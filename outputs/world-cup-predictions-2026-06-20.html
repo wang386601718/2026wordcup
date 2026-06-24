@@ -1,0 +1,2596 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026 世界杯今日六场预测 | 2026-06-24</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f7f4ea;
+      --muted: #b9c0bd;
+      --panel: rgba(26, 48, 43, 0.78);
+      --panel-strong: rgba(35, 38, 57, 0.9);
+      --line: rgba(255, 255, 255, 0.16);
+      --gold: #f2b650;
+      --green: #3ddc84;
+      --red: #ff6b5e;
+      --cyan: #6fd6ff;
+      --blue: #7aa7ff;
+      --purple: #b7a2ff;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.36);
+      --glass: rgba(255, 255, 255, 0.085);
+      --glass-strong: rgba(255, 255, 255, 0.13);
+      --stadium-line: rgba(255, 255, 255, 0.09);
+      --field-line: rgba(111, 214, 255, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      position: relative;
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(15, 40, 35, 0.82) 0%, rgba(52, 40, 68, 0.52) 46%, rgba(83, 35, 46, 0.76) 100%),
+        linear-gradient(180deg, rgba(8, 21, 25, 0.2) 0%, rgba(24, 38, 45, 0.66) 56%, rgba(26, 28, 39, 0.94) 100%),
+        url("world-cup-dashboard-bg-custom.png") center top / cover fixed,
+        #1f4337;
+      letter-spacing: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, transparent 0 49.8%, rgba(255, 255, 255, 0.08) 50%, transparent 50.2%),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 92px),
+        linear-gradient(180deg, transparent 0 58%, rgba(12, 53, 38, 0.24) 100%);
+      mask-image: linear-gradient(180deg, transparent, #000 18%, #000 92%, transparent);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto 0 0;
+      z-index: -1;
+      height: 36vh;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, transparent, rgba(42, 125, 66, 0.16)),
+        repeating-linear-gradient(0deg, transparent 0 34px, rgba(255, 255, 255, 0.045) 35px 36px);
+      opacity: 0.75;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .shell {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 36px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 44px;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      font-weight: 800;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 42% 24%, rgba(255, 255, 255, 0.58), transparent 18%),
+        radial-gradient(circle at 50% 35%, rgba(242, 182, 80, 0.38), rgba(255, 255, 255, 0.08) 62%, rgba(61, 220, 132, 0.14));
+      box-shadow: 0 0 24px rgba(242, 182, 80, 0.32), inset 0 0 18px rgba(255, 255, 255, 0.08);
+      flex: 0 0 auto;
+    }
+
+    .brand-mark svg {
+      width: 27px;
+      height: 27px;
+      filter: drop-shadow(0 0 10px rgba(242, 182, 80, 0.45));
+    }
+
+    .brand span {
+      overflow-wrap: anywhere;
+    }
+
+    .timestamp {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: right;
+    }
+
+    .hero {
+      min-height: 360px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(310px, 0.9fr);
+      gap: 26px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      max-width: 800px;
+      font-size: clamp(38px, 7vw, 82px);
+      line-height: 0.98;
+      letter-spacing: 0;
+      text-shadow: 0 12px 42px rgba(0, 0, 0, 0.46);
+    }
+
+    .lead {
+      max-width: 660px;
+      margin: 0 0 24px;
+      color: #d7ddda;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 7px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.055));
+      color: #eef4ef;
+      font-size: 13px;
+      backdrop-filter: blur(16px);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 18px currentColor;
+      color: var(--green);
+      flex: 0 0 auto;
+    }
+
+    .briefing {
+      align-self: stretch;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      align-content: end;
+      gap: 14px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.13), transparent 38%),
+        linear-gradient(180deg, rgba(40, 76, 65, 0.72), rgba(54, 46, 72, 0.9));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .briefing::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 86% 14%, rgba(242, 182, 80, 0.18), transparent 28%),
+        linear-gradient(120deg, transparent, rgba(111, 214, 255, 0.1), transparent);
+    }
+
+    .briefing h2,
+    .section-title h2 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .briefing p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .metric {
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      background: linear-gradient(180deg, var(--glass), rgba(255, 255, 255, 0.045));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09);
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 24px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 18px 0 14px;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: right;
+    }
+
+    .matches {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .match-switcher {
+      position: relative;
+      overflow: hidden;
+      margin: 0 0 22px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.11), transparent 42%),
+        linear-gradient(135deg, rgba(36, 78, 66, 0.84), rgba(74, 54, 83, 0.8));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .match-switcher::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(111, 214, 255, 0.1), transparent 28%, transparent 72%, rgba(242, 182, 80, 0.1)),
+        repeating-linear-gradient(90deg, transparent 0 54px, rgba(255, 255, 255, 0.035) 55px 56px);
+      opacity: 0.7;
+    }
+
+    .switcher-tabs,
+    .match-detail {
+      position: relative;
+    }
+
+    .switcher-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .switcher-tab {
+      min-height: 54px;
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 8px;
+      color: #e8eeeb;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.055)),
+        rgba(255, 255, 255, 0.075);
+      font: inherit;
+      font-weight: 800;
+      text-align: left;
+      cursor: pointer;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+    }
+
+    .switcher-tab:hover {
+      transform: translateY(-1px);
+      border-color: rgba(255, 255, 255, 0.28);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .switcher-tab span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .switcher-tab[aria-selected="true"] {
+      color: #172018;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.68), transparent 18%),
+        linear-gradient(135deg, var(--tab-accent), #ffffff);
+      border-color: rgba(255, 255, 255, 0.42);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22), 0 0 22px color-mix(in srgb, var(--tab-accent) 32%, transparent);
+    }
+
+    .switcher-tab[aria-selected="true"] span {
+      color: rgba(23, 32, 24, 0.72);
+    }
+
+    .match-detail {
+      display: none;
+      grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .match-detail.is-active {
+      display: grid;
+    }
+
+    .detail-scoreboard,
+    .detail-data {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent 48%),
+        rgba(255, 255, 255, 0.065);
+      padding: 14px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .detail-scoreboard h3 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 19px;
+    }
+
+    .detail-scoreboard p {
+      margin: 0;
+      color: #d7ddda;
+      line-height: 1.7;
+    }
+
+    .detail-kpis {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 9px;
+      margin-top: 13px;
+    }
+
+    .detail-kpi {
+      min-height: 70px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.045));
+    }
+
+    .detail-kpi strong {
+      display: block;
+      margin-bottom: 3px;
+      color: #ffffff;
+      font-size: 20px;
+    }
+
+    .detail-kpi span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .detail-data ul {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .detail-data li {
+      color: #d7ddda;
+      line-height: 1.55;
+      font-size: 13px;
+    }
+
+    .detail-data b {
+      display: block;
+      color: #ffffff;
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+
+    .poisson-box {
+      margin-top: 13px;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(111, 214, 255, 0.1), transparent 58%),
+        rgba(255, 255, 255, 0.07);
+    }
+
+    .poisson-box b {
+      display: block;
+      margin-bottom: 8px;
+      color: #ffffff;
+      font-size: 13px;
+    }
+
+    .poisson-line {
+      display: grid;
+      grid-template-columns: 86px minmax(0, 1fr);
+      gap: 8px;
+      align-items: start;
+      color: #d7ddda;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .poisson-line + .poisson-line {
+      margin-top: 6px;
+    }
+
+    .poisson-line span:first-child {
+      color: var(--muted);
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent 44%),
+        var(--card-bg),
+        var(--panel);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 92% 18%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 28%),
+        linear-gradient(120deg, rgba(255, 255, 255, 0.11), transparent 24%, transparent 76%, rgba(255, 255, 255, 0.06));
+      opacity: 0.8;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+    }
+
+    .card-inner {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+
+    .match-card {
+      display: none;
+    }
+
+    .match-card.is-active {
+      display: block;
+    }
+
+    .match-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .match-meta span:last-child {
+      text-align: right;
+    }
+
+    .teams {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .team {
+      min-width: 0;
+    }
+
+    .team.right {
+      text-align: right;
+    }
+
+    .team-name {
+      display: block;
+      overflow-wrap: anywhere;
+      font-size: 23px;
+      font-weight: 900;
+      line-height: 1.15;
+    }
+
+    .team-note {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .versus {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 50%;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+      font-weight: 900;
+      font-size: 13px;
+      flex: 0 0 auto;
+    }
+
+    .bars {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .data-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .data-point {
+      min-height: 82px;
+      padding: 11px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.095), rgba(255, 255, 255, 0.045)),
+        rgba(255, 255, 255, 0.065);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .data-point strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #ffffff;
+      font-size: 18px;
+      line-height: 1.15;
+    }
+
+    .data-point span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 78px minmax(0, 1fr) 42px;
+      gap: 10px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .track {
+      height: 9px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.28);
+    }
+
+    .fill {
+      width: var(--value);
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--accent), rgba(255, 255, 255, 0.78));
+      box-shadow: 0 0 14px color-mix(in srgb, var(--accent) 46%, transparent);
+    }
+
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .mini {
+      min-height: 114px;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.085), transparent 58%),
+        rgba(255, 255, 255, 0.055);
+    }
+
+    .mini b {
+      display: block;
+      margin-bottom: 7px;
+      color: #ffffff;
+      font-size: 13px;
+    }
+
+    .mini span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .postmatch-section {
+      position: relative;
+      overflow: hidden;
+      margin-top: 22px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent 42%),
+        linear-gradient(135deg, rgba(58, 86, 81, 0.86), rgba(78, 52, 78, 0.84));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .postmatch-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 8% 8%, rgba(242, 182, 80, 0.14), transparent 24%),
+        radial-gradient(circle at 88% 16%, rgba(111, 214, 255, 0.12), transparent 24%);
+    }
+
+    .postmatch-head,
+    .postmatch-grid {
+      position: relative;
+    }
+
+    .postmatch-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .postmatch-head h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .postmatch-head p {
+      margin: 0;
+      color: var(--muted);
+      text-align: right;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .postmatch-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .postmatch-card {
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-left: 6px solid var(--review-color);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--review-color) 12%, transparent), transparent 54%),
+        rgba(255, 255, 255, 0.065);
+      padding: 13px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .postmatch-top {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .postmatch-match {
+      color: #ffffff;
+      font-weight: 900;
+      line-height: 1.35;
+    }
+
+    .review-tag {
+      flex: 0 0 auto;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: var(--review-color);
+      color: #151915;
+      font-size: 12px;
+      font-weight: 950;
+    }
+
+    .postmatch-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .postmatch-meta span {
+      padding: 8px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.07);
+      color: #d7ddda;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .postmatch-card p {
+      margin: 0;
+      color: #d7ddda;
+      line-height: 1.65;
+      font-size: 13px;
+    }
+
+    .footer-note {
+      display: grid;
+      gap: 18px;
+      margin-top: 22px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025)),
+        var(--panel-strong);
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 13px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .footer-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .footer-head h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 20px;
+    }
+
+    .footer-head p {
+      margin: 0;
+      text-align: right;
+    }
+
+    .site-contact {
+      margin: 2px 0 0;
+      padding: 12px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--ink);
+      text-align: center;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .site-contact span {
+      color: var(--gold);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .table-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .standings-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .group-block {
+      display: grid;
+      grid-template-columns: minmax(380px, 0.8fr) minmax(0, 1.2fr);
+      gap: 14px;
+      align-items: start;
+      padding: 14px;
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.055), transparent 42%),
+        rgba(255, 255, 255, 0.025);
+    }
+
+    .table-panel.group-panel {
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.02) 44%),
+        var(--group-bg) !important;
+      border-left: 8px solid var(--group-accent);
+    }
+
+    .group-block .table-panel {
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .table-panel.standings-panel {
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.035)),
+        var(--standings-bg) !important;
+    }
+
+    .table-panel.schedule-panel {
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.15), transparent 50%),
+        var(--schedule-bg) !important;
+    }
+
+    .table-panel {
+      min-width: 0;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.055);
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .table-panel h3 {
+      margin: 0;
+      padding: 12px 14px;
+      color: #ffffff;
+      font-size: 15px;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.045));
+    }
+
+    .table-wrap {
+      overflow-x: visible;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    th,
+    td {
+      padding: 10px 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: left;
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+
+    th {
+      color: #f7f4ea;
+      font-size: 12px;
+      font-weight: 800;
+      background: rgba(255, 255, 255, 0.095);
+    }
+
+    td {
+      color: #d7ddda;
+    }
+
+    tr.qualified-row td {
+      background: linear-gradient(90deg, rgba(225, 47, 68, 0.82), rgba(145, 32, 48, 0.64));
+      color: #fff7f7;
+    }
+
+    tr.qualified-row .team-cell {
+      color: #ffffff;
+    }
+
+    tr.qualified-row .rank {
+      background: rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+    }
+
+    tr.eliminated-row td {
+      background: #000000;
+      color: #d9d9d9;
+    }
+
+    tr.eliminated-row .team-cell {
+      color: #ffffff;
+    }
+
+    tr.eliminated-row .rank {
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+    }
+
+    td.num,
+    th.num {
+      text-align: right;
+    }
+
+    .rank {
+      display: inline-grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: rgba(242, 182, 80, 0.18);
+      color: #fff2bd;
+      font-weight: 900;
+    }
+
+    .rank-cell {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 34px;
+    }
+
+    .stamp {
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      z-index: 2;
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border: 2px solid #ffffff;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #b9152b;
+      font-size: 12px;
+      font-weight: 950;
+      line-height: 1;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 14px rgba(255, 255, 255, 0.32);
+      pointer-events: none;
+    }
+
+    .stamp-eliminated {
+      color: #000000;
+    }
+
+    .team-cell {
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    .standing-team {
+      white-space: nowrap;
+      overflow-wrap: normal;
+      word-break: keep-all;
+    }
+
+    .score-highlight {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 42px;
+      min-height: 24px;
+      margin: 0 6px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f2b650, #fff1a8);
+      color: #24170b;
+      font-weight: 950;
+      box-shadow: 0 0 16px rgba(242, 182, 80, 0.35);
+    }
+
+    .schedule-table {
+      min-width: 0;
+    }
+
+    .schedule-table th:nth-child(1),
+    .schedule-table td:nth-child(1) {
+      width: 78px;
+    }
+
+    .schedule-table th:nth-child(2),
+    .schedule-table td:nth-child(2) {
+      width: 28%;
+    }
+
+    .schedule-table th:nth-child(3),
+    .schedule-table td:nth-child(3) {
+      width: 28%;
+    }
+
+    .schedule-table th:nth-child(4),
+    .schedule-table td:nth-child(4) {
+      width: auto;
+    }
+
+    .knockout-map {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      gap: 14px;
+      margin-top: 4px;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 8px;
+      background:
+        radial-gradient(circle at 50% 18%, rgba(242, 182, 80, 0.18), transparent 28%),
+        linear-gradient(135deg, rgba(242, 182, 80, 0.16), rgba(47, 120, 199, 0.12) 44%, rgba(91, 201, 158, 0.1)),
+        rgba(255, 255, 255, 0.055);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .knockout-map::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, transparent 0 49.8%, rgba(255, 255, 255, 0.12) 50%, transparent 50.2%),
+        repeating-linear-gradient(90deg, transparent 0 76px, rgba(255, 255, 255, 0.035) 77px 78px);
+      opacity: 0.7;
+    }
+
+    .knockout-head {
+      position: relative;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .knockout-head h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 20px;
+    }
+
+    .knockout-head p {
+      margin: 0;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .route-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(180px, 0.72fr) minmax(0, 1fr);
+      gap: 14px;
+      align-items: center;
+    }
+
+    .bracket-side,
+    .bracket-center {
+      min-width: 0;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.04)),
+        rgba(255, 255, 255, 0.06);
+      overflow: hidden;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .bracket-side h3,
+    .bracket-center h3 {
+      margin: 0;
+      padding: 10px 12px;
+      color: #ffffff;
+      font-size: 14px;
+      background:
+        linear-gradient(90deg, color-mix(in srgb, var(--route-accent, #ffffff) 18%, transparent), rgba(255, 255, 255, 0.055));
+    }
+
+    .bracket-rounds {
+      display: grid;
+      grid-template-columns: 1.2fr 0.95fr 0.82fr 0.78fr;
+      gap: 10px;
+      padding: 10px;
+      align-items: stretch;
+    }
+
+    .bracket-side.right .bracket-rounds {
+      grid-template-columns: 0.78fr 0.82fr 0.95fr 1.2fr;
+    }
+
+    .bracket-round {
+      display: grid;
+      gap: 8px;
+      --round-color: var(--route-accent, var(--gold));
+    }
+
+    .bracket-side .round-16 {
+      align-content: space-between;
+      padding-top: 42px;
+      padding-bottom: 42px;
+    }
+
+    .bracket-side .round-8 {
+      align-content: space-between;
+      padding-top: 130px;
+      padding-bottom: 130px;
+    }
+
+    .bracket-side .round-semi {
+      align-content: center;
+      padding-top: 232px;
+      padding-bottom: 232px;
+    }
+
+    .route-match.group-start {
+      margin-top: 14px;
+    }
+
+    .round-title {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      min-height: 24px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--round-color) 22%, transparent);
+      color: var(--round-color);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .round-32 {
+      --round-color: #f2b650;
+    }
+
+    .round-16 {
+      --round-color: #5bc99e;
+    }
+
+    .round-8 {
+      --round-color: #47c6e8;
+    }
+
+    .round-semi {
+      --round-color: #ff8f72;
+    }
+
+    .round-final {
+      --round-color: #ffffff;
+    }
+
+    .round-final-title,
+    .final-match {
+      --round-color: #ffffff;
+    }
+
+    .bracket-center {
+      background:
+        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.22), transparent 34%),
+        linear-gradient(180deg, rgba(242, 182, 80, 0.2), rgba(255, 255, 255, 0.07)),
+        rgba(255, 255, 255, 0.075);
+      box-shadow: 0 0 32px rgba(242, 182, 80, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .bracket-center .bracket-rounds {
+      grid-template-columns: 1fr;
+      align-content: center;
+      min-height: 100%;
+    }
+
+    .route-match {
+      position: relative;
+      display: grid;
+      gap: 4px;
+      min-height: 74px;
+      align-content: center;
+      padding: 9px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-left: 4px solid var(--round-color, var(--route-accent, var(--gold)));
+      border-radius: 8px;
+      background:
+        radial-gradient(circle at 92% 18%, color-mix(in srgb, var(--round-color, var(--route-accent, var(--gold))) 16%, transparent), transparent 36%),
+        linear-gradient(135deg, color-mix(in srgb, var(--round-color, var(--route-accent, var(--gold))) 16%, transparent), transparent 72%),
+        rgba(16, 31, 38, 0.42);
+      color: #f8f5ea;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09);
+    }
+
+    .route-match::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -11px;
+      width: 10px;
+      border-top: 2px solid color-mix(in srgb, var(--round-color, var(--route-accent, var(--gold))) 52%, rgba(255, 255, 255, 0.2));
+      filter: drop-shadow(0 0 4px color-mix(in srgb, var(--round-color, var(--route-accent, var(--gold))) 36%, transparent));
+    }
+
+    .bracket-side.right .route-match::after {
+      right: auto;
+      left: -11px;
+    }
+
+    .bracket-center .route-match::after,
+    .route-match.no-line::after {
+      display: none;
+    }
+
+    .route-match b {
+      color: var(--round-color, var(--route-accent, var(--gold)));
+      font-size: 12px;
+    }
+
+    .route-match span {
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .route-time {
+      color: var(--muted) !important;
+      font-size: 11px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0;
+    }
+
+    .route-note {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .source-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 8px;
+    }
+
+    .source-links a {
+      min-height: 32px;
+      padding: 7px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.06);
+      color: #eef4ef;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        background-attachment: scroll;
+      }
+
+      .hero,
+      .matches,
+      .match-detail {
+        grid-template-columns: 1fr;
+      }
+
+      .switcher-tabs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 28px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .shell {
+        width: min(100% - 22px, 1180px);
+        padding-top: 18px;
+      }
+
+      .topbar,
+      .section-title,
+      .footer-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .timestamp,
+      .section-title p,
+      .footer-head p {
+        text-align: left;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+
+      .metrics,
+      .analysis-grid,
+      .data-strip,
+      .detail-kpis,
+      .detail-data ul,
+      .postmatch-grid,
+      .postmatch-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .postmatch-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .postmatch-head p {
+        text-align: left;
+      }
+
+      .switcher-tabs {
+        grid-template-columns: 1fr;
+      }
+
+      .teams {
+        grid-template-columns: 1fr;
+      }
+
+      .team.right {
+        text-align: left;
+      }
+
+      .versus {
+        width: 100%;
+        height: 34px;
+        border-radius: 8px;
+      }
+
+      .source-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .table-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .group-block {
+        grid-template-columns: 1fr;
+      }
+
+      .route-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bracket-rounds {
+        grid-template-columns: 1fr;
+      }
+
+      .bracket-side.right .bracket-rounds {
+        grid-template-columns: 1fr;
+      }
+
+      .bracket-side .round-16,
+      .bracket-side .round-8,
+      .bracket-side .round-semi {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .route-match.group-start {
+        margin-top: 0;
+      }
+
+      .route-match::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .standings-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .knockout-head {
+        display: grid;
+        gap: 6px;
+      }
+
+      .knockout-head p {
+        text-align: left;
+      }
+
+      .schedule-table,
+      .schedule-table thead,
+      .schedule-table tbody,
+      .schedule-table tr,
+      .schedule-table th,
+      .schedule-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .schedule-panel .table-wrap {
+        overflow-x: hidden;
+      }
+
+      .schedule-table {
+        table-layout: fixed;
+      }
+
+      .schedule-table th:nth-child(1),
+      .schedule-table td:nth-child(1),
+      .schedule-table th:nth-child(2),
+      .schedule-table td:nth-child(2),
+      .schedule-table th:nth-child(3),
+      .schedule-table td:nth-child(3),
+      .schedule-table th:nth-child(4),
+      .schedule-table td:nth-child(4) {
+        width: 100%;
+      }
+
+      .schedule-table thead {
+        display: none;
+      }
+
+      .schedule-table tr {
+        width: auto;
+        box-sizing: border-box;
+        margin: 10px 8px 0;
+        padding: 10px 0;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .schedule-table td {
+        display: grid;
+        grid-template-columns: 64px minmax(0, 1fr);
+        gap: 8px;
+        align-items: start;
+        padding: 6px 12px;
+        border-top: 0;
+        line-height: 1.45;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+
+      .schedule-table td::before {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 1.45;
+      }
+
+      .schedule-table .team-cell {
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .schedule-table .score-highlight {
+        min-width: 36px;
+        min-height: 22px;
+        margin: 0 4px;
+        padding: 2px 7px;
+      }
+
+      .schedule-table td:nth-child(1)::before {
+        content: "北京时间";
+      }
+
+      .schedule-table td:nth-child(2)::before {
+        content: "比赛";
+      }
+
+      .schedule-table td:nth-child(3)::before {
+        content: "场地";
+      }
+
+      .schedule-table td:nth-child(4)::before {
+        content: "天气";
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img">
+            <defs>
+              <linearGradient id="trophyGold" x1="16" x2="48" y1="6" y2="58">
+                <stop offset="0" stop-color="#fff0a6"/>
+                <stop offset="0.42" stop-color="#f2b650"/>
+                <stop offset="1" stop-color="#9f6724"/>
+              </linearGradient>
+            </defs>
+            <path d="M28 7c-5 2-9 7-9 14 0 5 2 10 6 13 2 2 3 4 3 7v5h8v-5c0-3 1-5 3-7 4-3 6-8 6-13 0-7-4-12-9-14-1 4-2 8-4 12-2-4-3-8-4-12Z" fill="url(#trophyGold)"/>
+            <path d="M20 17c-5 1-9 5-9 10 0 6 5 10 12 11" fill="none" stroke="url(#trophyGold)" stroke-width="5" stroke-linecap="round"/>
+            <path d="M44 17c5 1 9 5 9 10 0 6-5 10-12 11" fill="none" stroke="url(#trophyGold)" stroke-width="5" stroke-linecap="round"/>
+            <path d="M25 47h14l2 8H23l2-8Z" fill="url(#trophyGold)"/>
+            <path d="M19 56h26v5H19z" fill="#d99a3c"/>
+            <path d="M28 10c-2 7-1 13 4 19 5-6 6-12 4-19" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span>2026 世界杯比赛日 AI 预测</span>
+      </div>
+      <div class="timestamp">最后更新：北京时间 2026-06-24 17:30</div>
+    </header>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <h1 id="page-title">今日六场世界杯预测</h1>
+        <p class="lead">基于已确认的比赛日对阵、前两轮积分形势、阵容结构、场地环境与泊松模型，更新赛前倾向、比分预测和关键变量。预测用于赛前阅读与讨论，不作为投注建议。</p>
+        <div class="chips" aria-label="今日概览">
+          <span class="chip"><span class="dot"></span>6 场小组赛</span>
+          <span class="chip"><span class="dot" style="color: var(--gold); background: var(--gold);"></span>2 场 B 组收官战</span>
+          <span class="chip"><span class="dot" style="color: var(--cyan); background: var(--cyan);"></span>A/B/C 组三线收官</span>
+        </div>
+      </div>
+
+      <aside class="briefing" aria-label="预测摘要">
+        <h2>比赛日总览</h2>
+        <p>A、B、C 三组进入收官轮。加拿大和瑞士同积 4 分，平局都能保持较高出线安全性；C 组巴西、摩洛哥和苏格兰都有出线空间；A 组墨西哥已占主动，捷克、韩国仍要为排名和出线位置抢分。</p>
+        <div class="metrics">
+          <div class="metric">
+            <strong>69%</strong>
+            <span>最高清晰胜率：摩洛哥</span>
+          </div>
+          <div class="metric">
+            <strong>2.7</strong>
+            <span>预计场均进球</span>
+          </div>
+          <div class="metric">
+            <strong>3</strong>
+            <span>小组同时收官</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section aria-labelledby="match-title">
+      <div class="section-title">
+        <h2 id="match-title">六场分析预测</h2>
+        <p>胜平负概率为主观赛前模型估计，结合近期公开赛前报道修正。</p>
+      </div>
+
+      <section class="match-switcher" aria-label="切换比赛详细数据">
+        <div class="switcher-tabs" role="tablist" aria-label="选择比赛">
+          <button class="switcher-tab" type="button" role="tab" aria-selected="true" aria-controls="detail-sui-can" id="tab-sui-can" style="--tab-accent: var(--red);">瑞士 vs 加拿大<span>北京时间 6-25 03:00 · B 组 · 预计 1-1</span></button>
+          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-bih-qat" id="tab-bih-qat" style="--tab-accent: var(--gold);">波黑 vs 卡塔尔<span>北京时间 6-25 03:00 · B 组 · 预计 2-1</span></button>
+          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-sco-bra" id="tab-sco-bra" style="--tab-accent: var(--green);">苏格兰 vs 巴西<span>北京时间 6-25 06:00 · C 组 · 预计 1-2</span></button>
+          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-mar-hai" id="tab-mar-hai" style="--tab-accent: var(--blue);">摩洛哥 vs 海地<span>北京时间 6-25 06:00 · C 组 · 预计 2-0</span></button>
+          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-cze-mex" id="tab-cze-mex" style="--tab-accent: var(--cyan);">捷克 vs 墨西哥<span>北京时间 6-25 09:00 · A 组 · 预计 1-2</span></button>
+          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-rsa-kor" id="tab-rsa-kor" style="--tab-accent: var(--purple);">南非 vs 韩国<span>北京时间 6-25 09:00 · A 组 · 预计 1-2</span></button>
+        </div>
+
+        <div class="match-detail is-active" id="detail-sui-can" role="tabpanel" aria-labelledby="tab-sui-can">
+          <div class="detail-scoreboard">
+            <h3>瑞士 vs 加拿大：稳守反击对抗主场速度</h3>
+            <p>两队同积 4 分，平局对双方都不差。加拿大净胜球优势明显，比赛策略会更稳；瑞士需要控制失误，避免被加拿大前场速度连续冲击。</p>
+            <div class="detail-kpis">
+              <div class="detail-kpi"><strong>36%</strong><span>加拿大胜率</span></div>
+              <div class="detail-kpi"><strong>2.1</strong><span>预计总进球</span></div>
+              <div class="detail-kpi"><strong>52%</strong><span>瑞士控球倾向</span></div>
+              <div class="detail-kpi"><strong>10:11</strong><span>预估射门比</span></div>
+              <div class="detail-kpi"><strong>1.08</strong><span>瑞士 xG 倾向</span></div>
+              <div class="detail-kpi"><strong>中高</strong><span>加拿大转换威胁</span></div>
+            </div>
+          </div>
+          <div class="detail-data">
+            <ul>
+              <li><b>节奏判断</b>瑞士更重视中场站位和定位球，加拿大会用边路速度和前场压迫寻找转换机会。</li>
+              <li><b>进球路径</b>瑞士靠定位球、二点球和禁区前沿远射，加拿大靠边路推进和肋部快速插上。</li>
+              <li><b>防守隐患</b>瑞士要防身后空间，加拿大要避免后腰身前被瑞士连续做墙。</li>
+              <li><b>临场变量</b>如果前 60 分钟仍是平局，两队保守倾向会增强，1-1 或 0-0 权重上升。</li>
+            </ul>
+            <div class="poisson-box">
+              <b>泊松模型</b>
+              <div class="poisson-line"><span>λ 均值</span><span>瑞士 1.08，加拿大 1.18，双方差距很小，加拿大略占转换优势。</span></div>
+              <div class="poisson-line"><span>胜平负</span><span>瑞士胜 32.0%，平 32.0%，加拿大胜 36.0%。</span></div>
+              <div class="poisson-line"><span>高频比分</span><span>1-1 为 13.4%，0-1 为 11.1%，1-0 为 10.2%。</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="match-detail" id="detail-bih-qat" role="tabpanel" aria-labelledby="tab-bih-qat">
+          <div class="detail-scoreboard">
+            <h3>波黑 vs 卡塔尔：必须赢球的开放局</h3>
+            <p>两队都只有 1 分，平局意义有限。波黑前两轮防线被打穿次数较多，但进攻端高点和定位球仍有威胁；卡塔尔被加拿大大胜后，防线信心需要重建。</p>
+            <div class="detail-kpis">
+              <div class="detail-kpi"><strong>48%</strong><span>波黑胜率</span></div>
+              <div class="detail-kpi"><strong>2.6</strong><span>预计总进球</span></div>
+              <div class="detail-kpi"><strong>54%</strong><span>波黑控球倾向</span></div>
+              <div class="detail-kpi"><strong>12:9</strong><span>预估射门比</span></div>
+              <div class="detail-kpi"><strong>1.46</strong><span>波黑 xG 倾向</span></div>
+              <div class="detail-kpi"><strong>中</strong><span>卡塔尔反击威胁</span></div>
+            </div>
+          </div>
+          <div class="detail-data">
+            <ul>
+              <li><b>节奏判断</b>波黑会主动压上，卡塔尔需要先稳住后场宽度，再靠反击找机会。</li>
+              <li><b>进球路径</b>波黑靠传中、高点和定位球，卡塔尔靠边路反击和禁区前沿二次进攻。</li>
+              <li><b>防守隐患</b>波黑回追速度偏慢，卡塔尔禁区内对抗和二点保护压力较大。</li>
+              <li><b>临场变量</b>若早段有进球，比赛会迅速打开；若拖到后段，双方都会冒险压上。</li>
+            </ul>
+            <div class="poisson-box">
+              <b>泊松模型</b>
+              <div class="poisson-line"><span>λ 均值</span><span>波黑 1.46，卡塔尔 0.96，波黑进攻优势更明显但失球风险存在。</span></div>
+              <div class="poisson-line"><span>胜平负</span><span>波黑胜 48.0%，平 27.0%，卡塔尔胜 25.0%。</span></div>
+              <div class="poisson-line"><span>高频比分</span><span>1-1 为 12.3%，2-1 为 9.0%，1-0 为 12.8%。</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="match-detail" id="detail-sco-bra" role="tabpanel" aria-labelledby="tab-sco-bra">
+          <div class="detail-scoreboard">
+            <h3>苏格兰 vs 巴西：强对抗防线考验技术推进</h3>
+            <p>苏格兰 3 分在手，防守强度和定位球会让巴西不舒服。巴西前两轮拿到 4 分，整体创造力更强，但面对高强度身体对抗时，需要提高禁区内终结效率。</p>
+            <div class="detail-kpis">
+              <div class="detail-kpi"><strong>58%</strong><span>巴西胜率</span></div>
+              <div class="detail-kpi"><strong>2.4</strong><span>预计总进球</span></div>
+              <div class="detail-kpi"><strong>60%</strong><span>巴西控球倾向</span></div>
+              <div class="detail-kpi"><strong>8:14</strong><span>预估射门比</span></div>
+              <div class="detail-kpi"><strong>1.58</strong><span>巴西 xG 倾向</span></div>
+              <div class="detail-kpi"><strong>中高</strong><span>苏格兰定位球威胁</span></div>
+            </div>
+          </div>
+          <div class="detail-data">
+            <ul>
+              <li><b>节奏判断</b>巴西会通过边路和肋部控球推进，苏格兰会压缩中路并主动提高身体对抗。</li>
+              <li><b>进球路径</b>巴西靠小范围配合和倒三角，苏格兰靠定位球、长传第一落点和二次冲击。</li>
+              <li><b>防守隐患</b>巴西要防定位球和禁区混战，苏格兰要防边路被连续一对一打穿。</li>
+              <li><b>临场变量</b>若苏格兰先领先，巴西需要面对密集防线；若巴西先破门，苏格兰被迫压出后空间会变大。</li>
+            </ul>
+            <div class="poisson-box">
+              <b>泊松模型</b>
+              <div class="poisson-line"><span>λ 均值</span><span>苏格兰 0.78，巴西 1.58，巴西优势清晰但零封不稳。</span></div>
+              <div class="poisson-line"><span>胜平负</span><span>苏格兰胜 17.0%，平 25.0%，巴西胜 58.0%。</span></div>
+              <div class="poisson-line"><span>高频比分</span><span>0-1 为 14.7%，1-2 为 10.1%，1-1 为 11.5%。</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="match-detail" id="detail-mar-hai" role="tabpanel" aria-labelledby="tab-mar-hai">
+          <div class="detail-scoreboard">
+            <h3>摩洛哥 vs 海地：稳固防线对抗背水一战</h3>
+            <p>摩洛哥 4 分在手，赢球基本锁定出线主动权。海地两连败且净胜球压力大，必须主动寻找进球，但这也会给摩洛哥留下反击空间。</p>
+            <div class="detail-kpis">
+              <div class="detail-kpi"><strong>69%</strong><span>摩洛哥胜率</span></div>
+              <div class="detail-kpi"><strong>2.2</strong><span>预计总进球</span></div>
+              <div class="detail-kpi"><strong>56%</strong><span>摩洛哥控球倾向</span></div>
+              <div class="detail-kpi"><strong>13:6</strong><span>预估射门比</span></div>
+              <div class="detail-kpi"><strong>1.72</strong><span>摩洛哥 xG 倾向</span></div>
+              <div class="detail-kpi"><strong>低中</strong><span>海地反击威胁</span></div>
+            </div>
+          </div>
+          <div class="detail-data">
+            <ul>
+              <li><b>节奏判断</b>摩洛哥会先保证防守结构，再通过边路速度和前场压迫制造机会。</li>
+              <li><b>进球路径</b>摩洛哥靠边路传中、反击和定位球，海地靠长传身后和前场逼抢后的二次进攻。</li>
+              <li><b>防守隐患</b>摩洛哥要防领先后的注意力下降，海地要避免边路回防被连续打穿。</li>
+              <li><b>临场变量</b>如果摩洛哥早进球，海地压出后比分可能扩大；若久攻不下，平局风险会上升。</li>
+            </ul>
+            <div class="poisson-box">
+              <b>泊松模型</b>
+              <div class="poisson-line"><span>λ 均值</span><span>摩洛哥 1.72，海地 0.50，摩洛哥优势明显，零封权重较高。</span></div>
+              <div class="poisson-line"><span>胜平负</span><span>摩洛哥胜 69.0%，平 21.0%，海地胜 10.0%。</span></div>
+              <div class="poisson-line"><span>高频比分</span><span>1-0 为 15.3%，2-0 为 13.1%，2-1 为 6.6%。</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="match-detail" id="detail-cze-mex" role="tabpanel" aria-labelledby="tab-cze-mex">
+          <div class="detail-scoreboard">
+            <h3>捷克 vs 墨西哥：中欧高点对抗东道主节奏</h3>
+            <p>墨西哥两连胜且零封韩国，出线主动权很稳。捷克 3 分在手，仍需抢分巩固排名；本场会依靠身体对抗、传中和定位球制造压力，但墨西哥的主场节奏和前场压迫更稳定。</p>
+            <div class="detail-kpis">
+              <div class="detail-kpi"><strong>58%</strong><span>墨西哥胜率</span></div>
+              <div class="detail-kpi"><strong>2.6</strong><span>预计总进球</span></div>
+              <div class="detail-kpi"><strong>57%</strong><span>墨西哥控球倾向</span></div>
+              <div class="detail-kpi"><strong>9:13</strong><span>预估射门比</span></div>
+              <div class="detail-kpi"><strong>1.58</strong><span>墨西哥 xG 倾向</span></div>
+              <div class="detail-kpi"><strong>中高</strong><span>捷克定位球威胁</span></div>
+            </div>
+          </div>
+          <div class="detail-data">
+            <ul>
+              <li><b>节奏判断</b>墨西哥会更多控球和压迫，捷克会降低防线风险，用长传和定位球找第一落点。</li>
+              <li><b>进球路径</b>墨西哥靠肋部配合、边路倒三角和二次进攻，捷克靠传中、高点和禁区混战。</li>
+              <li><b>防守隐患</b>墨西哥要防定位球盯人，捷克要防被墨西哥前场压迫后就地反抢。</li>
+              <li><b>临场变量</b>如果墨西哥先领先，捷克压出后空间会变大；如果捷克先靠定位球得手，比赛会进入高对抗拉锯。</li>
+            </ul>
+            <div class="poisson-box">
+              <b>泊松模型</b>
+              <div class="poisson-line"><span>λ 均值</span><span>捷克 0.92，墨西哥 1.58，墨西哥优势清晰但有失球风险。</span></div>
+              <div class="poisson-line"><span>胜平负</span><span>捷克胜 18.0%，平 24.0%，墨西哥胜 58.0%。</span></div>
+              <div class="poisson-line"><span>高频比分</span><span>1-2 为 9.3%，0-1 为 14.6%，1-1 为 12.4%。</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="match-detail" id="detail-rsa-kor" role="tabpanel" aria-labelledby="tab-rsa-kor">
+          <div class="detail-scoreboard">
+            <h3>南非 vs 韩国：背水一战对抗快速反击</h3>
+            <p>南非两连败，必须争胜才有理论希望；韩国 3 分在手，仍需抢分保证排名。韩国反击速度和边路推进更有威胁，南非需要提高前场终结效率。</p>
+            <div class="detail-kpis">
+              <div class="detail-kpi"><strong>54%</strong><span>韩国胜率</span></div>
+              <div class="detail-kpi"><strong>2.7</strong><span>预计总进球</span></div>
+              <div class="detail-kpi"><strong>51%</strong><span>韩国控球倾向</span></div>
+              <div class="detail-kpi"><strong>10:12</strong><span>预估射门比</span></div>
+              <div class="detail-kpi"><strong>1.50</strong><span>韩国 xG 倾向</span></div>
+              <div class="detail-kpi"><strong>中</strong><span>南非反击威胁</span></div>
+            </div>
+          </div>
+          <div class="detail-data">
+            <ul>
+              <li><b>节奏判断</b>南非会比前两轮更主动，韩国则更愿意利用边路速度和反击空间。</li>
+              <li><b>进球路径</b>韩国靠快速推进、禁区前沿配合和后点包抄，南非靠定位球、远射和边路冲击。</li>
+              <li><b>防守隐患</b>南非压上后身后空间明显，韩国要防对手定位球和禁区二点。</li>
+              <li><b>临场变量</b>若韩国早进球，南非必须继续压上，比赛可能走向多进球；若久攻不下，韩国也会更谨慎。</li>
+            </ul>
+            <div class="poisson-box">
+              <b>泊松模型</b>
+              <div class="poisson-line"><span>λ 均值</span><span>南非 0.98，韩国 1.50，韩国效率和转换略占优势。</span></div>
+              <div class="poisson-line"><span>胜平负</span><span>南非胜 21.0%，平 25.0%，韩国胜 54.0%。</span></div>
+              <div class="poisson-line"><span>高频比分</span><span>1-2 为 9.2%，0-1 为 13.7%，1-1 为 13.4%。</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="matches">
+        <article class="card match-card is-active" data-match-card="detail-sui-can" style="--accent: var(--red); --card-bg: linear-gradient(135deg, rgba(125, 42, 58, 0.62), rgba(36, 17, 28, 0.74));">
+          <div class="card-inner">
+            <div class="match-meta">
+              <span>BC Place · Vancouver</span>
+              <span>北京时间<br>6-25 03:00</span>
+            </div>
+            <div class="teams">
+              <div class="team">
+                <span class="team-name">瑞士</span>
+                <span class="team-note">前两轮 1胜1平，防守稳定但需要防转换速度</span>
+              </div>
+              <div class="versus">VS</div>
+              <div class="team right">
+                <span class="team-name">加拿大</span>
+                <span class="team-note">前两轮 1胜1平且净胜球领先，主场速度优势明显</span>
+              </div>
+            </div>
+            <div class="data-strip" aria-label="瑞士对加拿大数据拆解">
+              <div class="data-point"><strong>同积 4 分</strong><span>双方平局都能维持较高出线安全性，冒险意愿有限。</span></div>
+              <div class="data-point"><strong>净胜球差</strong><span>加拿大 +6 明显领先，瑞士 +3，比赛压力更多在瑞士。</span></div>
+              <div class="data-point"><strong>转换中高</strong><span>加拿大会用速度冲击瑞士边后卫身后。</span></div>
+              <div class="data-point"><strong>加拿大胜 36%</strong><span>优势很小，平局和瑞士小胜都在高权重区间。</span></div>
+              <div class="data-point"><strong>泊松 1-1</strong><span>模型胜平负为 32.0 / 32.0 / 36.0，平局优先。</span></div>
+            </div>
+            <div class="bars" aria-label="概率">
+              <div class="bar-row"><span>瑞士胜</span><div class="track"><div class="fill" style="--value: 32%;"></div></div><span>32%</span></div>
+              <div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 32%;"></div></div><span>32%</span></div>
+              <div class="bar-row"><span>加拿大胜</span><div class="track"><div class="fill" style="--value: 36%;"></div></div><span>36%</span></div>
+            </div>
+            <div class="analysis-grid">
+              <div class="mini"><b>关键点</b><span>瑞士能否控制加拿大边路第一波冲刺。</span></div>
+              <div class="mini"><b>风险</b><span>双方都可接受平局，后段节奏可能明显放慢。</span></div>
+              <div class="mini"><b>观察球员</b><span>瑞士后腰保护、加拿大边路突击手。</span></div>
+              <div class="mini"><b>节奏倾向</b><span>瑞士控球略多，加拿大反击更直接。</span></div>
+              <div class="mini"><b>预估控球</b><span>瑞士约 52%，但推进效率未必占优。</span></div>
+              <div class="mini"><b>定位球权重</b><span>瑞士定位球和二点球是重要得分路径。</span></div>
+              <div class="mini"><b>射门结构</b><span>瑞士偏阵地远射，加拿大偏快速冲刺和倒三角。</span></div>
+              <div class="mini"><b>换人影响</b><span>加拿大后程速度型替补会继续冲击身后。</span></div>
+              <div class="mini"><b>心理面</b><span>加拿大净胜球优势让其更容易接受平局。</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card match-card" data-match-card="detail-bih-qat" style="--accent: var(--gold); --card-bg: linear-gradient(135deg, rgba(128, 82, 25, 0.64), rgba(34, 24, 11, 0.74));">
+          <div class="card-inner">
+            <div class="match-meta">
+              <span>Lumen Field · Seattle</span>
+              <span>北京时间<br>6-25 03:00</span>
+            </div>
+            <div class="teams">
+              <div class="team">
+                <span class="team-name">波黑</span>
+                <span class="team-note">前两轮 1 分，必须赢球才有更现实的晋级希望</span>
+              </div>
+              <div class="versus">VS</div>
+              <div class="team right">
+                <span class="team-name">卡塔尔</span>
+                <span class="team-note">前两轮 1 分且净胜球落后，需要修正防线稳定性</span>
+              </div>
+            </div>
+            <div class="data-strip" aria-label="波黑对卡塔尔数据拆解">
+              <div class="data-point"><strong>同积 1 分</strong><span>两队平局价值不高，比赛后段容易变开放。</span></div>
+              <div class="data-point"><strong>防线压力</strong><span>波黑已丢 5 球，卡塔尔已丢 7 球，失误空间很小。</span></div>
+              <div class="data-point"><strong>高点优势</strong><span>波黑传中和定位球更有直接威胁。</span></div>
+              <div class="data-point"><strong>波黑胜 48%</strong><span>纸面进攻质量更好，但防守会给卡塔尔机会。</span></div>
+              <div class="data-point"><strong>泊松 2-1</strong><span>模型胜平负为 48.0 / 27.0 / 25.0，开放局权重较高。</span></div>
+            </div>
+            <div class="bars" aria-label="概率">
+              <div class="bar-row"><span>波黑胜</span><div class="track"><div class="fill" style="--value: 48%;"></div></div><span>48%</span></div>
+              <div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 27%;"></div></div><span>27%</span></div>
+              <div class="bar-row"><span>卡塔尔胜</span><div class="track"><div class="fill" style="--value: 25%;"></div></div><span>25%</span></div>
+            </div>
+            <div class="analysis-grid">
+              <div class="mini"><b>关键点</b><span>波黑能否把高点优势转化为真正射正。</span></div>
+              <div class="mini"><b>风险</b><span>波黑压上后，卡塔尔反击空间会增加。</span></div>
+              <div class="mini"><b>观察球员</b><span>波黑中锋支点、卡塔尔边路第一脚传球。</span></div>
+              <div class="mini"><b>节奏倾向</b><span>前段谨慎，后段随积分压力变开放。</span></div>
+              <div class="mini"><b>预估控球</b><span>波黑约 54%，更多通过边路推进。</span></div>
+              <div class="mini"><b>进球窗口</b><span>定位球和禁区二点是波黑最直接机会。</span></div>
+              <div class="mini"><b>射门结构</b><span>波黑偏传中抢点，卡塔尔偏反击低射。</span></div>
+              <div class="mini"><b>换人影响</b><span>落后一方后程会加前锋，比赛可能继续提速。</span></div>
+              <div class="mini"><b>出线压力</b><span>两队都需要赢球，平局基本不解渴。</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card match-card" data-match-card="detail-sco-bra" style="--accent: var(--green); --card-bg: linear-gradient(135deg, rgba(18, 103, 71, 0.62), rgba(8, 35, 31, 0.74));">
+          <div class="card-inner">
+            <div class="match-meta">
+              <span>Hard Rock Stadium · Miami</span>
+              <span>北京时间<br>6-25 06:00</span>
+            </div>
+            <div class="teams">
+              <div class="team">
+                <span class="team-name">苏格兰</span>
+                <span class="team-note">前两轮 3 分，防守强度和定位球是主要武器</span>
+              </div>
+              <div class="versus">VS</div>
+              <div class="team right">
+                <span class="team-name">巴西</span>
+                <span class="team-note">前两轮 4 分，控球创造力更强但要防身体对抗</span>
+              </div>
+            </div>
+            <div class="data-strip" aria-label="苏格兰对巴西数据拆解">
+              <div class="data-point"><strong>积分压力</strong><span>巴西 4 分更稳，苏格兰 3 分仍需抢分确认位置。</span></div>
+              <div class="data-point"><strong>对抗强</strong><span>苏格兰会提高身体对抗，压缩巴西中路处理球空间。</span></div>
+              <div class="data-point"><strong>控球优势</strong><span>巴西会掌握更多球权，关键在禁区内最后一脚。</span></div>
+              <div class="data-point"><strong>巴西胜 58%</strong><span>巴西优势明确，但苏格兰定位球会制造风险。</span></div>
+              <div class="data-point"><strong>泊松 1-2</strong><span>模型胜平负为 17.0 / 25.0 / 58.0，巴西小胜优先。</span></div>
+            </div>
+            <div class="bars" aria-label="概率">
+              <div class="bar-row"><span>苏格兰胜</span><div class="track"><div class="fill" style="--value: 17%;"></div></div><span>17%</span></div>
+              <div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 25%;"></div></div><span>25%</span></div>
+              <div class="bar-row"><span>巴西胜</span><div class="track"><div class="fill" style="--value: 58%;"></div></div><span>58%</span></div>
+            </div>
+            <div class="analysis-grid">
+              <div class="mini"><b>关键点</b><span>巴西能否绕开苏格兰中路强对抗。</span></div>
+              <div class="mini"><b>风险</b><span>苏格兰定位球和长传二点会放大随机性。</span></div>
+              <div class="mini"><b>观察球员</b><span>巴西边锋一对一、苏格兰中卫第一落点。</span></div>
+              <div class="mini"><b>节奏倾向</b><span>巴西控球推进，苏格兰低位加身体压迫。</span></div>
+              <div class="mini"><b>预估控球</b><span>巴西约 60%，射门数量预计领先。</span></div>
+              <div class="mini"><b>进球窗口</b><span>巴西边路倒三角和禁区弧顶远射最关键。</span></div>
+              <div class="mini"><b>射门结构</b><span>巴西偏地面渗透，苏格兰偏头球和补射。</span></div>
+              <div class="mini"><b>体能走势</b><span>苏格兰高强度对抗后，后段横移会被考验。</span></div>
+              <div class="mini"><b>出线压力</b><span>巴西赢球锁主动权，苏格兰至少需要守住竞争力。</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card match-card" data-match-card="detail-mar-hai" style="--accent: var(--blue); --card-bg: linear-gradient(135deg, rgba(38, 82, 155, 0.62), rgba(10, 25, 42, 0.72));">
+          <div class="card-inner">
+            <div class="match-meta">
+              <span>Mercedes-Benz Stadium · Atlanta</span>
+              <span>北京时间<br>6-25 06:00</span>
+            </div>
+            <div class="teams">
+              <div class="team">
+                <span class="team-name">摩洛哥</span>
+                <span class="team-note">前两轮 4 分，防守结构稳定，反击质量高</span>
+              </div>
+              <div class="versus">VS</div>
+              <div class="team right">
+                <span class="team-name">海地</span>
+                <span class="team-note">前两轮 0 分，必须主动争胜但防线压力很大</span>
+              </div>
+            </div>
+            <div class="data-strip" aria-label="摩洛哥对海地数据拆解">
+              <div class="data-point"><strong>积分优势</strong><span>摩洛哥 4 分，赢球基本锁定出线主动权。</span></div>
+              <div class="data-point"><strong>海地背水</strong><span>海地 0 分且净胜球 -5，必须主动寻求进球。</span></div>
+              <div class="data-point"><strong>反击质量</strong><span>摩洛哥边路推进和防反效率明显更好。</span></div>
+              <div class="data-point"><strong>摩洛哥胜 69%</strong><span>优势最清晰，重点防海地早段抢开局。</span></div>
+              <div class="data-point"><strong>泊松 2-0</strong><span>模型胜平负为 69.0 / 21.0 / 10.0，零封权重较高。</span></div>
+            </div>
+            <div class="bars" aria-label="概率">
+              <div class="bar-row"><span>摩洛哥胜</span><div class="track"><div class="fill" style="--value: 69%;"></div></div><span>69%</span></div>
+              <div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 21%;"></div></div><span>21%</span></div>
+              <div class="bar-row"><span>海地胜</span><div class="track"><div class="fill" style="--value: 10%;"></div></div><span>10%</span></div>
+            </div>
+            <div class="analysis-grid">
+              <div class="mini"><b>关键点</b><span>摩洛哥能否利用海地压出后的身后空间。</span></div>
+              <div class="mini"><b>风险</b><span>如果久攻不下，海地会把比赛拖成低比分。</span></div>
+              <div class="mini"><b>观察球员</b><span>摩洛哥边路推进、海地中卫回追速度。</span></div>
+              <div class="mini"><b>节奏倾向</b><span>摩洛哥稳守再提速，海地需要主动冒险。</span></div>
+              <div class="mini"><b>预估控球</b><span>摩洛哥约 56%，更重视推进效率。</span></div>
+              <div class="mini"><b>进球窗口</b><span>边路反击和定位球二点最容易破局。</span></div>
+              <div class="mini"><b>射门结构</b><span>摩洛哥偏禁区内机会，海地偏远射和反击。</span></div>
+              <div class="mini"><b>防线修正</b><span>海地需要避免边路被连续打穿。</span></div>
+              <div class="mini"><b>出线压力</b><span>摩洛哥赢球可稳住主动权，海地基本只能争胜。</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card match-card" data-match-card="detail-cze-mex" style="--accent: var(--cyan); --card-bg: linear-gradient(135deg, rgba(31, 121, 137, 0.62), rgba(36, 71, 85, 0.74));">
+          <div class="card-inner">
+            <div class="match-meta">
+              <span>Azteca Stadium · Mexico City</span>
+              <span>北京时间<br>6-25 09:00</span>
+            </div>
+            <div class="teams">
+              <div class="team">
+                <span class="team-name">捷克</span>
+                <span class="team-note">前两轮 3 分，定位球和高点是抢分关键</span>
+              </div>
+              <div class="versus">VS</div>
+              <div class="team right">
+                <span class="team-name">墨西哥</span>
+                <span class="team-note">两连胜积 6 分，主场节奏和压迫优势明显</span>
+              </div>
+            </div>
+            <div class="data-strip" aria-label="捷克对墨西哥数据拆解">
+              <div class="data-point"><strong>积分主动</strong><span>墨西哥 6 分领先，捷克 3 分仍要抢排名。</span></div>
+              <div class="data-point"><strong>主场优势</strong><span>墨西哥在节奏、压迫和球迷环境上更占优。</span></div>
+              <div class="data-point"><strong>高点威胁</strong><span>捷克定位球和传中会考验墨西哥禁区盯防。</span></div>
+              <div class="data-point"><strong>墨西哥胜 58%</strong><span>墨西哥整体更稳，但零封难度不低。</span></div>
+              <div class="data-point"><strong>泊松 1-2</strong><span>模型胜平负为 18.0 / 24.0 / 58.0，墨西哥小胜优先。</span></div>
+            </div>
+            <div class="bars" aria-label="概率">
+              <div class="bar-row"><span>捷克胜</span><div class="track"><div class="fill" style="--value: 18%;"></div></div><span>18%</span></div>
+              <div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 24%;"></div></div><span>24%</span></div>
+              <div class="bar-row"><span>墨西哥胜</span><div class="track"><div class="fill" style="--value: 58%;"></div></div><span>58%</span></div>
+            </div>
+            <div class="analysis-grid">
+              <div class="mini"><b>关键点</b><span>墨西哥能否压住捷克定位球和第一落点。</span></div>
+              <div class="mini"><b>风险</b><span>捷克高点进球会让比赛进入更直接的对抗。</span></div>
+              <div class="mini"><b>观察球员</b><span>墨西哥边路推进、捷克中锋支点。</span></div>
+              <div class="mini"><b>节奏倾向</b><span>墨西哥控球压迫，捷克等待定位球和反击。</span></div>
+              <div class="mini"><b>预估控球</b><span>墨西哥约 57%，推进质量预计更好。</span></div>
+              <div class="mini"><b>进球窗口</b><span>墨西哥肋部渗透和禁区二点最容易破局。</span></div>
+              <div class="mini"><b>射门结构</b><span>墨西哥偏地面配合，捷克偏头球和远射。</span></div>
+              <div class="mini"><b>体能走势</b><span>高原和主场节奏会考验捷克后段横移。</span></div>
+              <div class="mini"><b>出线压力</b><span>墨西哥争头名，捷克需要避免大比分失利。</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card match-card" data-match-card="detail-rsa-kor" style="--accent: var(--purple); --card-bg: linear-gradient(135deg, rgba(82, 70, 149, 0.62), rgba(55, 48, 89, 0.74));">
+          <div class="card-inner">
+            <div class="match-meta">
+              <span>BBVA Stadium · Monterrey</span>
+              <span>北京时间<br>6-25 09:00</span>
+            </div>
+            <div class="teams">
+              <div class="team">
+                <span class="team-name">南非</span>
+                <span class="team-note">两连败积 0 分，必须主动进攻保留理论希望</span>
+              </div>
+              <div class="versus">VS</div>
+              <div class="team right">
+                <span class="team-name">韩国</span>
+                <span class="team-note">前两轮 3 分，反击速度和边路推进仍是优势</span>
+              </div>
+            </div>
+            <div class="data-strip" aria-label="南非对韩国数据拆解">
+              <div class="data-point"><strong>积分压力</strong><span>南非 0 分必须争胜，韩国 3 分也需要抢分。</span></div>
+              <div class="data-point"><strong>转换空间</strong><span>南非压上会给韩国边路和身后空间。</span></div>
+              <div class="data-point"><strong>防守修正</strong><span>韩国上一场被墨西哥压制，本场需要提升出球稳定性。</span></div>
+              <div class="data-point"><strong>韩国胜 54%</strong><span>韩国效率更好，但南非背水一战会制造波动。</span></div>
+              <div class="data-point"><strong>泊松 1-2</strong><span>模型胜平负为 21.0 / 25.0 / 54.0，韩国小胜优先。</span></div>
+            </div>
+            <div class="bars" aria-label="概率">
+              <div class="bar-row"><span>南非胜</span><div class="track"><div class="fill" style="--value: 21%;"></div></div><span>21%</span></div>
+              <div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 25%;"></div></div><span>25%</span></div>
+              <div class="bar-row"><span>韩国胜</span><div class="track"><div class="fill" style="--value: 54%;"></div></div><span>54%</span></div>
+            </div>
+            <div class="analysis-grid">
+              <div class="mini"><b>关键点</b><span>韩国能否利用南非压上后的纵深空间。</span></div>
+              <div class="mini"><b>风险</b><span>南非定位球和早段抢开局会制造不确定性。</span></div>
+              <div class="mini"><b>观察球员</b><span>韩国边路速度、南非前场第一点。</span></div>
+              <div class="mini"><b>节奏倾向</b><span>南非主动进攻，韩国等待快速转换。</span></div>
+              <div class="mini"><b>预估控球</b><span>韩国约 51%，但反击效率更关键。</span></div>
+              <div class="mini"><b>进球窗口</b><span>韩国边路传中和后点包抄最容易出机会。</span></div>
+              <div class="mini"><b>射门结构</b><span>韩国偏反击禁区内射门，南非偏远射和定位球。</span></div>
+              <div class="mini"><b>体能走势</b><span>南非高压若无法进球，后段防线会被拉开。</span></div>
+              <div class="mini"><b>出线压力</b><span>韩国需要胜利巩固位置，南非只能冒险。</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="postmatch-section" aria-labelledby="postmatch-title">
+      <div class="postmatch-head">
+        <h2 id="postmatch-title">赛后复盘：已完赛偏差分析</h2>
+        <p>只保留昨日预测过的场次，重点看赛前倾向和实际结果之间的偏离原因。</p>
+      </div>
+      <div class="postmatch-grid">
+        <article class="postmatch-card" style="--review-color: #ff8f72;">
+          <div class="postmatch-top">
+            <div class="postmatch-match">葡萄牙 5-0 乌兹别克斯坦</div>
+            <span class="review-tag">大幅偏离</span>
+          </div>
+          <div class="postmatch-meta">
+            <span><b>赛前倾向</b><br>葡萄牙 2-0 取胜</span>
+            <span><b>实际结果</b><br>葡萄牙五球大胜</span>
+          </div>
+          <p>胜负方向正确，但比分被明显低估。葡萄牙早段破门后彻底打开低位防线，乌兹别克斯坦被迫压出导致边路和肋部空间连续暴露。模型低估了葡萄牙领先后的持续压迫强度，也低估了乌兹别克斯坦落后时防线崩盘风险。</p>
+        </article>
+
+        <article class="postmatch-card" style="--review-color: #92e6a7;">
+          <div class="postmatch-top">
+            <div class="postmatch-match">英格兰 0-0 加纳</div>
+            <span class="review-tag">明显偏离</span>
+          </div>
+          <div class="postmatch-meta">
+            <span><b>赛前倾向</b><br>英格兰 2-1 取胜</span>
+            <span><b>实际结果</b><br>双方互交白卷</span>
+          </div>
+          <p>模型高估了英格兰的禁区转化率，也高估了比赛开放程度。加纳防守站位更紧，限制了英格兰肋部渗透，英格兰虽然控球更多，但高质量射门不足。加纳反击威胁没有转化成进球，比赛因此落入低节奏消耗局。</p>
+        </article>
+
+        <article class="postmatch-card" style="--review-color: #92e6a7;">
+          <div class="postmatch-top">
+            <div class="postmatch-match">巴拿马 0-1 克罗地亚</div>
+            <span class="review-tag">小幅偏离</span>
+          </div>
+          <div class="postmatch-meta">
+            <span><b>赛前倾向</b><br>克罗地亚 0-2 取胜</span>
+            <span><b>实际结果</b><br>克罗地亚小胜</span>
+          </div>
+          <p>胜负方向正确，但总进球略高估。克罗地亚确实掌握更多控球和中场调度，但巴拿马低位防守比预期更坚决，禁区内空间有限。克罗地亚进攻质量足以赢球，却没有持续制造大比分所需的连续高质量机会。</p>
+        </article>
+
+        <article class="postmatch-card" style="--review-color: #92e6a7;">
+          <div class="postmatch-top">
+            <div class="postmatch-match">哥伦比亚 1-0 刚果民主共和国</div>
+            <span class="review-tag">小幅偏离</span>
+          </div>
+          <div class="postmatch-meta">
+            <span><b>赛前倾向</b><br>哥伦比亚 2-1 取胜</span>
+            <span><b>实际结果</b><br>哥伦比亚零封小胜</span>
+          </div>
+          <p>胜负方向正确，但刚果民主共和国的进球威胁被高估。哥伦比亚领先后更愿意控节奏，减少开放转换，比赛没有进入模型预估的对攻区间。刚果民主共和国定位球和身体冲击存在，但最后一传和射门质量不足。</p>
+        </article>
+
+      </div>
+    </section>
+
+    <footer class="footer-note">
+      <div class="table-grid">
+        <section>
+          <div class="standings-grid" id="all-standings-grid"></div>
+        </section>
+      </div>
+      <section class="knockout-map" aria-labelledby="knockout-title">
+        <div class="knockout-head">
+          <h2 id="knockout-title">32强到决赛晋级路线图</h2>
+          <p>按小组名次进入淘汰赛，胜者逐轮晋级，直至决赛。</p>
+        </div>
+        <div class="route-grid">
+          <div class="bracket-side left" style="--route-accent: #f2b650;">
+            <h3>上半区</h3>
+            <div class="bracket-rounds">
+              <div class="bracket-round round-32">
+                <div class="route-match"><b>R32-1</b><span class="route-time">6-30 00:00</span><span data-route="A1-B2">A1 vs B2</span></div>
+                <div class="route-match"><b>R32-2</b><span class="route-time">6-30 03:00</span><span data-route="C1-D2">C1 vs D2</span></div>
+                <div class="route-match group-start"><b>R32-3</b><span class="route-time">6-30 06:00</span><span data-route="E1-F2">E1 vs F2</span></div>
+                <div class="route-match"><b>R32-4</b><span class="route-time">6-30 09:00</span><span data-route="G1-H2">G1 vs H2</span></div>
+                <div class="route-match group-start"><b>R32-5</b><span class="route-time">7-1 00:00</span><span data-route="I1-J2">I1 vs J2</span></div>
+                <div class="route-match"><b>R32-6</b><span class="route-time">7-1 03:00</span><span data-route="K1-L2">K1 vs L2</span></div>
+                <div class="route-match group-start"><b>R32-7</b><span class="route-time">7-1 06:00</span><span data-route="T1-T2">最佳小组第3 vs 最佳小组第3</span></div>
+                <div class="route-match"><b>R32-8</b><span class="route-time">7-1 09:00</span><span data-route="T3-T4">最佳小组第3 vs 最佳小组第3</span></div>
+              </div>
+              <div class="bracket-round round-16">
+                <div class="route-match"><b>R16-1</b><span class="route-time">7-4 00:00</span><span>承接 R32-1 / R32-2</span></div>
+                <div class="route-match"><b>R16-2</b><span class="route-time">7-4 03:00</span><span>承接 R32-3 / R32-4</span></div>
+                <div class="route-match"><b>R16-3</b><span class="route-time">7-4 06:00</span><span>承接 R32-5 / R32-6</span></div>
+                <div class="route-match"><b>R16-4</b><span class="route-time">7-4 09:00</span><span>承接 R32-7 / R32-8</span></div>
+              </div>
+              <div class="bracket-round round-8">
+                <div class="route-match"><b>QF-1</b><span class="route-time">7-9 03:00</span><span>承接 R16-1 / R16-2</span></div>
+                <div class="route-match"><b>QF-2</b><span class="route-time">7-9 09:00</span><span>承接 R16-3 / R16-4</span></div>
+              </div>
+              <div class="bracket-round round-semi">
+                <div class="route-match"><b>SF-1</b><span class="route-time">7-15 08:00</span><span>承接 QF-1 / QF-2</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bracket-center" style="--route-accent: #ffffff;">
+            <h3>冠军区</h3>
+            <div class="bracket-rounds">
+              <div class="bracket-round round-final">
+                <div class="route-match no-line final-match"><b>冠军战</b><span class="route-time">7-20 03:00</span><span>承接 SF-1 / SF-2 胜者</span></div>
+                <div class="route-match no-line final-match"><b>季军战</b><span class="route-time">7-19 03:00</span><span>承接 SF-1 / SF-2 负者</span></div>
+                <div class="route-note">胜者逐轮进入中心决赛区，最终决出世界杯冠军。</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bracket-side right" style="--route-accent: #47c6e8;">
+            <h3>下半区</h3>
+            <div class="bracket-rounds">
+              <div class="bracket-round round-semi">
+                <div class="route-match"><b>SF-2</b><span class="route-time">7-16 08:00</span><span>承接 QF-3 / QF-4</span></div>
+              </div>
+              <div class="bracket-round round-8">
+                <div class="route-match"><b>QF-3</b><span class="route-time">7-10 03:00</span><span>承接 R16-5 / R16-6</span></div>
+                <div class="route-match"><b>QF-4</b><span class="route-time">7-10 09:00</span><span>承接 R16-7 / R16-8</span></div>
+              </div>
+              <div class="bracket-round round-16">
+                <div class="route-match"><b>R16-5</b><span class="route-time">7-5 00:00</span><span>承接 R32-9 / R32-10</span></div>
+                <div class="route-match"><b>R16-6</b><span class="route-time">7-5 03:00</span><span>承接 R32-11 / R32-12</span></div>
+                <div class="route-match"><b>R16-7</b><span class="route-time">7-5 06:00</span><span>承接 R32-13 / R32-14</span></div>
+                <div class="route-match"><b>R16-8</b><span class="route-time">7-5 09:00</span><span>承接 R32-15 / R32-16</span></div>
+              </div>
+              <div class="bracket-round round-32">
+                <div class="route-match"><b>R32-9</b><span class="route-time">7-2 00:00</span><span data-route="B1-A2">B1 vs A2</span></div>
+                <div class="route-match"><b>R32-10</b><span class="route-time">7-2 03:00</span><span data-route="D1-C2">D1 vs C2</span></div>
+                <div class="route-match group-start"><b>R32-11</b><span class="route-time">7-2 06:00</span><span data-route="F1-E2">F1 vs E2</span></div>
+                <div class="route-match"><b>R32-12</b><span class="route-time">7-2 09:00</span><span data-route="H1-G2">H1 vs G2</span></div>
+                <div class="route-match group-start"><b>R32-13</b><span class="route-time">7-3 00:00</span><span data-route="J1-I2">J1 vs I2</span></div>
+                <div class="route-match"><b>R32-14</b><span class="route-time">7-3 03:00</span><span data-route="L1-K2">L1 vs K2</span></div>
+                <div class="route-match group-start"><b>R32-15</b><span class="route-time">7-3 06:00</span><span data-route="T5-T6">最佳小组第3 vs 最佳小组第3</span></div>
+                <div class="route-match"><b>R32-16</b><span class="route-time">7-3 09:00</span><span data-route="T7-T8">最佳小组第3 vs 最佳小组第3</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="site-contact">站长联系 QQ：<span>386601718</span></div>
+    </footer>
+  </main>
+  <script>
+    const scheduleData = [
+      ["A", "6-12 03:00", "墨西哥 2-0 南非", "已赛"],
+      ["A", "6-12 06:00", "韩国 2-1 捷克", "已赛"],
+      ["A", "6-19 03:00", "捷克 1-0 南非", "已赛"],
+      ["A", "6-19 06:00", "墨西哥 1-0 韩国", "已赛"],
+      ["A", "6-25 09:00", "捷克 vs 墨西哥", "未赛"],
+      ["A", "6-25 09:00", "南非 vs 韩国", "未赛"],
+      ["B", "6-13 08:00", "加拿大 1-1 波黑", "已赛"],
+      ["B", "6-14 03:00", "卡塔尔 1-1 瑞士", "已赛"],
+      ["B", "6-19 08:00", "瑞士 4-1 波黑", "已赛"],
+      ["B", "6-19 11:00", "加拿大 6-0 卡塔尔", "已赛"],
+      ["B", "6-25 03:00", "瑞士 vs 加拿大", "未赛"],
+      ["B", "6-25 03:00", "波黑 vs 卡塔尔", "未赛"],
+      ["C", "6-14 06:00", "海地 0-2 苏格兰", "已赛"],
+      ["C", "6-14 09:00", "巴西 1-1 摩洛哥", "已赛"],
+      ["C", "6-20 03:00", "巴西 3-0 海地", "已赛"],
+      ["C", "6-20 06:00", "苏格兰 0-1 摩洛哥", "已赛"],
+      ["C", "6-25 06:00", "苏格兰 vs 巴西", "未赛"],
+      ["C", "6-25 06:00", "摩洛哥 vs 海地", "未赛"],
+      ["D", "6-13 05:00", "美国 4-1 巴拉圭", "已赛"],
+      ["D", "6-14 12:00", "澳大利亚 2-0 土耳其", "已赛"],
+      ["D", "6-21 03:00", "土耳其 0-1 巴拉圭", "已赛"],
+      ["D", "6-21 06:00", "美国 2-0 澳大利亚", "已赛"],
+      ["D", "6-26 10:00", "土耳其 vs 美国", "未赛"],
+      ["D", "6-26 10:00", "巴拉圭 vs 澳大利亚", "未赛"],
+      ["E", "6-15 03:00", "科特迪瓦 1-0 厄瓜多尔", "已赛"],
+      ["E", "6-15 06:00", "德国 7-1 库拉索", "已赛"],
+      ["E", "6-21 04:00", "德国 2-1 科特迪瓦", "已赛"],
+      ["E", "6-21 08:00", "厄瓜多尔 1-1 库拉索", "已赛"],
+      ["E", "6-26 04:00", "库拉索 vs 科特迪瓦", "未赛"],
+      ["E", "6-26 04:00", "厄瓜多尔 vs 德国", "未赛"],
+      ["F", "6-15 09:00", "荷兰 2-2 日本", "已赛"],
+      ["F", "6-15 12:00", "瑞典 5-1 突尼斯", "已赛"],
+      ["F", "6-21 01:00", "荷兰 5-1 瑞典", "已赛"],
+      ["F", "6-21 12:00", "突尼斯 0-2 日本", "已赛"],
+      ["F", "6-26 07:00", "日本 vs 瑞典", "未赛"],
+      ["F", "6-26 07:00", "突尼斯 vs 荷兰", "未赛"],
+      ["G", "6-16 03:00", "伊朗 2-2 新西兰", "已赛"],
+      ["G", "6-16 06:00", "比利时 1-1 埃及", "已赛"],
+      ["G", "6-22 03:00", "比利时 0-0 伊朗", "已赛"],
+      ["G", "6-22 06:00", "新西兰 1-3 埃及", "已赛"],
+      ["G", "6-27 10:00", "埃及 vs 伊朗", "未赛"],
+      ["G", "6-27 10:00", "新西兰 vs 比利时", "未赛"],
+      ["H", "6-16 09:00", "沙特 1-1 乌拉圭", "已赛"],
+      ["H", "6-16 12:00", "西班牙 0-0 佛得角", "已赛"],
+      ["H", "6-22 09:00", "乌拉圭 2-2 佛得角", "已赛"],
+      ["H", "6-22 00:00", "西班牙 4-0 沙特", "已赛"],
+      ["H", "6-27 04:00", "佛得角 vs 沙特", "未赛"],
+      ["H", "6-27 04:00", "乌拉圭 vs 西班牙", "未赛"],
+      ["I", "6-17 03:00", "法国 3-1 塞内加尔", "已赛"],
+      ["I", "6-17 06:00", "伊拉克 1-4 挪威", "已赛"],
+      ["I", "6-23 03:00", "挪威 3-2 塞内加尔", "已赛"],
+      ["I", "6-23 06:00", "法国 3-0 伊拉克", "已赛"],
+      ["I", "6-27 07:00", "挪威 vs 法国", "未赛"],
+      ["I", "6-27 07:00", "塞内加尔 vs 伊拉克", "未赛"],
+      ["J", "6-17 09:00", "阿根廷 3-0 阿尔及利亚", "已赛"],
+      ["J", "6-17 12:00", "奥地利 3-1 约旦", "已赛"],
+      ["J", "6-23 09:00", "阿根廷 2-0 奥地利", "已赛"],
+      ["J", "6-23 12:00", "约旦 1-2 阿尔及利亚", "已赛"],
+      ["J", "6-28 10:00", "阿尔及利亚 vs 奥地利", "未赛"],
+      ["J", "6-28 10:00", "约旦 vs 阿根廷", "未赛"],
+      ["K", "6-18 03:00", "葡萄牙 1-1 刚果民主共和国", "已赛"],
+      ["K", "6-18 06:00", "乌兹别克斯坦 0-2 哥伦比亚", "已赛"],
+      ["K", "6-24 01:00", "葡萄牙 5-0 乌兹别克斯坦", "已赛"],
+      ["K", "6-24 10:00", "哥伦比亚 1-0 刚果民主共和国", "已赛"],
+      ["K", "6-28 04:00", "哥伦比亚 vs 葡萄牙", "未赛"],
+      ["K", "6-28 04:00", "刚果民主共和国 vs 乌兹别克斯坦", "未赛"],
+      ["L", "6-18 09:00", "加纳 1-0 巴拿马", "已赛"],
+      ["L", "6-18 12:00", "英格兰 4-2 克罗地亚", "已赛"],
+      ["L", "6-24 04:00", "英格兰 0-0 加纳", "已赛"],
+      ["L", "6-24 07:00", "巴拿马 0-1 克罗地亚", "已赛"],
+      ["L", "6-28 07:00", "巴拿马 vs 英格兰", "未赛"],
+      ["L", "6-28 07:00", "克罗地亚 vs 加纳", "未赛"]
+    ];
+
+    const standingsData = {
+      A: [["墨西哥", 2, 0, 0, "+3", 6], ["韩国", 1, 0, 1, "0", 3], ["捷克", 1, 0, 1, "0", 3], ["南非", 0, 0, 2, "-3", 0]],
+      B: [["加拿大", 1, 1, 0, "+6", 4], ["瑞士", 1, 1, 0, "+3", 4], ["波黑", 0, 1, 1, "-3", 1], ["卡塔尔", 0, 1, 1, "-6", 1]],
+      C: [["巴西", 1, 1, 0, "+3", 4], ["摩洛哥", 1, 1, 0, "+1", 4], ["苏格兰", 1, 0, 1, "+1", 3], ["海地", 0, 0, 2, "-5", 0]],
+      D: [["美国", 2, 0, 0, "+5", 6], ["澳大利亚", 1, 0, 1, "0", 3], ["巴拉圭", 1, 0, 1, "-2", 3], ["土耳其", 0, 0, 2, "-3", 0]],
+      E: [["德国", 2, 0, 0, "+7", 6], ["科特迪瓦", 1, 0, 1, "0", 3], ["厄瓜多尔", 0, 1, 1, "-1", 1], ["库拉索", 0, 1, 1, "-6", 1]],
+      F: [["荷兰", 1, 1, 0, "+4", 4], ["日本", 1, 1, 0, "+2", 4], ["瑞典", 1, 0, 1, "0", 3], ["突尼斯", 0, 0, 2, "-6", 0]],
+      G: [["埃及", 1, 1, 0, "+2", 4], ["伊朗", 0, 2, 0, "0", 2], ["比利时", 0, 2, 0, "0", 2], ["新西兰", 0, 1, 1, "-2", 1]],
+      H: [["西班牙", 1, 1, 0, "+4", 4], ["佛得角", 0, 2, 0, "0", 2], ["乌拉圭", 0, 2, 0, "0", 2], ["沙特", 0, 1, 1, "-4", 1]],
+      I: [["挪威", 2, 0, 0, "+4", 6], ["法国", 2, 0, 0, "+5", 6], ["塞内加尔", 0, 0, 2, "-3", 0], ["伊拉克", 0, 0, 2, "-6", 0]],
+      J: [["阿根廷", 2, 0, 0, "+5", 6], ["奥地利", 1, 0, 1, "0", 3], ["阿尔及利亚", 1, 0, 1, "-2", 3], ["约旦", 0, 0, 2, "-3", 0]],
+      K: [["哥伦比亚", 2, 0, 0, "+3", 6], ["葡萄牙", 1, 1, 0, "+5", 4], ["刚果民主共和国", 0, 1, 1, "-1", 1], ["乌兹别克斯坦", 0, 0, 2, "-7", 0]],
+      L: [["英格兰", 1, 1, 0, "+2", 4], ["加纳", 1, 1, 0, "+1", 4], ["克罗地亚", 1, 0, 1, "-1", 3], ["巴拿马", 0, 0, 2, "-2", 0]]
+    };
+
+    const groupColors = {
+      A: "linear-gradient(135deg, rgba(44, 91, 146, 0.72), rgba(34, 57, 82, 0.82))",
+      B: "linear-gradient(135deg, rgba(38, 116, 96, 0.72), rgba(31, 67, 65, 0.82))",
+      C: "linear-gradient(135deg, rgba(139, 72, 68, 0.72), rgba(78, 45, 58, 0.82))",
+      D: "linear-gradient(135deg, rgba(130, 91, 34, 0.72), rgba(80, 59, 38, 0.82))",
+      E: "linear-gradient(135deg, rgba(82, 70, 149, 0.72), rgba(55, 48, 89, 0.82))",
+      F: "linear-gradient(135deg, rgba(31, 121, 137, 0.72), rgba(36, 71, 85, 0.82))",
+      G: "linear-gradient(135deg, rgba(116, 59, 124, 0.72), rgba(74, 45, 82, 0.82))",
+      H: "linear-gradient(135deg, rgba(58, 126, 66, 0.72), rgba(43, 74, 53, 0.82))",
+      I: "linear-gradient(135deg, rgba(153, 78, 41, 0.72), rgba(84, 53, 41, 0.82))",
+      J: "linear-gradient(135deg, rgba(50, 93, 154, 0.72), rgba(45, 55, 91, 0.82))",
+      K: "linear-gradient(135deg, rgba(121, 87, 42, 0.72), rgba(69, 66, 47, 0.82))",
+      L: "linear-gradient(135deg, rgba(148, 52, 84, 0.72), rgba(78, 42, 66, 0.82))"
+    };
+
+    const groupScheduleColors = {
+      A: "linear-gradient(135deg, rgba(76, 126, 185, 0.72), rgba(36, 72, 103, 0.86))",
+      B: "linear-gradient(135deg, rgba(61, 151, 120, 0.72), rgba(33, 88, 74, 0.86))",
+      C: "linear-gradient(135deg, rgba(172, 92, 81, 0.72), rgba(99, 54, 65, 0.86))",
+      D: "linear-gradient(135deg, rgba(161, 113, 42, 0.72), rgba(94, 66, 42, 0.86))",
+      E: "linear-gradient(135deg, rgba(105, 91, 178, 0.72), rgba(64, 56, 110, 0.86))",
+      F: "linear-gradient(135deg, rgba(42, 151, 166, 0.72), rgba(42, 84, 102, 0.86))",
+      G: "linear-gradient(135deg, rgba(146, 76, 151, 0.72), rgba(87, 52, 96, 0.86))",
+      H: "linear-gradient(135deg, rgba(78, 157, 85, 0.72), rgba(48, 89, 60, 0.86))",
+      I: "linear-gradient(135deg, rgba(183, 95, 49, 0.72), rgba(101, 61, 43, 0.86))",
+      J: "linear-gradient(135deg, rgba(73, 117, 184, 0.72), rgba(51, 63, 105, 0.86))",
+      K: "linear-gradient(135deg, rgba(151, 109, 48, 0.72), rgba(83, 76, 50, 0.86))",
+      L: "linear-gradient(135deg, rgba(179, 66, 101, 0.72), rgba(96, 49, 76, 0.86))"
+    };
+
+    const groupAccentColors = {
+      A: "#8fd6ff",
+      B: "#5ee0aa",
+      C: "#ff9785",
+      D: "#f2b650",
+      E: "#b7a2ff",
+      F: "#6fd6ff",
+      G: "#ee91ff",
+      H: "#92e6a7",
+      I: "#ffad72",
+      J: "#9ab8ff",
+      K: "#e5c36a",
+      L: "#ff8db1"
+    };
+
+    const venueByMatch = {
+      "墨西哥 2-0 南非": "墨西哥城 Azteca",
+      "韩国 2-1 捷克": "瓜达拉哈拉 Akron",
+      "捷克 1-0 南非": "蒙特雷 BBVA",
+      "墨西哥 1-0 韩国": "墨西哥城 Azteca",
+      "捷克 vs 墨西哥": "墨西哥城 Azteca",
+      "南非 vs 韩国": "蒙特雷 BBVA",
+      "加拿大 1-1 波黑": "多伦多 BMO Field",
+      "卡塔尔 1-1 瑞士": "旧金山湾区 Levi's Stadium",
+      "瑞士 4-1 波黑": "西雅图 Lumen Field",
+      "加拿大 6-0 卡塔尔": "温哥华 BC Place",
+      "瑞士 vs 加拿大": "温哥华 BC Place",
+      "波黑 vs 卡塔尔": "西雅图 Lumen Field",
+      "海地 0-2 苏格兰": "波士顿 Gillette Stadium",
+      "巴西 1-1 摩洛哥": "迈阿密 Hard Rock Stadium",
+      "巴西 3-0 海地": "迈阿密 Hard Rock Stadium",
+      "苏格兰 0-1 摩洛哥": "波士顿 Gillette Stadium",
+      "苏格兰 vs 巴西": "迈阿密 Hard Rock Stadium",
+      "摩洛哥 vs 海地": "亚特兰大 Mercedes-Benz Stadium",
+      "美国 4-1 巴拉圭": "洛杉矶 SoFi Stadium",
+      "澳大利亚 2-0 土耳其": "温哥华 BC Place",
+      "土耳其 0-1 巴拉圭": "堪萨斯城 Arrowhead Stadium",
+      "美国 2-0 澳大利亚": "西雅图 Lumen Field",
+      "土耳其 vs 美国": "洛杉矶 SoFi Stadium",
+      "巴拉圭 vs 澳大利亚": "温哥华 BC Place",
+      "科特迪瓦 1-0 厄瓜多尔": "多伦多 BMO Field",
+      "德国 7-1 库拉索": "堪萨斯城 Arrowhead Stadium",
+      "德国 2-1 科特迪瓦": "多伦多 BMO Field",
+      "厄瓜多尔 1-1 库拉索": "堪萨斯城 Arrowhead Stadium",
+      "库拉索 vs 科特迪瓦": "多伦多 BMO Field",
+      "厄瓜多尔 vs 德国": "堪萨斯城 Arrowhead Stadium",
+      "荷兰 2-2 日本": "休斯敦 NRG Stadium",
+      "瑞典 5-1 突尼斯": "蒙特雷 BBVA",
+      "荷兰 5-1 瑞典": "休斯敦 NRG Stadium",
+      "突尼斯 0-2 日本": "蒙特雷 BBVA",
+      "日本 vs 瑞典": "休斯敦 NRG Stadium",
+      "突尼斯 vs 荷兰": "蒙特雷 BBVA",
+      "伊朗 2-2 新西兰": "纽约/新泽西 MetLife Stadium",
+      "比利时 1-1 埃及": "达拉斯 AT&T Stadium",
+      "比利时 0-0 伊朗": "纽约/新泽西 MetLife Stadium",
+      "比利时 vs 伊朗": "纽约/新泽西 MetLife Stadium",
+      "新西兰 1-3 埃及": "达拉斯 AT&T Stadium",
+      "新西兰 vs 埃及": "达拉斯 AT&T Stadium",
+      "埃及 vs 伊朗": "纽约/新泽西 MetLife Stadium",
+      "新西兰 vs 比利时": "达拉斯 AT&T Stadium",
+      "沙特 1-1 乌拉圭": "亚特兰大 Mercedes-Benz Stadium",
+      "西班牙 0-0 佛得角": "奥兰多 Camping World Stadium",
+      "乌拉圭 2-2 佛得角": "奥兰多 Camping World Stadium",
+      "乌拉圭 vs 佛得角": "奥兰多 Camping World Stadium",
+      "西班牙 4-0 沙特": "亚特兰大 Mercedes-Benz Stadium",
+      "西班牙 vs 沙特": "亚特兰大 Mercedes-Benz Stadium",
+      "佛得角 vs 沙特": "奥兰多 Camping World Stadium",
+      "乌拉圭 vs 西班牙": "亚特兰大 Mercedes-Benz Stadium",
+      "法国 3-1 塞内加尔": "费城 Lincoln Financial Field",
+      "伊拉克 1-4 挪威": "波士顿 Gillette Stadium",
+      "挪威 3-2 塞内加尔": "波士顿 Gillette Stadium",
+      "挪威 vs 塞内加尔": "波士顿 Gillette Stadium",
+      "法国 3-0 伊拉克": "费城 Lincoln Financial Field",
+      "法国 vs 伊拉克": "费城 Lincoln Financial Field",
+      "挪威 vs 法国": "费城 Lincoln Financial Field",
+      "塞内加尔 vs 伊拉克": "波士顿 Gillette Stadium",
+      "阿根廷 3-0 阿尔及利亚": "洛杉矶 SoFi Stadium",
+      "奥地利 3-1 约旦": "旧金山湾区 Levi's Stadium",
+      "阿根廷 2-0 奥地利": "洛杉矶 SoFi Stadium",
+      "阿根廷 vs 奥地利": "洛杉矶 SoFi Stadium",
+      "约旦 1-2 阿尔及利亚": "旧金山湾区 Levi's Stadium",
+      "约旦 vs 阿尔及利亚": "旧金山湾区 Levi's Stadium",
+      "阿尔及利亚 vs 奥地利": "旧金山湾区 Levi's Stadium",
+      "约旦 vs 阿根廷": "洛杉矶 SoFi Stadium",
+      "葡萄牙 1-1 刚果民主共和国": "休斯敦 NRG Stadium",
+      "乌兹别克斯坦 0-2 哥伦比亚": "达拉斯 AT&T Stadium",
+      "葡萄牙 5-0 乌兹别克斯坦": "休斯敦 NRG Stadium",
+      "哥伦比亚 1-0 刚果民主共和国": "达拉斯 AT&T Stadium",
+      "葡萄牙 vs 乌兹别克斯坦": "休斯敦 NRG Stadium",
+      "哥伦比亚 vs 刚果民主共和国": "达拉斯 AT&T Stadium",
+      "哥伦比亚 vs 葡萄牙": "休斯敦 NRG Stadium",
+      "刚果民主共和国 vs 乌兹别克斯坦": "达拉斯 AT&T Stadium",
+      "加纳 1-0 巴拿马": "迈阿密 Hard Rock Stadium",
+      "英格兰 4-2 克罗地亚": "亚特兰大 Mercedes-Benz Stadium",
+      "英格兰 0-0 加纳": "亚特兰大 Mercedes-Benz Stadium",
+      "巴拿马 0-1 克罗地亚": "迈阿密 Hard Rock Stadium",
+      "英格兰 vs 加纳": "亚特兰大 Mercedes-Benz Stadium",
+      "巴拿马 vs 克罗地亚": "迈阿密 Hard Rock Stadium",
+      "巴拿马 vs 英格兰": "迈阿密 Hard Rock Stadium",
+      "克罗地亚 vs 加纳": "亚特兰大 Mercedes-Benz Stadium"
+    };
+
+    function getVenue(group, match) {
+      return venueByMatch[match] || `${group} 组待定场地`;
+    }
+
+    function getWeather(venue, status, beijingTime) {
+      const day = beijingTime.split(" ")[0];
+      const indoor = "室内/可控温，约 22-24°C";
+      const weatherByVenue = [
+        ["Azteca", "17-24°C，高原温和，夜间转凉"],
+        ["Akron", "18-26°C，高原温和，傍晚转凉"],
+        ["BMO Field", "18-24°C，凉爽，多云，微风"],
+        ["BC Place", indoor],
+        ["SoFi", indoor],
+        ["AT&T", indoor],
+        ["Mercedes-Benz", indoor],
+        ["NRG", "室内可控温，约 23-25°C"],
+        ["Hard Rock", day === "6-24" ? "29-32°C，炎热潮湿，阵雨风险" : "28-32°C，炎热潮湿，可能阵雨"],
+        ["Orlando", "28-33°C，炎热潮湿，雷阵雨风险"],
+        ["Levi", "17-24°C，温和少云，晚间转凉"],
+        ["Lumen", "15-21°C，凉爽，多云"],
+        ["Gillette", "20-27°C，温和，微风"],
+        ["MetLife", "21-28°C，温和偏热，微风"],
+        ["Lincoln", "22-29°C，偏热，湿度中等"],
+        ["Arrowhead", "25-32°C，偏热，湿度中等"],
+        ["BBVA", "27-33°C，偏热，少云"]
+      ];
+      const matched = weatherByVenue.find(([key]) => venue.includes(key));
+      if (matched) return matched[1];
+      return status === "已赛" ? "赛时天气记录待补" : "20-28°C，赛前关注临场天气";
+    }
+
+    function getStandingClass(points, losses, goalDiff) {
+      if (points >= 6) return "qualified-row";
+      if (points === 0 && losses >= 2 && Number(goalDiff) <= -3) return "eliminated-row";
+      return "";
+    }
+
+    function getStandingStamp(points, losses, goalDiff) {
+      if (points >= 6) return '<span class="stamp">晋级</span>';
+      if (points === 0 && losses >= 2 && Number(goalDiff) <= -3) return '<span class="stamp stamp-eliminated">淘汰</span>';
+      return "";
+    }
+
+    function formatMatch(match, status) {
+      if (status !== "已赛") return match;
+      return match.replace(/ (\\d+-\\d+) /, ' <span class="score-highlight">$1</span> ');
+    }
+
+    function renderStandings() {
+      const grid = document.querySelector("#all-standings-grid");
+      grid.innerHTML = Object.entries(standingsData).map(([group, rows]) => `
+        <section class="table-panel group-panel" aria-labelledby="group-${group}-title" style="--group-bg: ${groupColors[group]}; --group-accent: ${groupAccentColors[group]};">
+          <h3 id="group-${group}-title">${group} 组</h3>
+          <div class="group-block">
+            <div class="table-panel standings-panel" style="--standings-bg: ${groupColors[group]};">
+              <h3>${group} 组排名</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>排名</th>
+                      <th>球队</th>
+                      <th class="num">胜</th>
+                      <th class="num">平</th>
+                      <th class="num">负</th>
+                      <th class="num">净胜球</th>
+                      <th class="num">积分</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${rows.map(([team, wins, draws, losses, goalDiff, points], index) => `
+                      <tr class="${getStandingClass(points, losses, goalDiff)}">
+                        <td><span class="rank-cell"><span class="rank">${index + 1}</span>${getStandingStamp(points, losses, goalDiff)}</span></td>
+                        <td class="team-cell standing-team">${team}</td>
+                        <td class="num">${wins}</td>
+                        <td class="num">${draws}</td>
+                        <td class="num">${losses}</td>
+                        <td class="num">${goalDiff}</td>
+                        <td class="num">${points}</td>
+                      </tr>
+                    `).join("")}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="table-panel schedule-panel" style="--schedule-bg: ${groupScheduleColors[group]};">
+              <h3>${group} 组赛程</h3>
+              <div class="table-wrap">
+                <table class="schedule-table">
+                  <thead>
+                    <tr>
+                      <th>北京时间</th>
+                      <th>比赛</th>
+                      <th>比赛场地</th>
+                      <th>比赛天气</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${scheduleData.filter(([scheduleGroup]) => scheduleGroup === group).map(([, beijingTime, match, status]) => `
+                      <tr>
+                        <td>${beijingTime}</td>
+                        <td class="team-cell">${formatMatch(match, status)}</td>
+                        <td>${getVenue(group, match)}</td>
+                        <td>${getWeather(getVenue(group, match), status, beijingTime)}</td>
+                      </tr>
+                    `).join("")}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      `).join("");
+    }
+
+    function parseGoalDiff(goalDiff) {
+      return Number(String(goalDiff).replace("+", "")) || 0;
+    }
+
+    function renderKnockoutRoute() {
+      const thirdTeams = Object.entries(standingsData)
+        .map(([group, rows]) => {
+          const [team, wins, draws, losses, goalDiff, points] = rows[2];
+          return { group, team, wins, draws, losses, goalDiff: parseGoalDiff(goalDiff), points };
+        })
+        .sort((a, b) =>
+          b.points - a.points ||
+          b.goalDiff - a.goalDiff ||
+          b.wins - a.wins ||
+          a.group.localeCompare(b.group)
+        );
+
+      const slots = {};
+      Object.entries(standingsData).forEach(([group, rows]) => {
+        slots[`${group}1`] = rows[0][0];
+        slots[`${group}2`] = rows[1][0];
+      });
+      thirdTeams.slice(0, 8).forEach((entry, index) => {
+        slots[`T${index + 1}`] = `${entry.team}（${entry.group}3）`;
+      });
+
+      document.querySelectorAll("[data-route]").forEach((node) => {
+        const teams = node.dataset.route.split("-").map((slot) => slots[slot] || slot);
+        node.textContent = `${teams[0]} vs ${teams[1]}`;
+      });
+    }
+
+    const tabs = Array.from(document.querySelectorAll(".switcher-tab"));
+    const panels = Array.from(document.querySelectorAll(".match-detail"));
+    const matchCards = Array.from(document.querySelectorAll(".match-card"));
+
+    function activateMatch(tab) {
+      const target = tab.getAttribute("aria-controls");
+      tabs.forEach((item) => item.setAttribute("aria-selected", String(item === tab)));
+      panels.forEach((panel) => panel.classList.toggle("is-active", panel.id === target));
+      matchCards.forEach((card) => card.classList.toggle("is-active", card.dataset.matchCard === target));
+    }
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => activateMatch(tab));
+      tab.addEventListener("keydown", (event) => {
+        if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+        event.preventDefault();
+        const offset = event.key === "ArrowRight" ? 1 : -1;
+        const next = tabs[(index + offset + tabs.length) % tabs.length];
+        next.focus();
+        activateMatch(next);
+      });
+    });
+
+    renderStandings();
+    renderKnockoutRoute();
+  </script>
+</body>
+</html>
+
+
+

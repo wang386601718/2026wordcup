@@ -1,0 +1,8 @@
+.agents/
+.codex/
+.cloudflare-tunnel/
+work/
+
+*.log
+*.err.log
+*.tmp
