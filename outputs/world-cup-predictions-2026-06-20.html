@@ -1565,7 +1565,7 @@
         </div>
         <span>2026 世界杯比赛日 AI 预测</span>
       </div>
-      <div class="timestamp">最后更新：北京时间 2026-06-24 21:08</div>
+      <div class="timestamp">最后更新：北京时间 2026-06-24 21:17</div>
     </header>
 
     <section class="hero" aria-labelledby="page-title">
@@ -2424,23 +2424,23 @@
       const day = beijingTime.split(" ")[0];
       const indoor = "室内/可控温，约 22-24°C";
       const weatherByVenue = [
-        ["Azteca", "17-24°C，高原温和，夜间转凉"],
+        ["Azteca", "18-23°C，高原温和，晚间有阵雨风险"],
         ["Akron", "18-26°C，高原温和，傍晚转凉"],
         ["BMO Field", "18-24°C，凉爽，多云，微风"],
-        ["BC Place", indoor],
+        ["BC Place", "室内/可控温，约 21-23°C，外部凉爽"],
         ["SoFi", indoor],
         ["AT&T", indoor],
-        ["Mercedes-Benz", indoor],
+        ["Mercedes-Benz", "室内/可控温，约 22-24°C，外部闷热有雷雨风险"],
         ["NRG", "室内可控温，约 23-25°C"],
-        ["Hard Rock", day === "6-24" ? "29-32°C，炎热潮湿，阵雨风险" : "28-32°C，炎热潮湿，可能阵雨"],
+        ["Hard Rock", "28-31°C，炎热潮湿，雷阵雨/闪电延迟风险高"],
         ["Orlando", "28-33°C，炎热潮湿，雷阵雨风险"],
         ["Levi", "17-24°C，温和少云，晚间转凉"],
-        ["Lumen", "15-21°C，凉爽，多云"],
+        ["Lumen", "16-22°C，凉爽，多云，微风"],
         ["Gillette", "20-27°C，温和，微风"],
         ["MetLife", "21-28°C，温和偏热，微风"],
         ["Lincoln", "22-29°C，偏热，湿度中等"],
         ["Arrowhead", "25-32°C，偏热，湿度中等"],
-        ["BBVA", "27-33°C，偏热，少云"]
+        ["BBVA", "28-34°C，偏热，晚间仍闷热，少云"]
       ];
       const matched = weatherByVenue.find(([key]) => venue.includes(key));
       if (matched) return matched[1];
