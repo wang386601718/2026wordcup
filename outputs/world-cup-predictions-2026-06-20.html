@@ -470,6 +470,90 @@
       color: var(--muted);
     }
 
+    .poisson-matrix {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .poisson-matrix-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .poisson-matrix-title span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .poisson-matrix-grid {
+      display: grid;
+      grid-template-columns: 62px repeat(5, minmax(64px, 1fr));
+      gap: 7px;
+    }
+
+    .matrix-cell {
+      min-height: 58px;
+      display: grid;
+      place-items: center;
+      padding: 8px 6px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      color: #f6fbf8;
+      background:
+        radial-gradient(circle at 50% 42%, var(--heat-core, rgba(242, 182, 80, 0.18)), transparent 72%),
+        linear-gradient(135deg, var(--heat-start, rgba(242, 182, 80, 0.12)), var(--heat-end, rgba(255, 255, 255, 0.045))),
+        rgba(255, 255, 255, 0.04);
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1.15;
+      text-align: center;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, var(--heat-shine, 0.08));
+    }
+
+    .matrix-cell span {
+      display: block;
+      margin-top: 4px;
+      color: rgba(246, 251, 248, 0.72);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .matrix-head,
+    .matrix-axis {
+      min-height: 42px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.055);
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .matrix-corner {
+      color: rgba(255, 255, 255, 0.52);
+    }
+
+    .matrix-top {
+      border-color: rgba(255, 255, 255, 0.55);
+      color: #162018;
+      background:
+        radial-gradient(circle at 24% 18%, rgba(255, 255, 255, 0.76), transparent 24%),
+        radial-gradient(circle at 50% 52%, rgba(255, 232, 143, 0.86), transparent 68%),
+        linear-gradient(135deg, #ffca55, #fff8cf);
+      box-shadow: 0 10px 24px rgba(242, 182, 80, 0.28), 0 8px 18px rgba(0, 0, 0, 0.22);
+    }
+
+    .matrix-top span {
+      color: rgba(22, 32, 24, 0.68);
+    }
+
     .card {
       position: relative;
       overflow: hidden;
@@ -1380,6 +1464,29 @@
         grid-template-columns: 1fr;
       }
 
+      .poisson-matrix-grid {
+        grid-template-columns: 42px repeat(5, minmax(0, 1fr));
+        gap: 4px;
+      }
+
+      .matrix-cell {
+        min-height: 42px;
+        padding: 5px 2px;
+        font-size: 12px;
+        border-radius: 6px;
+      }
+
+      .matrix-cell span {
+        margin-top: 2px;
+        font-size: 9px;
+      }
+
+      .matrix-head,
+      .matrix-axis {
+        min-height: 32px;
+        font-size: 9px;
+      }
+
       .teams {
         grid-template-columns: 1fr;
       }
@@ -1565,30 +1672,30 @@
         </div>
         <span>2026 世界杯比赛日 AI 预测</span>
       </div>
-      <div class="timestamp">最后更新：北京时间 2026-06-26 22:23</div>
+      <div class="timestamp">最后更新：北京时间 2026-06-27 13:05</div>
     </header>
 
     <section class="hero" aria-labelledby="page-title">
       <div>
-        <h1 id="page-title">北京时间 6-27 六场世界杯预测</h1>
-        <p class="lead">基于最新完赛结果、积分形势、阵容轮换、场地环境与泊松模型，更新下一比赛窗口六场小组赛预测和赛后复盘。预测用于赛前阅读与讨论，不作为投注建议。</p>
+        <h1 id="page-title">北京时间 6-28 六场世界杯预测</h1>
+        <p class="lead">按视频图文方法重构：R1/R2 回顾、R3 战略推演、九维评分、Dixon-Coles 泊松矩阵、大小球与风险提示同步更新。预测用于赛前阅读与讨论，不作为投注建议。</p>
         <div class="chips" aria-label="今日概览">
           <span class="chip"><span class="dot"></span>6 场小组赛</span>
-          <span class="chip"><span class="dot" style="color: var(--gold); background: var(--gold);"></span>G/H/I 组三线收官</span>
-          <span class="chip"><span class="dot" style="color: var(--cyan); background: var(--cyan);"></span>北京时间 6-27 03:00 开始</span>
+          <span class="chip"><span class="dot" style="color: var(--gold); background: var(--gold);"></span>J/K/L 组三线收官</span>
+          <span class="chip"><span class="dot" style="color: var(--cyan); background: var(--cyan);"></span>Dixon-Coles + 九维评分</span>
         </div>
       </div>
 
       <aside class="briefing" aria-label="预测摘要">
         <h2>比赛日总览</h2>
-        <p>G、H、I 三组进入收官轮。西班牙、法国、挪威和埃及都握有主动权，但同组第二、第三名仍有路线变化；比利时、伊朗、乌拉圭、佛得角、塞内加尔等队的拿分压力更高，平局与低比分权重继续上升。</p>
+        <p>J、K、L 三组进入收官轮。阿根廷、哥伦比亚、英格兰和加纳握有主动权，葡萄牙、奥地利、克罗地亚等队仍要争取更稳的淘汰赛路径；同分卡位战较多，平局与小比分权重继续偏高。</p>
         <div class="metrics">
           <div class="metric">
-            <strong>50%</strong>
-            <span>最高清晰胜率：比利时</span>
+            <strong>76%</strong>
+            <span>最高清晰胜率：阿根廷</span>
           </div>
           <div class="metric">
-            <strong>2.2</strong>
+            <strong>2.6</strong>
             <span>预计场均进球</span>
           </div>
           <div class="metric">
@@ -1602,118 +1709,86 @@
             <section aria-labelledby="match-title">
       <div class="section-title">
         <h2 id="match-title">六场分析预测</h2>
-        <p>按北京时间先后排序，覆盖 I、H、G 组三个收官窗口。</p>
+        <p>按北京时间先后排序，覆盖 K、L、J 组三个收官窗口。</p>
       </div>
 
       <section class="match-switcher" aria-label="切换比赛详细数据">
         <div class="switcher-tabs" role="tablist" aria-label="选择比赛">
-          <button class="switcher-tab" type="button" role="tab" aria-selected="true" aria-controls="detail-nor-fra" id="tab-nor-fra" style="--tab-accent: var(--green);">挪威 vs 法国<span>6-27 03:00 · I 组 · 预计 1-1</span></button>
-          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-sen-irq" id="tab-sen-irq" style="--tab-accent: var(--blue);">塞内加尔 vs 伊拉克<span>6-27 03:00 · I 组 · 预计 2-1</span></button>
-          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-cpv-ksa" id="tab-cpv-ksa" style="--tab-accent: var(--red);">佛得角 vs 沙特<span>6-27 08:00 · H 组 · 预计 1-1</span></button>
-          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-uru-esp" id="tab-uru-esp" style="--tab-accent: var(--gold);">乌拉圭 vs 西班牙<span>6-27 08:00 · H 组 · 预计 1-2</span></button>
-          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-egy-irn" id="tab-egy-irn" style="--tab-accent: var(--cyan);">埃及 vs 伊朗<span>6-27 11:00 · G 组 · 预计 1-1</span></button>
-          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-nzl-bel" id="tab-nzl-bel" style="--tab-accent: var(--purple);">新西兰 vs 比利时<span>6-27 11:00 · G 组 · 预计 1-2</span></button>
+          <button class="switcher-tab" type="button" role="tab" aria-selected="true" aria-controls="detail-col-por" id="tab-col-por" style="--tab-accent: var(--green);">哥伦比亚 vs 葡萄牙<span>6-28 04:00 · K 组 · 预计 1-1</span></button>
+          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-cod-uzb" id="tab-cod-uzb" style="--tab-accent: var(--blue);">刚果民主共和国 vs 乌兹别克斯坦<span>6-28 04:00 · K 组 · 预计 1-1</span></button>
+          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-pan-eng" id="tab-pan-eng" style="--tab-accent: var(--red);">巴拿马 vs 英格兰<span>6-28 07:00 · L 组 · 预计 0-2</span></button>
+          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-cro-gha" id="tab-cro-gha" style="--tab-accent: var(--gold);">克罗地亚 vs 加纳<span>6-28 07:00 · L 组 · 预计 1-1</span></button>
+          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-alg-aut" id="tab-alg-aut" style="--tab-accent: var(--cyan);">阿尔及利亚 vs 奥地利<span>6-28 10:00 · J 组 · 预计 1-1</span></button>
+          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-jor-arg" id="tab-jor-arg" style="--tab-accent: var(--purple);">约旦 vs 阿根廷<span>6-28 10:00 · J 组 · 预计 0-2</span></button>
         </div>
 
-        <div class="match-detail" id="detail-cpv-ksa" role="tabpanel" aria-labelledby="tab-cpv-ksa">
-          <div class="detail-scoreboard"><h3>佛得角 vs 沙特：小组第二机会战</h3><p>佛得角前两轮保持不败，但进攻产量偏低；沙特只有 1 分，必须主动提速。泊松模型给佛得角微弱优势，但平局仍是最高权重之一。</p><div class="detail-kpis"><div class="detail-kpi"><strong>38%</strong><span>佛得角胜率</span></div><div class="detail-kpi"><strong>2.0</strong><span>预计总进球</span></div><div class="detail-kpi"><strong>51%</strong><span>佛得角控球倾向</span></div><div class="detail-kpi"><strong>10:9</strong><span>预估射门比</span></div><div class="detail-kpi"><strong>1.08</strong><span>佛得角 xG</span></div><div class="detail-kpi"><strong>中</strong><span>沙特反击威胁</span></div></div></div>
-          <div class="detail-data"><ul><li><b>节奏判断</b>佛得角会先守住中路，沙特后段必须加快边路推进。</li><li><b>进球路径</b>佛得角靠定位球和二次进攻，沙特靠快速反击和禁区前沿远射。</li><li><b>防守隐患</b>佛得角要防边路身后，沙特要避免定位球盯人失位。</li><li><b>临场变量</b>如果上半场低比分，双方都会接受先不犯错。</li></ul><div class="poisson-box"><b>泊松模型</b><div class="poisson-line"><span>λ 均值</span><span>佛得角 1.08，沙特 0.92。</span></div><div class="poisson-line"><span>胜平负</span><span>佛得角胜 38.0%，平 34.0%，沙特胜 28.0%。</span></div><div class="poisson-line"><span>高频比分</span><span>1-1、1-0、0-0 权重最高。</span></div></div></div>
+        <div class="match-detail is-active" id="detail-col-por" role="tabpanel" aria-labelledby="tab-col-por">
+          <div class="detail-scoreboard"><h3>哥伦比亚 vs 葡萄牙：小组头名控制战</h3><p>哥伦比亚 6 分已掌握头名主动，葡萄牙 4 分仍要避免被身后球队拖入复杂比较。Dixon-Coles 矩阵给葡萄牙 37.2%、哥伦比亚 32.4%，首选比分是 1-1。</p><div class="detail-kpis"><div class="detail-kpi"><strong>37.2%</strong><span>葡萄牙胜率</span></div><div class="detail-kpi"><strong>2.46</strong><span>预期总进球</span></div><div class="detail-kpi"><strong>6.84</strong><span>葡萄牙评分</span></div><div class="detail-kpi"><strong>6.61</strong><span>哥伦比亚评分</span></div><div class="detail-kpi"><strong>1.28</strong><span>葡萄牙 λ</span></div><div class="detail-kpi"><strong>小2.5 55.4%</strong><span>大2.5 44.6%</span></div></div></div>
+          <div class="detail-data"><ul><li><b>R1+R2 回顾</b>葡萄牙 1-1 刚果民主共和国、5-0 乌兹别克斯坦；哥伦比亚 2-0 乌兹别克斯坦、1-0 刚果民主共和国。哥伦比亚 6 分，葡萄牙 4 分。</li><li><b>R3 战略推演</b>哥伦比亚平局大概率守住小组第一；葡萄牙赢球反超头名，平局基本出线，策略不会过度冒险。</li><li><b>九维评分</b>葡萄牙阵容上限和定位球质量略优；哥伦比亚防守连续零封，比赛控制和身体对抗更稳定。</li><li><b>触发判定</b>双方都不适合早段失控，低比分和平局触发权重上升。葡萄牙若早进球，哥伦比亚后段会提高边路压迫。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>哥伦比亚 1.18，葡萄牙 1.28，ρ=-0.12。</span></div><div class="poisson-line"><span>胜平负</span><span>哥伦比亚胜 32.4%，平 30.3%，葡萄牙胜 37.2%。</span></div><div class="poisson-line"><span>高频比分</span><span>1-1 14.5%，0-0 10.1%，0-1 9.4%。</span></div><div class="poisson-line"><span>大小球</span><span>小2.5 为 55.4%，大2.5 为 44.6%。</span></div></div></div>
         </div>
 
-        <div class="match-detail" id="detail-uru-esp" role="tabpanel" aria-labelledby="tab-uru-esp">
-          <div class="detail-scoreboard"><h3>乌拉圭 vs 西班牙：控球优势对抗强硬压迫</h3><p>西班牙净胜球和整体控场能力更好，乌拉圭需要拿分稳住晋级路线。比赛会在西班牙控球与乌拉圭压迫反击之间拉扯。</p><div class="detail-kpis"><div class="detail-kpi"><strong>45%</strong><span>西班牙胜率</span></div><div class="detail-kpi"><strong>2.4</strong><span>预计总进球</span></div><div class="detail-kpi"><strong>61%</strong><span>西班牙控球倾向</span></div><div class="detail-kpi"><strong>9:13</strong><span>预估射门比</span></div><div class="detail-kpi"><strong>1.42</strong><span>西班牙 xG</span></div><div class="detail-kpi"><strong>中高</strong><span>乌拉圭定位球</span></div></div></div>
-          <div class="detail-data"><ul><li><b>节奏判断</b>西班牙会用控球降风险，乌拉圭更依赖抢断后的纵向推进。</li><li><b>进球路径</b>西班牙靠肋部渗透和倒三角，乌拉圭靠定位球与高点。</li><li><b>防守隐患</b>西班牙要防身体对抗，乌拉圭要防连续传控拉扯。</li><li><b>临场变量</b>如果西班牙先入球，乌拉圭会被迫打开阵型。</li></ul><div class="poisson-box"><b>泊松模型</b><div class="poisson-line"><span>λ 均值</span><span>乌拉圭 0.96，西班牙 1.42。</span></div><div class="poisson-line"><span>胜平负</span><span>乌拉圭胜 23.0%，平 32.0%，西班牙胜 45.0%。</span></div><div class="poisson-line"><span>高频比分</span><span>1-1、0-1、1-2 权重靠前。</span></div></div></div>
+        <div class="match-detail" id="detail-cod-uzb" role="tabpanel" aria-labelledby="tab-cod-uzb">
+          <div class="detail-scoreboard"><h3>刚果民主共和国 vs 乌兹别克斯坦：第三名生死线</h3><p>刚果民主共和国 1 分，乌兹别克斯坦 0 分，这场决定谁还能争最佳第三。矩阵给刚果民主共和国 49.9%，但首选比分仍是 1-1。</p><div class="detail-kpis"><div class="detail-kpi"><strong>49.9%</strong><span>刚果民主共和国胜率</span></div><div class="detail-kpi"><strong>2.50</strong><span>预期总进球</span></div><div class="detail-kpi"><strong>5.42</strong><span>刚果民主共和国评分</span></div><div class="detail-kpi"><strong>4.62</strong><span>乌兹别克斯坦评分</span></div><div class="detail-kpi"><strong>1.55</strong><span>刚果民主共和国 λ</span></div><div class="detail-kpi"><strong>小2.5 54.4%</strong><span>大2.5 45.6%</span></div></div></div>
+          <div class="detail-data"><ul><li><b>R1+R2 回顾</b>刚果民主共和国 1-1 葡萄牙、0-1 哥伦比亚；乌兹别克斯坦 0-2 哥伦比亚、0-5 葡萄牙。</li><li><b>R3 战略推演</b>刚果民主共和国赢球有机会争最佳第三，平局意义有限；乌兹别克斯坦必须赢球，后段会被迫压上。</li><li><b>九维评分</b>刚果民主共和国身体对抗和反击效率更好；乌兹别克斯坦连续被零封，进攻端兑现率偏低。</li><li><b>触发判定</b>乌兹别克斯坦净胜球劣势过大，心理压力更重。若上半场无进球，下半场会更开放。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>刚果民主共和国 1.55，乌兹别克斯坦 0.95，ρ=-0.12。</span></div><div class="poisson-line"><span>胜平负</span><span>刚果民主共和国胜 49.9%，平 28.4%，乌兹别克斯坦胜 21.7%。</span></div><div class="poisson-line"><span>高频比分</span><span>1-1 13.5%，1-0 11.3%，2-0 9.9%。</span></div><div class="poisson-line"><span>大小球</span><span>小2.5 为 54.4%，大2.5 为 45.6%。</span></div></div></div>
         </div>
 
-        <div class="match-detail is-active" id="detail-nor-fra" role="tabpanel" aria-labelledby="tab-nor-fra">
-          <div class="detail-scoreboard"><h3>挪威 vs 法国：头名对话更像控风险局</h3><p>两队同积 6 分，法国净胜球稍好，挪威锋线冲击力更直接。头名归属重要，但淘汰赛前的体能和黄牌管理同样会影响强度。</p><div class="detail-kpis"><div class="detail-kpi"><strong>42%</strong><span>法国胜率</span></div><div class="detail-kpi"><strong>2.3</strong><span>预计总进球</span></div><div class="detail-kpi"><strong>55%</strong><span>法国控球倾向</span></div><div class="detail-kpi"><strong>10:12</strong><span>预估射门比</span></div><div class="detail-kpi"><strong>1.30</strong><span>法国 xG</span></div><div class="detail-kpi"><strong>高</strong><span>挪威冲击</span></div></div></div>
-          <div class="detail-data"><ul><li><b>节奏判断</b>法国会控制中场节奏，挪威会寻找更直接的纵深球。</li><li><b>进球路径</b>法国靠边路内切和二次进攻，挪威靠中锋支点和身后冲刺。</li><li><b>防守隐患</b>法国要防高点，挪威要防边后卫身后被连续打穿。</li><li><b>临场变量</b>平局对双方都可接受，后段可能收住风险。</li></ul><div class="poisson-box"><b>泊松模型</b><div class="poisson-line"><span>λ 均值</span><span>挪威 1.08，法国 1.30。</span></div><div class="poisson-line"><span>胜平负</span><span>挪威胜 26.0%，平 32.0%，法国胜 42.0%。</span></div><div class="poisson-line"><span>高频比分</span><span>1-1、0-1、1-2 权重最高。</span></div></div></div>
+        <div class="match-detail" id="detail-pan-eng" role="tabpanel" aria-labelledby="tab-pan-eng">
+          <div class="detail-scoreboard"><h3>巴拿马 vs 英格兰：英格兰锁定出线路线</h3><p>英格兰 4 分，平局即可稳住晋级；巴拿马 0 分必须赢球但火力不足。矩阵给英格兰 70.2%，首选 0-2。</p><div class="detail-kpis"><div class="detail-kpi"><strong>70.2%</strong><span>英格兰胜率</span></div><div class="detail-kpi"><strong>2.90</strong><span>预期总进球</span></div><div class="detail-kpi"><strong>7.12</strong><span>英格兰评分</span></div><div class="detail-kpi"><strong>4.38</strong><span>巴拿马评分</span></div><div class="detail-kpi"><strong>2.18</strong><span>英格兰 λ</span></div><div class="detail-kpi"><strong>大2.5 55.4%</strong><span>小2.5 44.6%</span></div></div></div>
+          <div class="detail-data"><ul><li><b>R1+R2 回顾</b>巴拿马 0-1 加纳、0-1 克罗地亚；英格兰 4-2 克罗地亚、0-0 加纳。英格兰 4 分，巴拿马 0 分。</li><li><b>R3 战略推演</b>英格兰平局即可晋级，赢球争头名；巴拿马必须赢球且要看另一场结果。</li><li><b>九维评分</b>英格兰阵容实力、定位球和替补深度明显领先；巴拿马防守韧性尚可，但进攻连续零进球。</li><li><b>触发判定</b>英格兰若早段领先，比赛会转入控节奏；巴拿马后段压上会给英格兰反击空间。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>巴拿马 0.72，英格兰 2.18，ρ=-0.08。</span></div><div class="poisson-line"><span>胜平负</span><span>巴拿马胜 10.2%，平 19.6%，英格兰胜 70.2%。</span></div><div class="poisson-line"><span>高频比分</span><span>0-2 13.1%，0-1 11.3%，0-3 9.5%。</span></div><div class="poisson-line"><span>大小球</span><span>大2.5 为 55.4%，小2.5 为 44.6%。</span></div></div></div>
         </div>
 
-        <div class="match-detail" id="detail-sen-irq" role="tabpanel" aria-labelledby="tab-sen-irq">
-          <div class="detail-scoreboard"><h3>塞内加尔 vs 伊拉克：尊严战也是第三名窗口</h3><p>两队前两轮都没有积分，塞内加尔进攻质量和身体对抗略占上风；伊拉克需要更主动，但压上会留下身后空间。</p><div class="detail-kpis"><div class="detail-kpi"><strong>43%</strong><span>塞内加尔胜率</span></div><div class="detail-kpi"><strong>2.5</strong><span>预计总进球</span></div><div class="detail-kpi"><strong>53%</strong><span>塞内加尔控球倾向</span></div><div class="detail-kpi"><strong>12:9</strong><span>预估射门比</span></div><div class="detail-kpi"><strong>1.34</strong><span>塞内加尔 xG</span></div><div class="detail-kpi"><strong>中</strong><span>伊拉克反击</span></div></div></div>
-          <div class="detail-data"><ul><li><b>节奏判断</b>塞内加尔会更主动，伊拉克会等待反击和定位球机会。</li><li><b>进球路径</b>塞内加尔靠边路速度，伊拉克靠定位球和二点球。</li><li><b>防守隐患</b>双方都容易在领先后丢失中场控制。</li><li><b>临场变量</b>早段进球会让比赛迅速开放。</li></ul><div class="poisson-box"><b>泊松模型</b><div class="poisson-line"><span>λ 均值</span><span>塞内加尔 1.34，伊拉克 1.02。</span></div><div class="poisson-line"><span>胜平负</span><span>塞内加尔胜 43.0%，平 30.0%，伊拉克胜 27.0%。</span></div><div class="poisson-line"><span>高频比分</span><span>1-1、2-1、1-0 权重靠前。</span></div></div></div>
+        <div class="match-detail" id="detail-cro-gha" role="tabpanel" aria-labelledby="tab-cro-gha">
+          <div class="detail-scoreboard"><h3>克罗地亚 vs 加纳：低比分晋级卡位</h3><p>加纳 4 分，克罗地亚 3 分，双方都能看到晋级路线。矩阵给克罗地亚 38.4%、加纳 30.7%，平局也有 30.9%，首选 1-1。</p><div class="detail-kpis"><div class="detail-kpi"><strong>38.4%</strong><span>克罗地亚胜率</span></div><div class="detail-kpi"><strong>2.40</strong><span>预期总进球</span></div><div class="detail-kpi"><strong>6.10</strong><span>克罗地亚评分</span></div><div class="detail-kpi"><strong>5.92</strong><span>加纳评分</span></div><div class="detail-kpi"><strong>1.28</strong><span>克罗地亚 λ</span></div><div class="detail-kpi"><strong>小2.5 57.0%</strong><span>大2.5 43.0%</span></div></div></div>
+          <div class="detail-data"><ul><li><b>R1+R2 回顾</b>克罗地亚 2-4 英格兰、1-0 巴拿马；加纳 1-0 巴拿马、0-0 英格兰。加纳 4 分，克罗地亚 3 分。</li><li><b>R3 战略推演</b>加纳平局大概率晋级，克罗地亚赢球最稳，比赛会在中场对抗里消耗。</li><li><b>九维评分</b>克罗地亚控球和经验略占优；加纳防守纪律和身体对抗强，反击效率是关键。</li><li><b>触发判定</b>双方都不希望先丢球，小2.5 权重上升。若克罗地亚久攻不下，后段风险会变大。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>克罗地亚 1.28，加纳 1.12，ρ=-0.13。</span></div><div class="poisson-line"><span>胜平负</span><span>克罗地亚胜 38.4%，平 30.9%，加纳胜 30.7%。</span></div><div class="poisson-line"><span>高频比分</span><span>1-1 14.7%，0-0 10.8%，1-0 9.9%。</span></div><div class="poisson-line"><span>大小球</span><span>小2.5 为 57.0%，大2.5 为 43.0%。</span></div></div></div>
         </div>
 
-        <div class="match-detail" id="detail-egy-irn" role="tabpanel" aria-labelledby="tab-egy-irn">
-          <div class="detail-scoreboard"><h3>埃及 vs 伊朗：小组主动权和防守纪律</h3><p>埃及 4 分在手，伊朗 2 分必须争取结果。埃及更稳，伊朗不会轻易打开阵型，这场平局权重很高。</p><div class="detail-kpis"><div class="detail-kpi"><strong>38%</strong><span>埃及胜率</span></div><div class="detail-kpi"><strong>2.0</strong><span>预计总进球</span></div><div class="detail-kpi"><strong>52%</strong><span>埃及控球倾向</span></div><div class="detail-kpi"><strong>10:9</strong><span>预估射门比</span></div><div class="detail-kpi"><strong>1.10</strong><span>埃及 xG</span></div><div class="detail-kpi"><strong>高</strong><span>伊朗定位球</span></div></div></div>
-          <div class="detail-data"><ul><li><b>节奏判断</b>埃及先稳守，伊朗要在后段提高压迫。</li><li><b>进球路径</b>埃及靠反击和边路，伊朗靠定位球和禁区混战。</li><li><b>防守隐患</b>埃及要防高球，伊朗要防转换第一脚。</li><li><b>临场变量</b>若比分长时间不动，1-1 会成为最自然落点。</li></ul><div class="poisson-box"><b>泊松模型</b><div class="poisson-line"><span>λ 均值</span><span>埃及 1.10，伊朗 0.94。</span></div><div class="poisson-line"><span>胜平负</span><span>埃及胜 38.0%，平 34.0%，伊朗胜 28.0%。</span></div><div class="poisson-line"><span>高频比分</span><span>1-1、1-0、0-0 权重最高。</span></div></div></div>
+        <div class="match-detail" id="detail-alg-aut" role="tabpanel" aria-labelledby="tab-alg-aut">
+          <div class="detail-scoreboard"><h3>阿尔及利亚 vs 奥地利：第二名直接对话</h3><p>奥地利和阿尔及利亚同为 3 分，这场很可能决定 J 组第二。矩阵给奥地利 38.8%、阿尔及利亚 31.2%，首选 1-1。</p><div class="detail-kpis"><div class="detail-kpi"><strong>38.8%</strong><span>奥地利胜率</span></div><div class="detail-kpi"><strong>2.52</strong><span>预期总进球</span></div><div class="detail-kpi"><strong>5.94</strong><span>奥地利评分</span></div><div class="detail-kpi"><strong>5.70</strong><span>阿尔及利亚评分</span></div><div class="detail-kpi"><strong>1.34</strong><span>奥地利 λ</span></div><div class="detail-kpi"><strong>小2.5 53.9%</strong><span>大2.5 46.1%</span></div></div></div>
+          <div class="detail-data"><ul><li><b>R1+R2 回顾</b>阿尔及利亚 0-3 阿根廷、2-1 约旦；奥地利 3-1 约旦、0-2 阿根廷。两队同为 3 分。</li><li><b>R3 战略推演</b>奥地利净胜球占优，平局路线更舒服；阿尔及利亚赢球才能彻底掌握第二。</li><li><b>九维评分</b>奥地利整体压迫和定位球更好；阿尔及利亚边路推进速度强，但防线抗压波动较大。</li><li><b>触发判定</b>同分对决容易先稳后抢，1-1 与 0-1 是高权重比分。若阿尔及利亚早失球，比赛会迅速打开。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>阿尔及利亚 1.18，奥地利 1.34，ρ=-0.13。</span></div><div class="poisson-line"><span>胜平负</span><span>阿尔及利亚胜 31.2%，平 30.1%，奥地利胜 38.8%。</span></div><div class="poisson-line"><span>高频比分</span><span>1-1 14.4%，0-0 9.7%，0-1 9.1%。</span></div><div class="poisson-line"><span>大小球</span><span>小2.5 为 53.9%，大2.5 为 46.1%。</span></div></div></div>
         </div>
 
-        <div class="match-detail" id="detail-nzl-bel" role="tabpanel" aria-labelledby="tab-nzl-bel">
-          <div class="detail-scoreboard"><h3>新西兰 vs 比利时：比利时必须把优势兑现</h3><p>比利时前两轮连续平局，纸面实力仍明显占优；新西兰只有 1 分，若压上争胜会给比利时更多转换空间。</p><div class="detail-kpis"><div class="detail-kpi"><strong>50%</strong><span>比利时胜率</span></div><div class="detail-kpi"><strong>2.5</strong><span>预计总进球</span></div><div class="detail-kpi"><strong>59%</strong><span>比利时控球倾向</span></div><div class="detail-kpi"><strong>8:13</strong><span>预估射门比</span></div><div class="detail-kpi"><strong>1.52</strong><span>比利时 xG</span></div><div class="detail-kpi"><strong>中</strong><span>新西兰高球</span></div></div></div>
-          <div class="detail-data"><ul><li><b>节奏判断</b>比利时会主动压上，新西兰重点守禁区宽度。</li><li><b>进球路径</b>比利时靠肋部配合和远射，新西兰靠高球和定位球。</li><li><b>防守隐患</b>比利时要防身后长传，新西兰要防边路被持续打穿。</li><li><b>临场变量</b>比利时如果早进球，比分可能继续扩大。</li></ul><div class="poisson-box"><b>泊松模型</b><div class="poisson-line"><span>λ 均值</span><span>新西兰 0.86，比利时 1.52。</span></div><div class="poisson-line"><span>胜平负</span><span>新西兰胜 20.0%，平 30.0%，比利时胜 50.0%。</span></div><div class="poisson-line"><span>高频比分</span><span>0-1、1-1、1-2 权重靠前。</span></div></div></div>
+        <div class="match-detail" id="detail-jor-arg" role="tabpanel" aria-labelledby="tab-jor-arg">
+          <div class="detail-scoreboard"><h3>约旦 vs 阿根廷：阿根廷轮换仍占优</h3><p>阿根廷 6 分基本锁定头名，约旦 0 分只剩荣誉和理论可能。矩阵给阿根廷 76.0%，首选 0-2。</p><div class="detail-kpis"><div class="detail-kpi"><strong>76.0%</strong><span>阿根廷胜率</span></div><div class="detail-kpi"><strong>3.00</strong><span>预期总进球</span></div><div class="detail-kpi"><strong>7.45</strong><span>阿根廷评分</span></div><div class="detail-kpi"><strong>4.18</strong><span>约旦评分</span></div><div class="detail-kpi"><strong>2.38</strong><span>阿根廷 λ</span></div><div class="detail-kpi"><strong>大2.5 57.7%</strong><span>小2.5 42.3%</span></div></div></div>
+          <div class="detail-data"><ul><li><b>R1+R2 回顾</b>约旦 1-3 奥地利、1-2 阿尔及利亚；阿根廷 3-0 阿尔及利亚、2-0 奥地利。阿根廷 6 分，约旦 0 分。</li><li><b>R3 战略推演</b>阿根廷可控轮换但仍要维持头名节奏；约旦必须主动寻求进球，防线会留下空间。</li><li><b>九维评分</b>阿根廷阵容厚度、进攻组织和禁区效率优势明显；约旦反击速度有威胁，但持续控球能力不足。</li><li><b>触发判定</b>若阿根廷轮换幅度大，胜率略降但不改方向。约旦若先丢球，后段大球概率会提高。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>约旦 0.62，阿根廷 2.38，ρ=-0.08。</span></div><div class="poisson-line"><span>胜平负</span><span>约旦胜 7.3%，平 16.7%，阿根廷胜 76.0%。</span></div><div class="poisson-line"><span>高频比分</span><span>0-2 14.1%，0-1 11.3%，0-3 11.2%。</span></div><div class="poisson-line"><span>大小球</span><span>大2.5 为 57.7%，小2.5 为 42.3%。</span></div></div></div>
         </div>
       </section>
 
       <div class="matches">
-        
-        <article class="card match-card is-active" data-match-card="detail-nor-fra" style="--accent: var(--green); --card-bg: linear-gradient(135deg, rgba(18, 103, 71, 0.62), rgba(8, 35, 31, 0.74));">
-          <div class="card-inner">
-            <div class="match-meta"><span>Gillette Stadium · Boston</span><span>6-27 03:00</span></div>
-            <div class="teams"><div class="team"><span class="team-name">挪威</span><span class="team-note">两队都已拿到主动权，法国略占上风但平局权重高。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">法国</span><span class="team-note">预测比分 1-1，赔率感更偏谨慎低比分。</span></div></div>
-            <div class="data-strip" aria-label="挪威对法国数据拆解"><div class="data-point"><strong>预测 1-1</strong><span>两队都已拿到主动权，法国略占上风但平局权重高。</span></div><div class="data-point"><strong>泊松模型</strong><span>胜平负为 26 / 32 / 42。</span></div><div class="data-point"><strong>比赛变量</strong><span>收官轮积分压力会放大定位球和换人影响。</span></div></div>
-            <div class="bars" aria-label="概率"><div class="bar-row"><span>挪威胜</span><div class="track"><div class="fill" style="--value: 26%;"></div></div><span>26%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 32%;"></div></div><span>32%</span></div><div class="bar-row"><span>法国胜</span><div class="track"><div class="fill" style="--value: 42%;"></div></div><span>42%</span></div></div>
-          </div>
+        <article class="card match-card is-active" data-match-card="detail-col-por" style="--accent: var(--green); --card-bg: linear-gradient(135deg, rgba(18, 103, 71, 0.62), rgba(8, 35, 31, 0.74));">
+          <div class="card-inner"><div class="match-meta"><span>Hard Rock Stadium · Miami</span><span>6-28 04:00</span></div><div class="teams"><div class="team"><span class="team-name">哥伦比亚</span><span class="team-note">哥伦比亚防守连续零封，平局路线更舒服。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">葡萄牙</span><span class="team-note">葡萄牙进攻上限更高，赢球可争头名。</span></div></div><div class="data-strip" aria-label="哥伦比亚 vs 葡萄牙推演数据"><div class="data-point"><strong>预测 1-1</strong><span>两队都有出线主动权，Dixon-Coles 首选 1-1。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 1.18 / 1.28；首选 1-1，次选 0-0。</span></div><div class="data-point"><strong>大小球百分比</strong><span>小2.5 55.4%，大2.5 44.6%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>哥伦比亚胜</span><div class="track"><div class="fill" style="--value: 32.4%;"></div></div><span>32.4%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 30.3%;"></div></div><span>30.3%</span></div><div class="bar-row"><span>葡萄牙胜</span><div class="track"><div class="fill" style="--value: 37.2%;"></div></div><span>37.2%</span></div></div></div>
         </article>
-        <article class="card match-card" data-match-card="detail-sen-irq" style="--accent: var(--blue); --card-bg: linear-gradient(135deg, rgba(38, 82, 155, 0.62), rgba(10, 25, 42, 0.72));">
-          <div class="card-inner">
-            <div class="match-meta"><span>BMO Field · Toronto</span><span>6-27 03:00</span></div>
-            <div class="teams"><div class="team"><span class="team-name">塞内加尔</span><span class="team-note">塞内加尔边路和身体对抗更强，伊拉克反击仍有机会。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">伊拉克</span><span class="team-note">预测比分 2-1，赔率感更偏谨慎低比分。</span></div></div>
-            <div class="data-strip" aria-label="塞内加尔对伊拉克数据拆解"><div class="data-point"><strong>预测 2-1</strong><span>塞内加尔边路和身体对抗更强，伊拉克反击仍有机会。</span></div><div class="data-point"><strong>泊松模型</strong><span>胜平负为 43 / 30 / 27。</span></div><div class="data-point"><strong>比赛变量</strong><span>收官轮积分压力会放大定位球和换人影响。</span></div></div>
-            <div class="bars" aria-label="概率"><div class="bar-row"><span>塞内加尔胜</span><div class="track"><div class="fill" style="--value: 43%;"></div></div><span>43%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 30%;"></div></div><span>30%</span></div><div class="bar-row"><span>伊拉克胜</span><div class="track"><div class="fill" style="--value: 27%;"></div></div><span>27%</span></div></div>
-          </div>
+        <article class="card match-card" data-match-card="detail-cod-uzb" style="--accent: var(--blue); --card-bg: linear-gradient(135deg, rgba(38, 82, 155, 0.62), rgba(10, 25, 42, 0.72));">
+          <div class="card-inner"><div class="match-meta"><span>BBVA · Monterrey</span><span>6-28 04:00</span></div><div class="teams"><div class="team"><span class="team-name">刚果民主共和国</span><span class="team-note">身体对抗和反击质量更好，必须争胜。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">乌兹别克斯坦</span><span class="team-note">连续被零封，进攻效率是最大问题。</span></div></div><div class="data-strip" aria-label="刚果民主共和国 vs 乌兹别克斯坦推演数据"><div class="data-point"><strong>预测 1-1</strong><span>刚果民主共和国胜率更高，但首选比分仍是 1-1。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 1.55 / 0.95；首选 1-1，次选 1-0。</span></div><div class="data-point"><strong>大小球百分比</strong><span>小2.5 54.4%，大2.5 45.6%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>刚果民主共和国胜</span><div class="track"><div class="fill" style="--value: 49.9%;"></div></div><span>49.9%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 28.4%;"></div></div><span>28.4%</span></div><div class="bar-row"><span>乌兹别克斯坦胜</span><div class="track"><div class="fill" style="--value: 21.7%;"></div></div><span>21.7%</span></div></div></div>
         </article>
-        <article class="card match-card" data-match-card="detail-cpv-ksa" style="--accent: var(--red); --card-bg: linear-gradient(135deg, rgba(125, 42, 58, 0.62), rgba(36, 17, 28, 0.74));">
-          <div class="card-inner">
-            <div class="match-meta"><span>NRG Stadium · Houston</span><span>6-27 08:00</span></div>
-            <div class="teams"><div class="team"><span class="team-name">佛得角</span><span class="team-note">佛得角不败价值更高，沙特必须提速争胜。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">沙特</span><span class="team-note">预测比分 1-1，赔率感更偏谨慎低比分。</span></div></div>
-            <div class="data-strip" aria-label="佛得角对沙特数据拆解"><div class="data-point"><strong>预测 1-1</strong><span>佛得角不败价值更高，沙特必须提速争胜。</span></div><div class="data-point"><strong>泊松模型</strong><span>胜平负为 38 / 34 / 28。</span></div><div class="data-point"><strong>比赛变量</strong><span>收官轮积分压力会放大定位球和换人影响。</span></div></div>
-            <div class="bars" aria-label="概率"><div class="bar-row"><span>佛得角胜</span><div class="track"><div class="fill" style="--value: 38%;"></div></div><span>38%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 34%;"></div></div><span>34%</span></div><div class="bar-row"><span>沙特胜</span><div class="track"><div class="fill" style="--value: 28%;"></div></div><span>28%</span></div></div>
-          </div>
+        <article class="card match-card" data-match-card="detail-pan-eng" style="--accent: var(--red); --card-bg: linear-gradient(135deg, rgba(125, 42, 58, 0.62), rgba(36, 17, 28, 0.74));">
+          <div class="card-inner"><div class="match-meta"><span>MetLife Stadium · New Jersey</span><span>6-28 07:00</span></div><div class="teams"><div class="team"><span class="team-name">巴拿马</span><span class="team-note">必须赢球，但前两轮进攻仍未打开。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">英格兰</span><span class="team-note">阵容深度和定位球优势明显。</span></div></div><div class="data-strip" aria-label="巴拿马 vs 英格兰推演数据"><div class="data-point"><strong>预测 0-2</strong><span>英格兰胜率 70.2%，首选 0-2。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 0.72 / 2.18；首选 0-2，次选 0-1。</span></div><div class="data-point"><strong>大小球百分比</strong><span>大2.5 55.4%，小2.5 44.6%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>巴拿马胜</span><div class="track"><div class="fill" style="--value: 10.2%;"></div></div><span>10.2%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 19.6%;"></div></div><span>19.6%</span></div><div class="bar-row"><span>英格兰胜</span><div class="track"><div class="fill" style="--value: 70.2%;"></div></div><span>70.2%</span></div></div></div>
         </article>
-        <article class="card match-card" data-match-card="detail-uru-esp" style="--accent: var(--gold); --card-bg: linear-gradient(135deg, rgba(128, 82, 25, 0.64), rgba(34, 24, 11, 0.74));">
-          <div class="card-inner">
-            <div class="match-meta"><span>Akron Stadium · Guadalajara</span><span>6-27 08:00</span></div>
-            <div class="teams"><div class="team"><span class="team-name">乌拉圭</span><span class="team-note">西班牙控球优势更稳定，乌拉圭靠定位球制造波动。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">西班牙</span><span class="team-note">预测比分 1-2，赔率感更偏谨慎低比分。</span></div></div>
-            <div class="data-strip" aria-label="乌拉圭对西班牙数据拆解"><div class="data-point"><strong>预测 1-2</strong><span>西班牙控球优势更稳定，乌拉圭靠定位球制造波动。</span></div><div class="data-point"><strong>泊松模型</strong><span>胜平负为 23 / 32 / 45。</span></div><div class="data-point"><strong>比赛变量</strong><span>收官轮积分压力会放大定位球和换人影响。</span></div></div>
-            <div class="bars" aria-label="概率"><div class="bar-row"><span>乌拉圭胜</span><div class="track"><div class="fill" style="--value: 23%;"></div></div><span>23%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 32%;"></div></div><span>32%</span></div><div class="bar-row"><span>西班牙胜</span><div class="track"><div class="fill" style="--value: 45%;"></div></div><span>45%</span></div></div>
-          </div>
+        <article class="card match-card" data-match-card="detail-cro-gha" style="--accent: var(--gold); --card-bg: linear-gradient(135deg, rgba(128, 82, 25, 0.64), rgba(34, 24, 11, 0.74));">
+          <div class="card-inner"><div class="match-meta"><span>Lincoln Financial Field · Philadelphia</span><span>6-28 07:00</span></div><div class="teams"><div class="team"><span class="team-name">克罗地亚</span><span class="team-note">控球和经验略优，赢球路线最稳。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">加纳</span><span class="team-note">防守纪律强，平局也有晋级价值。</span></div></div><div class="data-strip" aria-label="克罗地亚 vs 加纳推演数据"><div class="data-point"><strong>预测 1-1</strong><span>双方晋级压力都高，首选 1-1。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 1.28 / 1.12；首选 1-1，次选 0-0。</span></div><div class="data-point"><strong>大小球百分比</strong><span>小2.5 57.0%，大2.5 43.0%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>克罗地亚胜</span><div class="track"><div class="fill" style="--value: 38.4%;"></div></div><span>38.4%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 30.9%;"></div></div><span>30.9%</span></div><div class="bar-row"><span>加纳胜</span><div class="track"><div class="fill" style="--value: 30.7%;"></div></div><span>30.7%</span></div></div></div>
         </article>
-        <article class="card match-card" data-match-card="detail-egy-irn" style="--accent: var(--cyan); --card-bg: linear-gradient(135deg, rgba(31, 121, 137, 0.62), rgba(36, 71, 85, 0.74));">
-          <div class="card-inner">
-            <div class="match-meta"><span>Lumen Field · Seattle</span><span>6-27 11:00</span></div>
-            <div class="teams"><div class="team"><span class="team-name">埃及</span><span class="team-note">埃及先守主动权，伊朗后段必须提高进攻风险。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">伊朗</span><span class="team-note">预测比分 1-1，赔率感更偏谨慎低比分。</span></div></div>
-            <div class="data-strip" aria-label="埃及对伊朗数据拆解"><div class="data-point"><strong>预测 1-1</strong><span>埃及先守主动权，伊朗后段必须提高进攻风险。</span></div><div class="data-point"><strong>泊松模型</strong><span>胜平负为 38 / 34 / 28。</span></div><div class="data-point"><strong>比赛变量</strong><span>收官轮积分压力会放大定位球和换人影响。</span></div></div>
-            <div class="bars" aria-label="概率"><div class="bar-row"><span>埃及胜</span><div class="track"><div class="fill" style="--value: 38%;"></div></div><span>38%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 34%;"></div></div><span>34%</span></div><div class="bar-row"><span>伊朗胜</span><div class="track"><div class="fill" style="--value: 28%;"></div></div><span>28%</span></div></div>
-          </div>
+        <article class="card match-card" data-match-card="detail-alg-aut" style="--accent: var(--cyan); --card-bg: linear-gradient(135deg, rgba(31, 121, 137, 0.62), rgba(36, 71, 85, 0.74));">
+          <div class="card-inner"><div class="match-meta"><span>AT&T Stadium · Dallas</span><span>6-28 10:00</span></div><div class="teams"><div class="team"><span class="team-name">阿尔及利亚</span><span class="team-note">必须抢第二，边路速度是主要突破点。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">奥地利</span><span class="team-note">净胜球占优，平局路线更舒服。</span></div></div><div class="data-strip" aria-label="阿尔及利亚 vs 奥地利推演数据"><div class="data-point"><strong>预测 1-1</strong><span>同分卡位战，低比分和平局权重高。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 1.18 / 1.34；首选 1-1，次选 0-0。</span></div><div class="data-point"><strong>大小球百分比</strong><span>小2.5 53.9%，大2.5 46.1%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>阿尔及利亚胜</span><div class="track"><div class="fill" style="--value: 31.2%;"></div></div><span>31.2%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 30.1%;"></div></div><span>30.1%</span></div><div class="bar-row"><span>奥地利胜</span><div class="track"><div class="fill" style="--value: 38.8%;"></div></div><span>38.8%</span></div></div></div>
         </article>
-        <article class="card match-card" data-match-card="detail-nzl-bel" style="--accent: var(--purple); --card-bg: linear-gradient(135deg, rgba(82, 70, 149, 0.62), rgba(55, 48, 89, 0.74));">
-          <div class="card-inner">
-            <div class="match-meta"><span>BC Place · Vancouver</span><span>6-27 11:00</span></div>
-            <div class="teams"><div class="team"><span class="team-name">新西兰</span><span class="team-note">比利时纸面优势最清晰，新西兰主要靠高球和定位球。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">比利时</span><span class="team-note">预测比分 1-2，赔率感更偏谨慎低比分。</span></div></div>
-            <div class="data-strip" aria-label="新西兰对比利时数据拆解"><div class="data-point"><strong>预测 1-2</strong><span>比利时纸面优势最清晰，新西兰主要靠高球和定位球。</span></div><div class="data-point"><strong>泊松模型</strong><span>胜平负为 20 / 30 / 50。</span></div><div class="data-point"><strong>比赛变量</strong><span>收官轮积分压力会放大定位球和换人影响。</span></div></div>
-            <div class="bars" aria-label="概率"><div class="bar-row"><span>新西兰胜</span><div class="track"><div class="fill" style="--value: 20%;"></div></div><span>20%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 30%;"></div></div><span>30%</span></div><div class="bar-row"><span>比利时胜</span><div class="track"><div class="fill" style="--value: 50%;"></div></div><span>50%</span></div></div>
-          </div>
+        <article class="card match-card" data-match-card="detail-jor-arg" style="--accent: var(--purple); --card-bg: linear-gradient(135deg, rgba(82, 70, 149, 0.62), rgba(55, 48, 89, 0.74));">
+          <div class="card-inner"><div class="match-meta"><span>Arrowhead Stadium · Kansas City</span><span>6-28 10:00</span></div><div class="teams"><div class="team"><span class="team-name">约旦</span><span class="team-note">只剩理论机会，必须主动寻找进球。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">阿根廷</span><span class="team-note">即使轮换，阵容级别仍明显领先。</span></div></div><div class="data-strip" aria-label="约旦 vs 阿根廷推演数据"><div class="data-point"><strong>预测 0-2</strong><span>阿根廷胜率 76.0%，首选 0-2。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 0.62 / 2.38；首选 0-2，次选 0-1。</span></div><div class="data-point"><strong>大小球百分比</strong><span>大2.5 57.7%，小2.5 42.3%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>约旦胜</span><div class="track"><div class="fill" style="--value: 7.3%;"></div></div><span>7.3%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 16.7%;"></div></div><span>16.7%</span></div><div class="bar-row"><span>阿根廷胜</span><div class="track"><div class="fill" style="--value: 76.0%;"></div></div><span>76.0%</span></div></div></div>
         </article>
       </div>
     </section>
 
     <section class="postmatch-section" aria-labelledby="postmatch-title">
       <div class="postmatch-head">
-        <h2 id="postmatch-title">赛后复盘：昨日六场</h2>
-        <p>复盘 D、E、F 组收官战，重点看预测偏差和比赛实际走势。</p>
+        <h2 id="postmatch-title">赛后复盘：G/H/I 组收官六场</h2>
+        <p>复盘 6-27 完赛场次，重点看模型偏差和小组出线形势变化。</p>
       </div>
       <div class="postmatch-grid">
-        <article class="postmatch-card" style="--review-color: #ff8f72;"><div class="postmatch-top"><div class="postmatch-match">土耳其 3-2 美国</div><span class="review-tag">大幅偏离</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>美国小胜或不败</span><span><b>实际结果</b><br>土耳其绝杀取胜</span></div><p>美国提前锁定小组头名后大幅轮换，防线稳定性下降。土耳其中前场冲击更果断，补时阶段仍敢继续压上，最终把美国的防守松动转化成绝杀。</p></article>
-        <article class="postmatch-card" style="--review-color: #8bd4f8;"><div class="postmatch-top"><div class="postmatch-match">巴拉圭 0-0 澳大利亚</div><span class="review-tag">符合走势</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>低比分拉锯</span><span><b>实际结果</b><br>互交白卷</span></div><p>两队都知道平局有利于晋级，比赛自然进入低风险区间。澳大利亚防线重组后更稳，巴拉圭五后卫也压低了开放空间，0-0 属于模型可接受结果。</p></article>
-        <article class="postmatch-card" style="--review-color: #8bd4f8;"><div class="postmatch-top"><div class="postmatch-match">库拉索 0-2 科特迪瓦</div><span class="review-tag">方向正确</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>科特迪瓦取胜</span><span><b>实际结果</b><br>佩佩梅开二度</span></div><p>科特迪瓦的个人能力和禁区效率兑现得更好。库拉索仍有韧性，但终结质量不足，面对更成熟的边路攻击时难以持续守住禁区。</p></article>
-        <article class="postmatch-card" style="--review-color: #ff8f72;"><div class="postmatch-top"><div class="postmatch-match">厄瓜多尔 2-1 德国</div><span class="review-tag">明显偏离</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>德国不败</span><span><b>实际结果</b><br>厄瓜多尔逆转</span></div><p>德国早早进球后没有持续压制，中场控制和定位球防守都出现松动。厄瓜多尔的身体对抗和二点球判断更坚决，最终用远射和定位球完成反转。</p></article>
-        <article class="postmatch-card" style="--review-color: #8bd4f8;"><div class="postmatch-top"><div class="postmatch-match">日本 1-1 瑞典</div><span class="review-tag">符合走势</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>平局权重高</span><span><b>实际结果</b><br>双方携手出线</span></div><p>日本先靠团队配合破门，瑞典依靠个人能力扳平。双方都能接受不败结果，末段虽然有机会，但整体没有把风险推到失控。</p></article>
-        <article class="postmatch-card" style="--review-color: #8bd4f8;"><div class="postmatch-top"><div class="postmatch-match">突尼斯 1-3 荷兰</div><span class="review-tag">方向正确</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>荷兰取胜</span><span><b>实际结果</b><br>荷兰头名出线</span></div><p>荷兰整体技术优势和定位球质量明显更高，突尼斯防线在持续压力下失误增多。比分比保守模型略大，但胜负方向和比赛控制权判断准确。</p></article>
+        <article class="postmatch-card" style="--review-color: #ff8f72;"><div class="postmatch-top"><div class="postmatch-match">挪威 1-4 法国</div><span class="review-tag">方向正确，比分偏大</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>法国 1-2 小胜</span><span><b>实际结果</b><br>法国大胜头名</span></div><p>法国胜负方向兑现，但进攻效率高于模型。挪威必须争第一导致阵型前压，法国在转换和禁区终结上连续惩罚身后空间，最终把一球优势扩大成三球差。</p></article>
+        <article class="postmatch-card" style="--review-color: #ff8f72;"><div class="postmatch-top"><div class="postmatch-match">塞内加尔 5-0 伊拉克</div><span class="review-tag">方向正确，强度偏低</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>塞内加尔 3-0</span><span><b>实际结果</b><br>五球大胜</span></div><p>模型判断塞内加尔优势明确，但低估了伊拉克后段崩盘幅度。荣誉战打开后，塞内加尔边路速度和二次进攻持续兑现，伊拉克防线在体能下降后失误集中。</p></article>
+        <article class="postmatch-card" style="--review-color: #8bd4f8;"><div class="postmatch-top"><div class="postmatch-match">佛得角 0-0 沙特</div><span class="review-tag">低比分符合</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>小2.5 占优</span><span><b>实际结果</b><br>互交白卷</span></div><p>大小球方向准确，胜负方向偏保守。佛得角更重视不败和最佳第三路线，沙特虽必须赢球，但创造力和终结质量不足，比赛长期停留在低风险区域。</p></article>
+        <article class="postmatch-card" style="--review-color: #8bd4f8;"><div class="postmatch-top"><div class="postmatch-match">乌拉圭 0-1 西班牙</div><span class="review-tag">方向正确</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>西班牙不败，小比分</span><span><b>实际结果</b><br>西班牙小胜</span></div><p>模型的西班牙优势和小球方向兑现。西班牙无需冒险仍能用控球压制节奏，乌拉圭进攻端伤停影响明显，最后只能在低质量机会里追分。</p></article>
+        <article class="postmatch-card" style="--review-color: #8bd4f8;"><div class="postmatch-top"><div class="postmatch-match">埃及 1-1 伊朗</div><span class="review-tag">比分命中</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>首选 1-1</span><span><b>实际结果</b><br>双方战平</span></div><p>Dixon-Coles 高频比分兑现。埃及接受平局即可锁定晋级，伊朗需要赢但进攻质量有限，双方在关键区域的投入都没有把比赛推成大开大合。</p></article>
+        <article class="postmatch-card" style="--review-color: #ff8f72;"><div class="postmatch-top"><div class="postmatch-match">新西兰 1-5 比利时</div><span class="review-tag">方向正确，比分偏大</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>比利时 0-3</span><span><b>实际结果</b><br>比利时 5-1</span></div><p>比利时胜负方向兑现，但新西兰也打进一球。双方都必须争胜，比赛开放程度高于常规收官战，比利时个人能力兑现后，新西兰压上留下更多反击空间。</p></article>
       </div>
-    </section>
-<footer class="footer-note">
+    </section><footer class="footer-note">
       <div class="table-grid">
         <section>
           <div class="standings-grid" id="all-standings-grid"></div>
@@ -1840,20 +1915,20 @@
       ["G", "6-16 06:00", "比利时 1-1 埃及", "已赛"],
       ["G", "6-22 03:00", "比利时 0-0 伊朗", "已赛"],
       ["G", "6-22 06:00", "新西兰 1-3 埃及", "已赛"],
-      ["G", "6-27 11:00", "埃及 vs 伊朗", "未赛"],
-      ["G", "6-27 11:00", "新西兰 vs 比利时", "未赛"],
+      ["G", "6-27 11:00", "埃及 1-1 伊朗", "已赛"],
+      ["G", "6-27 11:00", "新西兰 1-5 比利时", "已赛"],
       ["H", "6-16 09:00", "沙特 1-1 乌拉圭", "已赛"],
       ["H", "6-16 12:00", "西班牙 0-0 佛得角", "已赛"],
       ["H", "6-22 09:00", "乌拉圭 2-2 佛得角", "已赛"],
       ["H", "6-22 00:00", "西班牙 4-0 沙特", "已赛"],
-      ["H", "6-27 08:00", "佛得角 vs 沙特", "未赛"],
-      ["H", "6-27 08:00", "乌拉圭 vs 西班牙", "未赛"],
+      ["H", "6-27 08:00", "佛得角 0-0 沙特", "已赛"],
+      ["H", "6-27 08:00", "乌拉圭 0-1 西班牙", "已赛"],
       ["I", "6-17 03:00", "法国 3-1 塞内加尔", "已赛"],
       ["I", "6-17 06:00", "伊拉克 1-4 挪威", "已赛"],
       ["I", "6-23 03:00", "挪威 3-2 塞内加尔", "已赛"],
       ["I", "6-23 06:00", "法国 3-0 伊拉克", "已赛"],
-      ["I", "6-27 03:00", "挪威 vs 法国", "未赛"],
-      ["I", "6-27 03:00", "塞内加尔 vs 伊拉克", "未赛"],
+      ["I", "6-27 03:00", "挪威 1-4 法国", "已赛"],
+      ["I", "6-27 03:00", "塞内加尔 5-0 伊拉克", "已赛"],
       ["J", "6-17 09:00", "阿根廷 3-0 阿尔及利亚", "已赛"],
       ["J", "6-17 12:00", "奥地利 3-1 约旦", "已赛"],
       ["J", "6-23 09:00", "阿根廷 2-0 奥地利", "已赛"],
@@ -1881,9 +1956,9 @@
       D: [["美国", 2, 0, 1, "+4", 6], ["澳大利亚", 1, 1, 1, "0", 4], ["巴拉圭", 1, 1, 1, "-2", 4], ["土耳其", 1, 0, 2, "-2", 3]],
       E: [["德国", 2, 0, 1, "+6", 6], ["科特迪瓦", 2, 0, 1, "+2", 6], ["厄瓜多尔", 1, 1, 1, "0", 4], ["库拉索", 0, 1, 2, "-8", 1]],
       F: [["荷兰", 2, 1, 0, "+6", 7], ["日本", 1, 2, 0, "+2", 5], ["瑞典", 1, 1, 1, "0", 4], ["突尼斯", 0, 0, 3, "-8", 0]],
-      G: [["埃及", 1, 1, 0, "+2", 4], ["伊朗", 0, 2, 0, "0", 2], ["比利时", 0, 2, 0, "0", 2], ["新西兰", 0, 1, 1, "-2", 1]],
-      H: [["西班牙", 1, 1, 0, "+4", 4], ["佛得角", 0, 2, 0, "0", 2], ["乌拉圭", 0, 2, 0, "0", 2], ["沙特", 0, 1, 1, "-4", 1]],
-      I: [["挪威", 2, 0, 0, "+4", 6], ["法国", 2, 0, 0, "+5", 6], ["塞内加尔", 0, 0, 2, "-3", 0], ["伊拉克", 0, 0, 2, "-6", 0]],
+      G: [["比利时", 1, 2, 0, "+4", 5], ["埃及", 1, 2, 0, "+2", 5], ["伊朗", 0, 3, 0, "0", 3], ["新西兰", 0, 1, 2, "-6", 1]],
+      H: [["西班牙", 2, 1, 0, "+5", 7], ["佛得角", 0, 3, 0, "0", 3], ["乌拉圭", 0, 2, 1, "-1", 2], ["沙特", 0, 2, 1, "-4", 2]],
+      I: [["法国", 3, 0, 0, "+8", 9], ["挪威", 2, 0, 1, "+1", 6], ["塞内加尔", 1, 0, 2, "+2", 3], ["伊拉克", 0, 0, 3, "-11", 0]],
       J: [["阿根廷", 2, 0, 0, "+5", 6], ["奥地利", 1, 0, 1, "0", 3], ["阿尔及利亚", 1, 0, 1, "-2", 3], ["约旦", 0, 0, 2, "-3", 0]],
       K: [["哥伦比亚", 2, 0, 0, "+3", 6], ["葡萄牙", 1, 1, 0, "+5", 4], ["刚果民主共和国", 0, 1, 1, "-1", 1], ["乌兹别克斯坦", 0, 0, 2, "-7", 0]],
       L: [["英格兰", 1, 1, 0, "+2", 4], ["加纳", 1, 1, 0, "+1", 4], ["克罗地亚", 1, 0, 1, "-1", 3], ["巴拿马", 0, 0, 2, "-2", 0]]
@@ -1990,7 +2065,9 @@
       "新西兰 1-3 埃及": "温哥华 BC Place",
       "新西兰 vs 埃及": "温哥华 BC Place",
       "埃及 vs 伊朗": "西雅图 Lumen Field",
+      "埃及 1-1 伊朗": "西雅图 Lumen Field",
       "新西兰 vs 比利时": "温哥华 BC Place",
+      "新西兰 1-5 比利时": "温哥华 BC Place",
       "沙特 1-1 乌拉圭": "迈阿密 Hard Rock Stadium",
       "西班牙 0-0 佛得角": "亚特兰大 Mercedes-Benz Stadium",
       "乌拉圭 2-2 佛得角": "迈阿密 Hard Rock Stadium",
@@ -1998,7 +2075,9 @@
       "西班牙 4-0 沙特": "亚特兰大 Mercedes-Benz Stadium",
       "西班牙 vs 沙特": "亚特兰大 Mercedes-Benz Stadium",
       "佛得角 vs 沙特": "休斯敦 NRG Stadium",
+      "佛得角 0-0 沙特": "休斯敦 NRG Stadium",
       "乌拉圭 vs 西班牙": "瓜达拉哈拉 Akron",
+      "乌拉圭 0-1 西班牙": "瓜达拉哈拉 Akron",
       "法国 3-1 塞内加尔": "纽约/新泽西 MetLife Stadium",
       "伊拉克 1-4 挪威": "波士顿 Gillette Stadium",
       "挪威 3-2 塞内加尔": "纽约/新泽西 MetLife Stadium",
@@ -2006,7 +2085,9 @@
       "法国 3-0 伊拉克": "费城 Lincoln Financial Field",
       "法国 vs 伊拉克": "费城 Lincoln Financial Field",
       "挪威 vs 法国": "波士顿 Gillette Stadium",
+      "挪威 1-4 法国": "波士顿 Gillette Stadium",
       "塞内加尔 vs 伊拉克": "多伦多 BMO Field",
+      "塞内加尔 5-0 伊拉克": "多伦多 BMO Field",
       "阿根廷 3-0 阿尔及利亚": "堪萨斯城 Arrowhead Stadium",
       "奥地利 3-1 约旦": "旧金山湾区 Levi's Stadium",
       "阿根廷 2-0 奥地利": "达拉斯 AT&T Stadium",
@@ -2064,9 +2145,10 @@
       return status === "已赛" ? "赛时天气记录待补" : "20-28°C，赛前关注临场天气";
     }
 
-    const completedGroups = new Set(["A", "B", "C", "D", "E", "F"]);
+    const completedGroups = new Set(["A", "B", "C", "D", "E", "F", "G", "H", "I"]);
 
     function getStandingStatus(group, index, points, losses, goalDiff) {
+      if (group === "H" && index >= 2) return "eliminated";
       if (completedGroups.has(group) && index < 2) return "qualified";
       if (completedGroups.has(group) && index === 3) return "eliminated";
       if (points >= 6) return "qualified";
@@ -2196,6 +2278,92 @@
     const panels = Array.from(document.querySelectorAll(".match-detail"));
     const matchCards = Array.from(document.querySelectorAll(".match-card"));
 
+    const poissonMatrixData = {
+      "detail-col-por": { home: "哥伦比亚", away: "葡萄牙", homeLambda: 1.18, awayLambda: 1.28, rho: -0.12 },
+      "detail-cod-uzb": { home: "刚果民主共和国", away: "乌兹别克斯坦", homeLambda: 1.55, awayLambda: 0.95, rho: -0.12 },
+      "detail-pan-eng": { home: "巴拿马", away: "英格兰", homeLambda: 0.72, awayLambda: 2.18, rho: -0.08 },
+      "detail-cro-gha": { home: "克罗地亚", away: "加纳", homeLambda: 1.28, awayLambda: 1.12, rho: -0.13 },
+      "detail-alg-aut": { home: "阿尔及利亚", away: "奥地利", homeLambda: 1.18, awayLambda: 1.34, rho: -0.13 },
+      "detail-jor-arg": { home: "约旦", away: "阿根廷", homeLambda: 0.62, awayLambda: 2.38, rho: -0.08 }
+    };
+
+    function factorial(n) {
+      let value = 1;
+      for (let i = 2; i <= n; i += 1) value *= i;
+      return value;
+    }
+
+    function poissonProbability(lambda, goals) {
+      return (Math.exp(-lambda) * Math.pow(lambda, goals)) / factorial(goals);
+    }
+
+    function dixonColesAdjustment(homeGoals, awayGoals, homeLambda, awayLambda, rho) {
+      if (homeGoals === 0 && awayGoals === 0) return 1 - (homeLambda * awayLambda * rho);
+      if (homeGoals === 0 && awayGoals === 1) return 1 + (homeLambda * rho);
+      if (homeGoals === 1 && awayGoals === 0) return 1 + (awayLambda * rho);
+      if (homeGoals === 1 && awayGoals === 1) return 1 - rho;
+      return 1;
+    }
+
+    function getMatrixHeatStyle(heat) {
+      if (heat >= 0.82) {
+        return "--heat-start: rgba(255, 203, 82, 0.92); --heat-end: rgba(255, 239, 169, 0.76); --heat-core: rgba(255, 223, 111, 0.82); --heat-shine: 0.38;";
+      }
+      if (heat >= 0.62) {
+        return "--heat-start: rgba(242, 182, 80, 0.68); --heat-end: rgba(255, 219, 132, 0.42); --heat-core: rgba(242, 182, 80, 0.52); --heat-shine: 0.26;";
+      }
+      if (heat >= 0.42) {
+        return "--heat-start: rgba(242, 182, 80, 0.44); --heat-end: rgba(255, 226, 154, 0.24); --heat-core: rgba(242, 182, 80, 0.3); --heat-shine: 0.2;";
+      }
+      if (heat >= 0.22) {
+        return "--heat-start: rgba(242, 182, 80, 0.24); --heat-end: rgba(255, 233, 177, 0.12); --heat-core: rgba(242, 182, 80, 0.16); --heat-shine: 0.14;";
+      }
+      return "--heat-start: rgba(242, 182, 80, 0.11); --heat-end: rgba(255, 240, 199, 0.05); --heat-core: rgba(242, 182, 80, 0.075); --heat-shine: 0.08;";
+    }
+
+    function renderPoissonMatrix() {
+      Object.entries(poissonMatrixData).forEach(([panelId, data]) => {
+        const box = document.querySelector(`#${panelId} .poisson-box`);
+        if (!box || box.querySelector(".poisson-matrix")) return;
+
+        const scores = [];
+        for (let homeGoals = 0; homeGoals <= 4; homeGoals += 1) {
+          for (let awayGoals = 0; awayGoals <= 4; awayGoals += 1) {
+            const base = poissonProbability(data.homeLambda, homeGoals) * poissonProbability(data.awayLambda, awayGoals);
+            const adjusted = base * dixonColesAdjustment(homeGoals, awayGoals, data.homeLambda, data.awayLambda, data.rho);
+            scores.push({ homeGoals, awayGoals, probability: adjusted });
+          }
+        }
+
+        const maxProbability = Math.max(...scores.map((score) => score.probability));
+        const cells = [
+          '<div class="matrix-cell matrix-head matrix-corner">比分</div>',
+          ...Array.from({ length: 5 }, (_, awayGoals) => `<div class="matrix-cell matrix-head">${data.away}<br>${awayGoals}</div>`)
+        ];
+
+        for (let homeGoals = 0; homeGoals <= 4; homeGoals += 1) {
+          cells.push(`<div class="matrix-cell matrix-axis">${data.home}<br>${homeGoals}</div>`);
+          for (let awayGoals = 0; awayGoals <= 4; awayGoals += 1) {
+            const score = scores.find((item) => item.homeGoals === homeGoals && item.awayGoals === awayGoals);
+            const heat = score.probability / maxProbability;
+            const isTop = Math.abs(score.probability - maxProbability) < 0.000001;
+            cells.push(`
+              <div class="matrix-cell ${isTop ? "matrix-top" : ""}" style="${getMatrixHeatStyle(heat)}">
+                ${homeGoals}-${awayGoals}<span>${(score.probability * 100).toFixed(1)}%</span>
+              </div>
+            `);
+          }
+        }
+
+        box.insertAdjacentHTML("beforeend", `
+          <div class="poisson-matrix" aria-label="${data.home} vs ${data.away} 泊松推演矩阵">
+            <div class="poisson-matrix-title">泊松推演矩阵图<span>0-0 至 4-4</span></div>
+            <div class="poisson-matrix-grid">${cells.join("")}</div>
+          </div>
+        `);
+      });
+    }
+
     function activateMatch(tab) {
       const target = tab.getAttribute("aria-controls");
       tabs.forEach((item) => item.setAttribute("aria-selected", String(item === tab)));
@@ -2217,9 +2385,12 @@
 
     renderStandings();
     renderKnockoutRoute();
+    renderPoissonMatrix();
   </script>
 </body>
 </html>
+
+
 
 
 
