@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2026 世界杯六场预测 | 2026-06-27</title>
+  <title>2026 世界杯数据更新 | 2026-06-28</title>
   <style>
     :root {
       color-scheme: dark;
@@ -93,7 +93,7 @@
     }
 
     .shell {
-      width: min(1180px, calc(100% - 32px));
+      width: min(1360px, calc(100% - 28px));
       margin: 0 auto;
       padding: 28px 0 36px;
     }
@@ -139,8 +139,8 @@
     .switcher-tab,
     .match-card,
     .postmatch-card,
-    .group-card,
     .route-match,
+    .r32-game,
     .matrix-cell {
       will-change: transform, opacity;
     }
@@ -440,6 +440,170 @@
       color: var(--muted);
       font-size: 12px;
       line-height: 1.35;
+    }
+
+    .rating-panel {
+      margin-top: 13px;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(242, 182, 80, 0.12), transparent 56%),
+        rgba(255, 255, 255, 0.06);
+    }
+
+    .rating-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .rating-title span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .rating-legend {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .rating-legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .rating-legend span::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--legend-color);
+      box-shadow: 0 0 12px color-mix(in srgb, var(--legend-color) 52%, transparent);
+    }
+
+    .rating-rows {
+      display: grid;
+      gap: 8px;
+    }
+
+    .rating-row {
+      display: grid;
+      grid-template-columns: 72px 34px minmax(0, 1fr) 34px;
+      align-items: center;
+      gap: 8px;
+      color: #d7ddda;
+      font-size: 12px;
+    }
+
+    .rating-row > span:first-child {
+      color: rgba(255, 255, 255, 0.82);
+      font-weight: 800;
+    }
+
+    .rating-score {
+      color: #ffffff;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .rating-score.home {
+      color: #8bd4f8;
+      text-align: right;
+    }
+
+    .rating-score.away {
+      color: #f2b650;
+      text-align: left;
+    }
+
+    .rating-bars {
+      position: relative;
+      min-width: 0;
+    }
+
+    .rating-track {
+      position: relative;
+      height: 14px;
+      overflow: hidden;
+      border-radius: 999px;
+      background:
+        linear-gradient(90deg, rgba(139, 212, 248, 0.16), rgba(255, 255, 255, 0.08) 50%, rgba(242, 182, 80, 0.16)),
+        rgba(255, 255, 255, 0.1);
+    }
+
+    .rating-track::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.42);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+    }
+
+    .rating-fill {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, color-mix(in srgb, var(--fill-color) 56%, transparent), var(--fill-color));
+      box-shadow: 0 0 14px color-mix(in srgb, var(--fill-color) 42%, transparent);
+    }
+
+    .rating-fill.home {
+      right: 50%;
+      width: calc(var(--value) * 5%);
+      max-width: 50%;
+      transform-origin: 100% 50%;
+    }
+
+    .rating-fill.away {
+      left: 50%;
+      width: calc(var(--value) * 5%);
+      max-width: 50%;
+      transform-origin: 0 50%;
+    }
+
+    .rating-summary {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 11px;
+    }
+
+    .rating-total {
+      min-height: 48px;
+      padding: 8px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+    }
+
+    .rating-total strong {
+      display: block;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .rating-total span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
     }
 
     .detail-data ul {
@@ -1230,16 +1394,24 @@
       position: relative;
       overflow: hidden;
       display: grid;
-      gap: 14px;
+      gap: 16px;
       margin-top: 4px;
-      padding: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 8px;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 10px;
       background:
-        radial-gradient(circle at 50% 18%, rgba(242, 182, 80, 0.18), transparent 28%),
-        linear-gradient(135deg, rgba(242, 182, 80, 0.16), rgba(47, 120, 199, 0.12) 44%, rgba(91, 201, 158, 0.1)),
-        rgba(255, 255, 255, 0.055);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        linear-gradient(105deg, rgba(255, 255, 255, 0.16) 0 10%, transparent 10% 18%, rgba(255, 255, 255, 0.1) 18% 27%, transparent 27% 37%, rgba(255, 255, 255, 0.08) 37% 48%, transparent 48%),
+        radial-gradient(circle at 16% 18%, rgba(255, 255, 255, 0.2), transparent 28%),
+        linear-gradient(180deg, rgba(119, 160, 178, 0.92), rgba(76, 116, 139, 0.9)),
+        #527f99;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 18px 42px rgba(8, 12, 30, 0.24);
+    }
+
+    .footer-note .knockout-map {
+      width: min(1420px, calc(100vw - 48px));
+      margin-left: auto;
+      margin-right: auto;
+      transform: translateX(-4%);
     }
 
     .knockout-map::before {
@@ -1248,9 +1420,10 @@
       inset: 0;
       pointer-events: none;
       background:
-        linear-gradient(90deg, transparent 0 49.8%, rgba(255, 255, 255, 0.12) 50%, transparent 50.2%),
-        repeating-linear-gradient(90deg, transparent 0 76px, rgba(255, 255, 255, 0.035) 77px 78px);
-      opacity: 0.7;
+        radial-gradient(circle at 8% 78%, rgba(21, 15, 98, 0.18), transparent 20%),
+        radial-gradient(circle at 92% 78%, rgba(21, 15, 98, 0.16), transparent 20%),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0 2px, transparent 2px 84px);
+      opacity: 0.9;
     }
 
     .knockout-head {
@@ -1263,20 +1436,20 @@
 
     .knockout-head h2 {
       margin: 0;
-      color: #ffffff;
+      color: #100c4e;
       font-size: 20px;
     }
 
     .knockout-head p {
       margin: 0;
-      color: var(--muted);
+      color: rgba(16, 12, 78, 0.82);
       text-align: right;
     }
 
     .route-grid {
       position: relative;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(180px, 0.72fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr) minmax(150px, 0.34fr) minmax(0, 1fr);
       gap: 14px;
       align-items: center;
     }
@@ -1284,64 +1457,91 @@
     .bracket-side,
     .bracket-center {
       min-width: 0;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 8px;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.04)),
-        rgba(255, 255, 255, 0.06);
-      overflow: hidden;
-      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      overflow: visible;
+      box-shadow: none;
     }
 
     .bracket-side h3,
     .bracket-center h3 {
-      margin: 0;
-      padding: 10px 12px;
-      color: #ffffff;
-      font-size: 14px;
-      background:
-        linear-gradient(90deg, color-mix(in srgb, var(--route-accent, #ffffff) 18%, transparent), rgba(255, 255, 255, 0.055));
+      margin: 0 0 8px;
+      color: rgba(16, 12, 78, 0.86);
+      font-size: 15px;
+      font-weight: 900;
+      text-align: center;
     }
 
     .bracket-rounds {
+      position: relative;
       display: grid;
-      grid-template-columns: 1.2fr 0.95fr 0.82fr 0.78fr;
-      gap: 10px;
-      padding: 10px;
+      grid-template-columns: 1.15fr 1fr 0.9fr 0.78fr;
+      gap: 20px;
+      padding: 8px 6px 12px;
       align-items: stretch;
     }
 
     .bracket-side.right .bracket-rounds {
-      grid-template-columns: 0.78fr 0.82fr 0.95fr 1.2fr;
+      grid-template-columns: 0.78fr 0.9fr 1fr 1.15fr;
     }
 
     .bracket-round {
+      position: relative;
       display: grid;
-      gap: 8px;
+      gap: 18px;
       --round-color: var(--route-accent, var(--gold));
     }
 
-    .bracket-side .round-16 {
-      align-content: space-between;
-      padding-top: 42px;
-      padding-bottom: 42px;
+    .bracket-round::before {
+      content: attr(data-stage);
+      display: block;
+      min-height: 48px;
+      margin-bottom: 6px;
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: 1000;
+      line-height: 48px;
+      text-align: center;
+      text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.3);
+      white-space: nowrap;
     }
 
-    .bracket-side .round-8 {
-      align-content: space-between;
-      padding-top: 130px;
-      padding-bottom: 130px;
+    .bracket-side .bracket-round {
+      grid-template-rows: 54px repeat(16, 58px);
+      gap: 0;
     }
 
-    .bracket-side .round-semi {
-      align-content: center;
-      padding-top: 232px;
-      padding-bottom: 232px;
+    .bracket-side .bracket-round::before {
+      grid-row: 1 / 2;
     }
 
     .route-match.group-start {
-      margin-top: 14px;
+      margin-top: 0;
     }
+
+    .bracket-side .route-match {
+      margin: 5px 0;
+    }
+
+    .bracket-side .round-32 .route-match:nth-of-type(1) { grid-row: 2 / span 2; }
+    .bracket-side .round-32 .route-match:nth-of-type(2) { grid-row: 4 / span 2; }
+    .bracket-side .round-32 .route-match:nth-of-type(3) { grid-row: 6 / span 2; }
+    .bracket-side .round-32 .route-match:nth-of-type(4) { grid-row: 8 / span 2; }
+    .bracket-side .round-32 .route-match:nth-of-type(5) { grid-row: 10 / span 2; }
+    .bracket-side .round-32 .route-match:nth-of-type(6) { grid-row: 12 / span 2; }
+    .bracket-side .round-32 .route-match:nth-of-type(7) { grid-row: 14 / span 2; }
+    .bracket-side .round-32 .route-match:nth-of-type(8) { grid-row: 16 / span 2; }
+
+    .bracket-side .round-16 .route-match:nth-of-type(1) { grid-row: 3 / span 2; }
+    .bracket-side .round-16 .route-match:nth-of-type(2) { grid-row: 7 / span 2; }
+    .bracket-side .round-16 .route-match:nth-of-type(3) { grid-row: 11 / span 2; }
+    .bracket-side .round-16 .route-match:nth-of-type(4) { grid-row: 15 / span 2; }
+
+    .bracket-side .round-8 .route-match:nth-of-type(1) { grid-row: 5 / span 2; }
+    .bracket-side .round-8 .route-match:nth-of-type(2) { grid-row: 13 / span 2; }
+
+    .bracket-side .round-semi .route-match:nth-of-type(1) { grid-row: 9 / span 2; }
 
     .round-title {
       display: inline-flex;
@@ -1382,11 +1582,12 @@
     }
 
     .bracket-center {
-      background:
-        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.22), transparent 34%),
-        linear-gradient(180deg, rgba(242, 182, 80, 0.2), rgba(255, 255, 255, 0.07)),
-        rgba(255, 255, 255, 0.075);
-      box-shadow: 0 0 32px rgba(242, 182, 80, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      display: grid;
+      align-content: center;
+      gap: 18px;
+      padding-top: 28px;
+      background: transparent;
+      box-shadow: none;
     }
 
     .bracket-center .bracket-rounds {
@@ -1397,42 +1598,56 @@
 
     .route-match {
       position: relative;
+      overflow: hidden;
       display: grid;
-      gap: 4px;
-      min-height: 74px;
-      align-content: center;
-      padding: 9px 10px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-left: 4px solid var(--round-color, var(--route-accent, var(--gold)));
-      border-radius: 8px;
-      background:
-        radial-gradient(circle at 92% 18%, color-mix(in srgb, var(--round-color, var(--route-accent, var(--gold))) 16%, transparent), transparent 36%),
-        linear-gradient(135deg, color-mix(in srgb, var(--round-color, var(--route-accent, var(--gold))) 16%, transparent), transparent 72%),
-        rgba(16, 31, 38, 0.42);
-      color: #f8f5ea;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09);
+      grid-template-rows: 28px 1fr;
+      gap: 0;
+      min-height: 112px;
+      align-content: stretch;
+      padding: 0;
+      border: 4px solid #171067;
+      border-radius: 0 0 10px 10px;
+      background: #171067;
+      color: #111111;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.22);
     }
 
     .route-match.is-lit {
-      border-color: color-mix(in srgb, var(--round-color, var(--route-accent, var(--gold))) 55%, rgba(255, 255, 255, 0.24));
+      border-color: #211689;
       box-shadow:
-        0 0 18px color-mix(in srgb, var(--round-color, var(--route-accent, var(--gold))) 18%, transparent),
-        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+        0 0 0 2px rgba(255, 255, 255, 0.36),
+        0 6px 16px rgba(21, 16, 103, 0.18);
+    }
+
+    .route-match::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      background: linear-gradient(115deg, transparent 0 34%, rgba(255, 255, 255, 0.42) 46%, transparent 58% 100%);
+      opacity: 0;
+      transform: translateX(-120%);
+    }
+
+    .route-match.is-lit::before {
+      opacity: 1;
+      animation: routeSheen 1200ms ease-out both;
     }
 
     .route-match::after {
       content: "";
       position: absolute;
       top: 50%;
-      right: -11px;
-      width: 10px;
-      border-top: 2px solid color-mix(in srgb, var(--round-color, var(--route-accent, var(--gold))) 52%, rgba(255, 255, 255, 0.2));
-      filter: drop-shadow(0 0 4px color-mix(in srgb, var(--round-color, var(--route-accent, var(--gold))) 36%, transparent));
+      right: -32px;
+      width: 32px;
+      border-top: 3px solid #111111;
+      filter: none;
     }
 
     .bracket-side.right .route-match::after {
       right: auto;
-      left: -11px;
+      left: -32px;
     }
 
     .bracket-center .route-match::after,
@@ -1441,28 +1656,178 @@
     }
 
     .route-match b {
-      color: var(--round-color, var(--route-accent, var(--gold)));
-      font-size: 12px;
+      display: none;
     }
 
     .route-match span {
-      color: #ffffff;
-      font-size: 13px;
-      font-weight: 800;
-      line-height: 1.35;
+      color: #111111;
+      font-size: 18px;
+      font-weight: 1000;
+      line-height: 1.18;
     }
 
     .route-time {
-      color: var(--muted) !important;
-      font-size: 11px !important;
-      font-weight: 800 !important;
+      display: flex;
+      align-items: center;
+      color: #ffffff !important;
+      font-size: 16px !important;
+      font-weight: 900 !important;
       letter-spacing: 0;
+      padding: 0 8px;
+      background: #171067;
+      white-space: nowrap;
+    }
+
+    .route-teams {
+      display: grid;
+      gap: 4px;
+      padding: 4px 6px 6px;
+      background: #171067;
+    }
+
+    .route-team {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 26px;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 3px 7px 3px 10px;
+      border-radius: 8px;
+      background: linear-gradient(180deg, #ffffff, #f3f3f3);
+      color: #111111 !important;
+      box-shadow: inset 0 0 0 1px rgba(21, 16, 103, 0.08);
+    }
+
+    .route-team-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .route-score-box {
+      width: 24px;
+      height: 28px;
+      border-radius: 4px;
+      background: #171067;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.32);
     }
 
     .route-note {
       color: var(--muted);
       font-size: 12px;
       line-height: 1.5;
+    }
+
+    .r32-schedule {
+      position: relative;
+      box-sizing: border-box;
+      width: min(1320px, calc(100vw - 40px));
+      max-width: 100%;
+      margin: 0 auto 16px;
+      padding: 14px;
+      transform: translateX(-4%);
+      border-radius: 10px;
+      background:
+        linear-gradient(135deg, rgba(21, 16, 103, 0.9), rgba(35, 84, 119, 0.84)),
+        rgba(21, 16, 103, 0.86);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 16px 34px rgba(8, 12, 30, 0.22);
+    }
+
+    .r32-schedule-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .r32-schedule-head h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 22px;
+    }
+
+    .r32-schedule-head p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.72);
+      text-align: right;
+    }
+
+    .r32-schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .r32-game {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      gap: 8px;
+      min-width: 0;
+      padding: 9px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.92);
+      color: #111111;
+    }
+
+    .r32-game::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(110deg, transparent 0 38%, rgba(242, 182, 80, 0.28) 50%, transparent 62% 100%);
+      opacity: 0;
+      transform: translateX(-120%);
+    }
+
+    .r32-game.is-lit::after {
+      opacity: 1;
+      animation: routeSheen 980ms ease-out both;
+    }
+
+    @keyframes routeSheen {
+      0% {
+        transform: translateX(-120%);
+      }
+      100% {
+        transform: translateX(120%);
+      }
+    }
+
+    .r32-game-time {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      color: #171067;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .r32-game-teams {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 1000;
+    }
+
+    .r32-team {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .r32-team:last-child {
+      text-align: right;
+    }
+
+    .r32-vs {
+      color: #171067;
+      font-size: 12px;
+      font-weight: 1000;
     }
 
     .source-links {
@@ -1536,9 +1901,18 @@
       .data-strip,
       .detail-kpis,
       .detail-data ul,
+      .rating-summary,
       .postmatch-grid,
       .postmatch-meta {
         grid-template-columns: 1fr;
+      }
+
+      .rating-row {
+        grid-template-columns: 64px 30px minmax(0, 1fr) 30px;
+      }
+
+      .rating-score {
+        font-size: 11px;
       }
 
       .postmatch-head {
@@ -1607,21 +1981,44 @@
 
       .route-grid {
         grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .r32-schedule-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
       }
 
       .bracket-rounds {
         grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 8px 0 12px;
       }
 
       .bracket-side.right .bracket-rounds {
         grid-template-columns: 1fr;
       }
 
-      .bracket-side .round-16,
-      .bracket-side .round-8,
-      .bracket-side .round-semi {
-        padding-top: 0;
-        padding-bottom: 0;
+      .bracket-side.left .bracket-rounds::after,
+      .bracket-side.right .bracket-rounds::after {
+        display: none;
+      }
+
+      .bracket-side .bracket-round {
+        grid-template-rows: auto;
+        gap: 12px;
+      }
+
+      .bracket-side .bracket-round::before {
+        grid-row: auto;
+      }
+
+      .bracket-side .round-32 .route-match,
+      .bracket-side .round-16 .route-match,
+      .bracket-side .round-8 .route-match,
+      .bracket-side .round-semi .route-match {
+        grid-row: auto !important;
+        margin: 0;
       }
 
       .route-match.group-start {
@@ -1630,6 +2027,23 @@
 
       .route-match::after {
         display: none;
+      }
+
+      .bracket-side h3,
+      .bracket-center h3 {
+        font-size: 28px;
+      }
+
+      .route-match {
+        min-height: 104px;
+      }
+
+      .route-team {
+        grid-template-columns: minmax(0, 1fr) 28px;
+      }
+
+      .route-team-name {
+        white-space: normal;
       }
     }
 
@@ -1645,6 +2059,58 @@
 
       .knockout-head p {
         text-align: left;
+      }
+
+      .footer-note .knockout-map {
+        width: calc(100vw - 18px);
+        margin-left: auto;
+        margin-right: auto;
+        transform: none;
+        padding: 10px;
+      }
+
+      .r32-schedule {
+        width: calc(100vw - 20px);
+        padding: 9px;
+        transform: none;
+      }
+
+      .r32-schedule-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .r32-schedule-head p {
+        text-align: left;
+      }
+
+      .r32-schedule-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .r32-game-teams {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .r32-team,
+      .r32-team:last-child {
+        text-align: left;
+        white-space: normal;
+      }
+
+      .bracket-side h3,
+      .bracket-center h3 {
+        font-size: 24px;
+        padding: 10px 12px;
+      }
+
+      .route-time {
+        font-size: 14px !important;
+      }
+
+      .route-match span {
+        font-size: 16px;
       }
 
       .schedule-table,
@@ -1763,35 +2229,35 @@
         </div>
         <span>2026 世界杯比赛日 AI 预测</span>
       </div>
-      <div class="timestamp">最后更新：北京时间 2026-06-27 23:22</div>
+      <div class="timestamp">最后更新：北京时间 2026-06-28 15:49</div>
     </header>
 
     <section class="hero" aria-labelledby="page-title">
       <div>
-        <h1 id="page-title">北京时间 6-28 六场世界杯预测</h1>
-        <p class="lead">按视频图文方法重构：R1/R2 回顾、R3 战略推演、九维评分、Dixon-Coles 泊松矩阵、大小球与风险提示同步更新。预测用于赛前阅读与讨论，不作为投注建议。</p>
+        <h1 id="page-title">北京时间 6-29 世界杯32强赛前预测</h1>
+        <p class="lead">今日只做一场，按视频图文方法深化：小组走势、战术对位、九维评分、Dixon-Coles 泊松矩阵、大小球分层概率与临场触发条件同步更新。预测用于赛前阅读与讨论，不作为投注建议。</p>
         <div class="chips" aria-label="今日概览">
-          <span class="chip"><span class="dot"></span>6 场小组赛</span>
-          <span class="chip"><span class="dot" style="color: var(--gold); background: var(--gold);"></span>J/K/L 组三线收官</span>
-          <span class="chip"><span class="dot" style="color: var(--cyan); background: var(--cyan);"></span>Dixon-Coles + 九维评分</span>
+          <span class="chip"><span class="dot"></span>M73 南非 vs 加拿大</span>
+          <span class="chip"><span class="dot" style="color: var(--gold); background: var(--gold);"></span>6-29 03:00</span>
+          <span class="chip"><span class="dot" style="color: var(--cyan); background: var(--cyan);"></span>单场深度预测</span>
         </div>
       </div>
 
       <aside class="briefing" aria-label="预测摘要">
         <h2>比赛日总览</h2>
-        <p>J、K、L 三组进入收官轮。临场轮换和保守出线策略继续抬高小球权重：英格兰、阿根廷优势仍在但胜率轻微回落，K/L 组头名与晋级卡位战更偏低比分。</p>
+        <p>32强首场为南非对加拿大。加拿大小组赛进 9 球、净胜球 +5，冲击力更强；南非压过同分球队拿到 A 组第二，低位防守和定位球质量是主要变量。</p>
         <div class="metrics">
           <div class="metric">
-            <strong>71%</strong>
-            <span>最高清晰胜率：英格兰</span>
+            <strong>48.7%</strong>
+            <span>加拿大常规时间胜率</span>
           </div>
           <div class="metric">
-            <strong>2.2</strong>
-            <span>预计场均进球</span>
+            <strong>1-1</strong>
+            <span>最高频比分</span>
           </div>
           <div class="metric">
-            <strong>3</strong>
-            <span>小组同时收官</span>
+            <strong>58.0%</strong>
+            <span>小2.5 概率</span>
           </div>
         </div>
       </aside>
@@ -1799,92 +2265,49 @@
 
             <section aria-labelledby="match-title">
       <div class="section-title">
-        <h2 id="match-title">六场分析预测</h2>
-        <p>按北京时间先后排序，覆盖 L、K、J 组三个收官窗口。</p>
+        <h2 id="match-title">今日单场深度预测</h2>
+        <p>只保留北京时间 6-29 的比赛，分析比小组赛阶段更细。</p>
       </div>
 
       <section class="match-switcher" aria-label="切换比赛详细数据">
         <div class="switcher-tabs" role="tablist" aria-label="选择比赛">
-          <button class="switcher-tab" type="button" role="tab" aria-selected="true" aria-controls="detail-pan-eng" id="tab-pan-eng" style="--tab-accent: var(--red);">巴拿马 vs 英格兰<span>6-28 05:00 · L 组 · 预计 0-2</span></button>
-          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-cro-gha" id="tab-cro-gha" style="--tab-accent: var(--gold);">克罗地亚 vs 加纳<span>6-28 05:00 · L 组 · 预计 1-1</span></button>
-          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-col-por" id="tab-col-por" style="--tab-accent: var(--green);">哥伦比亚 vs 葡萄牙<span>6-28 07:30 · K 组 · 预计 1-1</span></button>
-          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-cod-uzb" id="tab-cod-uzb" style="--tab-accent: var(--blue);">刚果民主共和国 vs 乌兹别克斯坦<span>6-28 07:30 · K 组 · 预计 1-0</span></button>
-          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-alg-aut" id="tab-alg-aut" style="--tab-accent: var(--cyan);">阿尔及利亚 vs 奥地利<span>6-28 10:00 · J 组 · 预计 1-1</span></button>
-          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-jor-arg" id="tab-jor-arg" style="--tab-accent: var(--purple);">约旦 vs 阿根廷<span>6-28 10:00 · J 组 · 预计 0-1</span></button>
+          <button class="switcher-tab" type="button" role="tab" aria-selected="true" aria-controls="detail-kor-can" id="tab-kor-can" style="--tab-accent: var(--red);">南非 vs 加拿大<span>6-29 03:00 · M73 · 32强</span></button>
         </div>
 
-        <div class="match-detail" id="detail-col-por" role="tabpanel" aria-labelledby="tab-col-por">
-          <div class="detail-scoreboard"><h3>哥伦比亚 vs 葡萄牙：小组头名控制战</h3><p>哥伦比亚 6 分已掌握头名主动，葡萄牙 4 分出线压力小但仍可争第一。最新模型把平局权重上调，葡萄牙 34.8%、哥伦比亚 31.2%，首选比分仍是 1-1。</p><div class="detail-kpis"><div class="detail-kpi"><strong>34.8%</strong><span>葡萄牙胜率</span></div><div class="detail-kpi"><strong>2.16</strong><span>预期总进球</span></div><div class="detail-kpi"><strong>6.78</strong><span>葡萄牙评分</span></div><div class="detail-kpi"><strong>6.66</strong><span>哥伦比亚评分</span></div><div class="detail-kpi"><strong>1.16</strong><span>葡萄牙 λ</span></div><div class="detail-kpi"><strong>小2.5 61.1%</strong><span>大2.5 38.9%</span></div></div></div>
-          <div class="detail-data"><ul><li><b>R1+R2 回顾</b>葡萄牙 1-1 刚果民主共和国、5-0 乌兹别克斯坦；哥伦比亚 2-0 乌兹别克斯坦、1-0 刚果民主共和国。哥伦比亚 6 分，葡萄牙 4 分。</li><li><b>R3 战略推演</b>哥伦比亚不败即可大概率守住第一；葡萄牙赢球反超但平局同样安全，双方前 60 分钟更像控风险。</li><li><b>九维评分</b>葡萄牙阵容上限仍略高，但哥伦比亚连续零封提升了防守评分；两队都会避免早段开放。</li><li><b>触发判定</b>最新触发点更偏小比分：若上半场 0-0，双方接受平局的概率上升；只有早段进球才会把比赛推向大球。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>哥伦比亚 1.06，葡萄牙 1.16，ρ=-0.12。</span></div><div class="poisson-line"><span>胜平负</span><span>哥伦比亚胜 31.2%，平 34.0%，葡萄牙胜 34.8%。</span></div><div class="poisson-line"><span>高频比分</span><span>1-1 14.9%，0-0 11.8%，0-1 9.8%。</span></div><div class="poisson-line"><span>大小球</span><span>小2.5 为 61.1%，大2.5 为 38.9%。</span></div></div></div>
-        </div>
-
-        <div class="match-detail" id="detail-cod-uzb" role="tabpanel" aria-labelledby="tab-cod-uzb">
-          <div class="detail-scoreboard"><h3>刚果民主共和国 vs 乌兹别克斯坦：第三名生死线</h3><p>刚果民主共和国 1 分仍要抢最佳第三，乌兹别克斯坦 0 分且连续被零封。最新模型给刚果民主共和国 54.6%，首选比分改为 1-0。</p><div class="detail-kpis"><div class="detail-kpi"><strong>54.6%</strong><span>刚果民主共和国胜率</span></div><div class="detail-kpi"><strong>2.12</strong><span>预期总进球</span></div><div class="detail-kpi"><strong>5.58</strong><span>刚果民主共和国评分</span></div><div class="detail-kpi"><strong>4.44</strong><span>乌兹别克斯坦评分</span></div><div class="detail-kpi"><strong>1.38</strong><span>刚果民主共和国 λ</span></div><div class="detail-kpi"><strong>小2.5 64.0%</strong><span>大2.5 36.0%</span></div></div></div>
-          <div class="detail-data"><ul><li><b>R1+R2 回顾</b>刚果民主共和国 1-1 葡萄牙、0-1 哥伦比亚；乌兹别克斯坦 0-2 哥伦比亚、0-5 葡萄牙。</li><li><b>R3 战略推演</b>刚果民主共和国赢球才有现实晋级价值，平局意义有限；乌兹别克斯坦若久攻不进，后段会留下反击空间。</li><li><b>九维评分</b>刚果民主共和国身体对抗和二点球优势更明显；乌兹别克斯坦连续被零封，终结质量继续下修。</li><li><b>触发判定</b>触发点在首球：刚果民主共和国若先领先，会收缩打反击；乌兹别克斯坦若 70 分钟仍无进球，比赛才会明显打开。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>刚果民主共和国 1.38，乌兹别克斯坦 0.74，ρ=-0.12。</span></div><div class="poisson-line"><span>胜平负</span><span>刚果民主共和国胜 54.6%，平 29.2%，乌兹别克斯坦胜 16.2%。</span></div><div class="poisson-line"><span>高频比分</span><span>1-0 13.4%，1-1 12.1%，2-0 9.2%。</span></div><div class="poisson-line"><span>大小球</span><span>小2.5 为 64.0%，大2.5 为 36.0%。</span></div></div></div>
-        </div>
-
-        <div class="match-detail is-active" id="detail-pan-eng" role="tabpanel" aria-labelledby="tab-pan-eng">
-          <div class="detail-scoreboard"><h3>巴拿马 vs 英格兰：英格兰锁定出线路线</h3><p>英格兰已至少锁定淘汰赛席位，仍要争小组第一；巴拿马已被淘汰且内部状态不稳。最新矩阵给英格兰 71.6%，首选 0-2。</p><div class="detail-kpis"><div class="detail-kpi"><strong>71.6%</strong><span>英格兰胜率</span></div><div class="detail-kpi"><strong>2.62</strong><span>预期总进球</span></div><div class="detail-kpi"><strong>7.05</strong><span>英格兰评分</span></div><div class="detail-kpi"><strong>4.20</strong><span>巴拿马评分</span></div><div class="detail-kpi"><strong>1.94</strong><span>英格兰 λ</span></div><div class="detail-kpi"><strong>小2.5 51.7%</strong><span>大2.5 48.3%</span></div></div></div>
-          <div class="detail-data"><ul><li><b>R1+R2 回顾</b>巴拿马 0-1 加纳、0-1 克罗地亚；英格兰 4-2 克罗地亚、0-0 加纳。英格兰 4 分，巴拿马 0 分。</li><li><b>R3 战略推演</b>英格兰平局即可稳住晋级，赢球争头名；巴拿马已失去主动权，比赛目标更偏荣誉战。</li><li><b>九维评分</b>英格兰阵容深度和定位球优势仍明显，Reece James 伤缺会削弱右路推进但不改整体优势；巴拿马进攻端仍未打开。</li><li><b>触发判定</b>英格兰若早段领先，会更倾向控节奏保护体能；巴拿马若情绪失控，英格兰定位球和二次进攻会继续放大优势。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>巴拿马 0.68，英格兰 1.94，ρ=-0.08。</span></div><div class="poisson-line"><span>胜平负</span><span>巴拿马胜 9.1%，平 19.3%，英格兰胜 71.6%。</span></div><div class="poisson-line"><span>高频比分</span><span>0-2 13.6%，0-1 13.1%，0-3 8.8%。</span></div><div class="poisson-line"><span>大小球</span><span>小2.5 为 51.7%，大2.5 为 48.3%。</span></div></div></div>
-        </div>
-
-        <div class="match-detail" id="detail-cro-gha" role="tabpanel" aria-labelledby="tab-cro-gha">
-          <div class="detail-scoreboard"><h3>克罗地亚 vs 加纳：低比分晋级卡位</h3><p>加纳 4 分不败路线更舒服，克罗地亚 3 分必须主动争胜。最新矩阵给克罗地亚 38.6%、平局 32.4%，首选 1-1。</p><div class="detail-kpis"><div class="detail-kpi"><strong>38.6%</strong><span>克罗地亚胜率</span></div><div class="detail-kpi"><strong>2.16</strong><span>预期总进球</span></div><div class="detail-kpi"><strong>6.18</strong><span>克罗地亚评分</span></div><div class="detail-kpi"><strong>5.88</strong><span>加纳评分</span></div><div class="detail-kpi"><strong>1.16</strong><span>克罗地亚 λ</span></div><div class="detail-kpi"><strong>小2.5 63.0%</strong><span>大2.5 37.0%</span></div></div></div>
-          <div class="detail-data"><ul><li><b>R1+R2 回顾</b>克罗地亚 2-4 英格兰、1-0 巴拿马；加纳 1-0 巴拿马、0-0 英格兰。加纳 4 分，克罗地亚 3 分。</li><li><b>R3 战略推演</b>加纳不败大概率晋级，克罗地亚赢球最稳；比赛节奏会被加纳的低位防守和克罗地亚控球拖慢。</li><li><b>九维评分</b>克罗地亚控球和经验略占优；加纳防守纪律和身体对抗强，反击效率是关键。</li><li><b>触发判定</b>双方前 60 分钟都不愿先犯错，小2.5 权重继续上升；若克罗地亚久攻不下，最后 20 分钟才会增加大球风险。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>克罗地亚 1.16，加纳 1.00，ρ=-0.13。</span></div><div class="poisson-line"><span>胜平负</span><span>克罗地亚胜 38.6%，平 32.4%，加纳胜 29.0%。</span></div><div class="poisson-line"><span>高频比分</span><span>1-1 14.2%，0-0 12.5%，1-0 10.2%。</span></div><div class="poisson-line"><span>大小球</span><span>小2.5 为 63.0%，大2.5 为 37.0%。</span></div></div></div>
-        </div>
-
-        <div class="match-detail" id="detail-alg-aut" role="tabpanel" aria-labelledby="tab-alg-aut">
-          <div class="detail-scoreboard"><h3>阿尔及利亚 vs 奥地利：第二名直接对话</h3><p>奥地利和阿尔及利亚同为 3 分，奥地利净胜球和整体压迫略占优。最新矩阵给奥地利 39.4%、阿尔及利亚 29.4%，首选 1-1。</p><div class="detail-kpis"><div class="detail-kpi"><strong>39.4%</strong><span>奥地利胜率</span></div><div class="detail-kpi"><strong>2.30</strong><span>预期总进球</span></div><div class="detail-kpi"><strong>6.02</strong><span>奥地利评分</span></div><div class="detail-kpi"><strong>5.64</strong><span>阿尔及利亚评分</span></div><div class="detail-kpi"><strong>1.28</strong><span>奥地利 λ</span></div><div class="detail-kpi"><strong>小2.5 58.7%</strong><span>大2.5 41.3%</span></div></div></div>
-          <div class="detail-data"><ul><li><b>R1+R2 回顾</b>阿尔及利亚 0-3 阿根廷、2-1 约旦；奥地利 3-1 约旦、0-2 阿根廷。两队同为 3 分。</li><li><b>R3 战略推演</b>奥地利净胜球占优，平局路线更舒服；阿尔及利亚赢球才能彻底掌握第二。</li><li><b>九维评分</b>奥地利整体压迫和定位球更好；阿尔及利亚边路推进速度强，但防线抗压波动较大。</li><li><b>触发判定</b>奥地利可接受平局，阿尔及利亚必须更主动；若阿尔及利亚 60 分钟后仍没领先，比赛会向开放对攻转化。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>阿尔及利亚 1.02，奥地利 1.28，ρ=-0.13。</span></div><div class="poisson-line"><span>胜平负</span><span>阿尔及利亚胜 29.4%，平 31.2%，奥地利胜 39.4%。</span></div><div class="poisson-line"><span>高频比分</span><span>1-1 14.2%，0-0 10.6%，0-1 9.8%。</span></div><div class="poisson-line"><span>大小球</span><span>小2.5 为 58.7%，大2.5 为 41.3%。</span></div></div></div>
-        </div>
-
-        <div class="match-detail" id="detail-jor-arg" role="tabpanel" aria-labelledby="tab-jor-arg">
-          <div class="detail-scoreboard"><h3>约旦 vs 阿根廷：阿根廷轮换仍占优</h3><p>阿根廷已锁定 J 组头名，预计会有轮换，约旦 0 分只剩荣誉战。模型把阿根廷胜率下调到 69.8%，首选改为 0-1。</p><div class="detail-kpis"><div class="detail-kpi"><strong>69.8%</strong><span>阿根廷胜率</span></div><div class="detail-kpi"><strong>2.58</strong><span>预期总进球</span></div><div class="detail-kpi"><strong>6.96</strong><span>阿根廷评分</span></div><div class="detail-kpi"><strong>4.22</strong><span>约旦评分</span></div><div class="detail-kpi"><strong>1.88</strong><span>阿根廷 λ</span></div><div class="detail-kpi"><strong>小2.5 52.2%</strong><span>大2.5 47.8%</span></div></div></div>
-          <div class="detail-data"><ul><li><b>R1+R2 回顾</b>约旦 1-3 奥地利、1-2 阿尔及利亚；阿根廷 3-0 阿尔及利亚、2-0 奥地利。阿根廷 6 分，约旦 0 分。</li><li><b>R3 战略推演</b>阿根廷已锁头名，轮换和控体能优先级提高；约旦必须主动寻求进球，但持续压迫能力不足。</li><li><b>九维评分</b>阿根廷即使轮换仍有阵容厚度优势，但核心出场时间若被控制，进球上限会低于前两轮。</li><li><b>触发判定</b>触发点在阿根廷首发强度：若大幅轮换，比赛更像 0-1/0-2；若早早进球，约旦压上后才会推高大球。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>约旦 0.70，阿根廷 1.88，ρ=-0.08。</span></div><div class="poisson-line"><span>胜平负</span><span>约旦胜 10.0%，平 20.2%，阿根廷胜 69.8%。</span></div><div class="poisson-line"><span>高频比分</span><span>0-1 13.5%，0-2 13.0%，0-3 8.1%。</span></div><div class="poisson-line"><span>大小球</span><span>小2.5 为 52.2%，大2.5 为 47.8%。</span></div></div></div>
+        <div class="match-detail is-active" id="detail-kor-can" role="tabpanel" aria-labelledby="tab-kor-can">
+          <div class="detail-scoreboard"><h3>南非 vs 加拿大：加拿大占优，小球防平</h3><p>这场是 32 强 M73，南非以 A 组第二进入淘汰赛，加拿大以 B 组第二进入。模型给加拿大常规时间胜率 48.7%，但平局概率仍有 28.5%，首选比分放在 1-1，次选 0-1/0-2；倾向加拿大不败，小2.5 略优。</p><div class="detail-kpis"><div class="detail-kpi"><strong>1-1</strong><span>首选比分</span></div><div class="detail-kpi"><strong>22.8/28.5/48.7</strong><span>胜平负</span></div><div class="detail-kpi"><strong>57.5%</strong><span>小2.5</span></div><div class="detail-kpi"><strong>0.92/1.46</strong><span>预期进球</span></div><div class="detail-kpi"><strong>加拿大不败</strong><span>方向建议</span></div><div class="detail-kpi"><strong>M73</strong><span>32强首场</span></div></div><div class="rating-panel" aria-label="南非 vs 加拿大九维评分比例图"><div class="rating-title">九维评分比例图<span>10分制</span></div><div class="rating-legend"><span style="--legend-color: #8bd4f8;">南非</span><span style="--legend-color: #f2b650;">加拿大</span></div><div class="rating-rows"><div class="rating-row"><span>进攻效率</span><span class="rating-score home">5.9</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 5.9; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 7.4; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">7.4</span></div><div class="rating-row"><span>防守稳定</span><span class="rating-score home">6.8</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 6.8; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 6.8; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">6.8</span></div><div class="rating-row"><span>转换速度</span><span class="rating-score home">6.3</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 6.3; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 8.1; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">8.1</span></div><div class="rating-row"><span>定位球</span><span class="rating-score home">6.9</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 6.9; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 6.5; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">6.5</span></div><div class="rating-row"><span>抗压能力</span><span class="rating-score home">6.7</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 6.7; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 6.8; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">6.8</span></div></div><div class="rating-summary"><div class="rating-total"><strong>6.52</strong><span>南非综合</span></div><div class="rating-total"><strong>7.12</strong><span>加拿大综合</span></div></div></div></div>
+          <div class="detail-data"><ul><li><b>小组走势</b>南非 1 胜 2 负、净胜球 -2，收官战 1-0 韩国把出线权抢回来，三场总进球不高但防守端有硬度；加拿大 1 胜 1 平 1 负、净胜球 +5，6-0 卡塔尔抬高了进攻数据，但面对瑞士时暴露了转换防守问题。</li><li><b>战术对位</b>南非更需要把阵型压紧，依靠身体对抗、定位球和边路二点球制造机会；加拿大的优势在纵向冲刺、边路速度和前场二次压迫，若能抢到第一球，比赛会从小比分拖入加拿大节奏。</li><li><b>盘口倾向</b>加拿大胜率高于南非，但淘汰赛首战容错低，单挑胜负不如加拿大不败稳；比分区间主要集中在 0-1、1-1、0-2，若南非定位球质量提升，平局权重会上升。</li><li><b>触发判定</b>前 25 分钟若加拿大形成 3 次以上高位抢断并有禁区内射门，加拿大胜率上修；若南非把半场拖到 0-0，小2.5 和平局概率会明显提高；若先出现定位球进球，大2.5 才会被拉到接近五成。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>南非 0.92，加拿大 1.46，ρ=-0.08。</span></div><div class="poisson-line"><span>胜平负</span><span>南非胜 22.8%，平 28.5%，加拿大胜 48.7%。</span></div><div class="poisson-line"><span>高频比分</span><span>1-1 13.4%，0-1 12.5%，0-0 10.2%，0-2 9.9%。</span></div><div class="poisson-line"><span>大小球</span><span>大2.5 42.5%，小2.5 57.5%。</span></div></div></div>
         </div>
       </section>
 
       <div class="matches">
-        <article class="card match-card" data-match-card="detail-col-por" style="--accent: var(--green); --card-bg: linear-gradient(135deg, rgba(18, 103, 71, 0.62), rgba(8, 35, 31, 0.74));">
-          <div class="card-inner"><div class="match-meta"><span>Hard Rock Stadium · Miami</span><span>6-28 07:30</span></div><div class="teams"><div class="team"><span class="team-name">哥伦比亚</span><span class="team-note">哥伦比亚防守连续零封，平局路线更舒服。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">葡萄牙</span><span class="team-note">葡萄牙进攻上限更高，赢球可争头名。</span></div></div><div class="data-strip" aria-label="哥伦比亚 vs 葡萄牙推演数据"><div class="data-point"><strong>预测 1-1</strong><span>两队都有出线主动权，Dixon-Coles 首选 1-1。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 1.06 / 1.16；首选 1-1，次选 0-0。</span></div><div class="data-point"><strong>大小球百分比</strong><span>小2.5 61.1%，大2.5 38.9%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>哥伦比亚胜</span><div class="track"><div class="fill" style="--value: 31.2%;"></div></div><span>31.2%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 34.0%;"></div></div><span>34.0%</span></div><div class="bar-row"><span>葡萄牙胜</span><div class="track"><div class="fill" style="--value: 34.8%;"></div></div><span>34.8%</span></div></div></div>
-        </article>
-        <article class="card match-card" data-match-card="detail-cod-uzb" style="--accent: var(--blue); --card-bg: linear-gradient(135deg, rgba(38, 82, 155, 0.62), rgba(10, 25, 42, 0.72));">
-          <div class="card-inner"><div class="match-meta"><span>BBVA · Monterrey</span><span>6-28 07:30</span></div><div class="teams"><div class="team"><span class="team-name">刚果民主共和国</span><span class="team-note">身体对抗和反击质量更好，必须争胜。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">乌兹别克斯坦</span><span class="team-note">连续被零封，进攻效率是最大问题。</span></div></div><div class="data-strip" aria-label="刚果民主共和国 vs 乌兹别克斯坦推演数据"><div class="data-point"><strong>预测 1-0</strong><span>刚果民主共和国胜率升至 54.6%，首选 1-0。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 1.38 / 0.74；首选 1-0，次选 1-1。</span></div><div class="data-point"><strong>大小球百分比</strong><span>小2.5 64.0%，大2.5 36.0%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>刚果民主共和国胜</span><div class="track"><div class="fill" style="--value: 54.6%;"></div></div><span>54.6%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 29.2%;"></div></div><span>29.2%</span></div><div class="bar-row"><span>乌兹别克斯坦胜</span><div class="track"><div class="fill" style="--value: 16.2%;"></div></div><span>16.2%</span></div></div></div>
-        </article>
-        <article class="card match-card is-active" data-match-card="detail-pan-eng" style="--accent: var(--red); --card-bg: linear-gradient(135deg, rgba(125, 42, 58, 0.62), rgba(36, 17, 28, 0.74));">
-          <div class="card-inner"><div class="match-meta"><span>MetLife Stadium · New Jersey</span><span>6-28 05:00</span></div><div class="teams"><div class="team"><span class="team-name">巴拿马</span><span class="team-note">必须赢球，但前两轮进攻仍未打开。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">英格兰</span><span class="team-note">阵容深度和定位球优势明显。</span></div></div><div class="data-strip" aria-label="巴拿马 vs 英格兰推演数据"><div class="data-point"><strong>预测 0-2</strong><span>英格兰胜率 71.6%，首选 0-2。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 0.68 / 1.94；首选 0-2，次选 0-1。</span></div><div class="data-point"><strong>大小球百分比</strong><span>小2.5 51.7%，大2.5 48.3%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>巴拿马胜</span><div class="track"><div class="fill" style="--value: 9.1%;"></div></div><span>9.1%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 19.3%;"></div></div><span>19.3%</span></div><div class="bar-row"><span>英格兰胜</span><div class="track"><div class="fill" style="--value: 71.6%;"></div></div><span>71.6%</span></div></div></div>
-        </article>
-        <article class="card match-card" data-match-card="detail-cro-gha" style="--accent: var(--gold); --card-bg: linear-gradient(135deg, rgba(128, 82, 25, 0.64), rgba(34, 24, 11, 0.74));">
-          <div class="card-inner"><div class="match-meta"><span>Lincoln Financial Field · Philadelphia</span><span>6-28 05:00</span></div><div class="teams"><div class="team"><span class="team-name">克罗地亚</span><span class="team-note">控球和经验略优，赢球路线最稳。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">加纳</span><span class="team-note">防守纪律强，平局也有晋级价值。</span></div></div><div class="data-strip" aria-label="克罗地亚 vs 加纳推演数据"><div class="data-point"><strong>预测 1-1</strong><span>双方晋级压力都高，首选 1-1。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 1.16 / 1.00；首选 1-1，次选 0-0。</span></div><div class="data-point"><strong>大小球百分比</strong><span>小2.5 63.0%，大2.5 37.0%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>克罗地亚胜</span><div class="track"><div class="fill" style="--value: 38.6%;"></div></div><span>38.6%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 32.4%;"></div></div><span>32.4%</span></div><div class="bar-row"><span>加纳胜</span><div class="track"><div class="fill" style="--value: 29.0%;"></div></div><span>29.0%</span></div></div></div>
-        </article>
-        <article class="card match-card" data-match-card="detail-alg-aut" style="--accent: var(--cyan); --card-bg: linear-gradient(135deg, rgba(31, 121, 137, 0.62), rgba(36, 71, 85, 0.74));">
-          <div class="card-inner"><div class="match-meta"><span>AT&T Stadium · Dallas</span><span>6-28 10:00</span></div><div class="teams"><div class="team"><span class="team-name">阿尔及利亚</span><span class="team-note">必须抢第二，边路速度是主要突破点。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">奥地利</span><span class="team-note">净胜球占优，平局路线更舒服。</span></div></div><div class="data-strip" aria-label="阿尔及利亚 vs 奥地利推演数据"><div class="data-point"><strong>预测 1-1</strong><span>同分卡位战，低比分和平局权重高。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 1.02 / 1.28；首选 1-1，次选 0-1。</span></div><div class="data-point"><strong>大小球百分比</strong><span>小2.5 58.7%，大2.5 41.3%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>阿尔及利亚胜</span><div class="track"><div class="fill" style="--value: 29.4%;"></div></div><span>29.4%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 31.2%;"></div></div><span>31.2%</span></div><div class="bar-row"><span>奥地利胜</span><div class="track"><div class="fill" style="--value: 39.4%;"></div></div><span>39.4%</span></div></div></div>
-        </article>
-        <article class="card match-card" data-match-card="detail-jor-arg" style="--accent: var(--purple); --card-bg: linear-gradient(135deg, rgba(82, 70, 149, 0.62), rgba(55, 48, 89, 0.74));">
-          <div class="card-inner"><div class="match-meta"><span>Arrowhead Stadium · Kansas City</span><span>6-28 10:00</span></div><div class="teams"><div class="team"><span class="team-name">约旦</span><span class="team-note">只剩理论机会，必须主动寻找进球。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">阿根廷</span><span class="team-note">即使轮换，阵容级别仍明显领先。</span></div></div><div class="data-strip" aria-label="约旦 vs 阿根廷推演数据"><div class="data-point"><strong>预测 0-1</strong><span>阿根廷轮换后胜率 69.8%，首选 0-1。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 0.70 / 1.88；首选 0-1，次选 0-2。</span></div><div class="data-point"><strong>大小球百分比</strong><span>小2.5 52.2%，大2.5 47.8%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>约旦胜</span><div class="track"><div class="fill" style="--value: 10.0%;"></div></div><span>10.0%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 20.2%;"></div></div><span>20.2%</span></div><div class="bar-row"><span>阿根廷胜</span><div class="track"><div class="fill" style="--value: 69.8%;"></div></div><span>69.8%</span></div></div></div>
+        <article class="card match-card is-active" data-match-card="detail-kor-can" style="--accent: var(--red); --card-bg: linear-gradient(135deg, rgba(125, 42, 58, 0.62), rgba(36, 17, 28, 0.74));">
+          <div class="card-inner"><div class="match-meta"><span>M73 · 32强</span><span>6-29 03:00</span></div><div class="teams"><div class="team"><span class="team-name">南非</span><span class="team-note">A 组第二，低位防守和定位球是爆冷关键。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">加拿大</span><span class="team-note">B 组第二，速度与冲击力占优。</span></div></div><div class="data-strip" aria-label="南非 vs 加拿大推演数据"><div class="data-point"><strong>首选 1-1</strong><span>加拿大占优，但淘汰赛首战平局权重仍高。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 0.92 / 1.46；最高频比分 1-1。</span></div><div class="data-point"><strong>大小球百分比</strong><span>大2.5 42.5%，小2.5 57.5%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>南非胜</span><div class="track"><div class="fill" style="--value: 22.8%;"></div></div><span>22.8%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 28.5%;"></div></div><span>28.5%</span></div><div class="bar-row"><span>加拿大胜</span><div class="track"><div class="fill" style="--value: 48.7%;"></div></div><span>48.7%</span></div></div></div>
         </article>
       </div>
     </section>
 
     <section class="postmatch-section" aria-labelledby="postmatch-title">
       <div class="postmatch-head">
-        <h2 id="postmatch-title">赛后复盘：G/H/I 组收官六场</h2>
-        <p>复盘 6-27 完赛场次，重点看模型偏差和小组出线形势变化。</p>
+        <h2 id="postmatch-title">赛后复盘：J/K/L 组收官六场</h2>
+        <p>复盘 6-28 完赛场次，重点看模型偏差和小组出线形势变化。</p>
       </div>
       <div class="postmatch-grid">
-        <article class="postmatch-card" style="--review-color: #ff8f72;"><div class="postmatch-top"><div class="postmatch-match">挪威 1-4 法国</div><span class="review-tag">方向正确，比分偏大</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>法国 1-2 小胜</span><span><b>实际结果</b><br>法国大胜头名</span></div><p>法国胜负方向兑现，但进攻效率高于模型。挪威必须争第一导致阵型前压，法国在转换和禁区终结上连续惩罚身后空间，最终把一球优势扩大成三球差。</p></article>
-        <article class="postmatch-card" style="--review-color: #ff8f72;"><div class="postmatch-top"><div class="postmatch-match">塞内加尔 5-0 伊拉克</div><span class="review-tag">方向正确，强度偏低</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>塞内加尔 3-0</span><span><b>实际结果</b><br>五球大胜</span></div><p>模型判断塞内加尔优势明确，但低估了伊拉克后段崩盘幅度。荣誉战打开后，塞内加尔边路速度和二次进攻持续兑现，伊拉克防线在体能下降后失误集中。</p></article>
-        <article class="postmatch-card" style="--review-color: #8bd4f8;"><div class="postmatch-top"><div class="postmatch-match">佛得角 0-0 沙特</div><span class="review-tag">低比分符合</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>小2.5 占优</span><span><b>实际结果</b><br>互交白卷</span></div><p>大小球方向准确，胜负方向偏保守。佛得角更重视不败和最佳第三路线，沙特虽必须赢球，但创造力和终结质量不足，比赛长期停留在低风险区域。</p></article>
-        <article class="postmatch-card" style="--review-color: #8bd4f8;"><div class="postmatch-top"><div class="postmatch-match">乌拉圭 0-1 西班牙</div><span class="review-tag">方向正确</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>西班牙不败，小比分</span><span><b>实际结果</b><br>西班牙小胜</span></div><p>模型的西班牙优势和小球方向兑现。西班牙无需冒险仍能用控球压制节奏，乌拉圭进攻端伤停影响明显，最后只能在低质量机会里追分。</p></article>
-        <article class="postmatch-card" style="--review-color: #8bd4f8;"><div class="postmatch-top"><div class="postmatch-match">埃及 1-1 伊朗</div><span class="review-tag">比分命中</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>首选 1-1</span><span><b>实际结果</b><br>双方战平</span></div><p>Dixon-Coles 高频比分兑现。埃及接受平局即可锁定晋级，伊朗需要赢但进攻质量有限，双方在关键区域的投入都没有把比赛推成大开大合。</p></article>
-        <article class="postmatch-card" style="--review-color: #ff8f72;"><div class="postmatch-top"><div class="postmatch-match">新西兰 1-5 比利时</div><span class="review-tag">方向正确，比分偏大</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>比利时 0-3</span><span><b>实际结果</b><br>比利时 5-1</span></div><p>比利时胜负方向兑现，但新西兰也打进一球。双方都必须争胜，比赛开放程度高于常规收官战，比利时个人能力兑现后，新西兰压上留下更多反击空间。</p></article>
+        <article class="postmatch-card" style="--review-color: #8bd4f8;"><div class="postmatch-top"><div class="postmatch-match">巴拿马 0-2 英格兰</div><span class="review-tag">比分命中</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>英格兰 0-2</span><span><b>实际结果</b><br>英格兰 2球完胜</span></div><p>模型把英格兰胜率放在最高档，比分也落在首选 0-2。英格兰控节奏后没有强行拉高回合数，巴拿马三场零进球，进攻端质量不足的问题继续暴露。</p></article>
+        <article class="postmatch-card" style="--review-color: #ff8f72;"><div class="postmatch-top"><div class="postmatch-match">克罗地亚 2-1 加纳</div><span class="review-tag">方向正确，比分偏大</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>克罗地亚不败，首选 1-1</span><span><b>实际结果</b><br>克罗地亚反超晋级</span></div><p>赛前胜平负里克罗地亚是最高项，但首选比分偏保守。必须赢球的压力让克罗地亚后段投入更高，加纳输球后仍靠 4 分留在最佳第三晋级区。</p></article>
+        <article class="postmatch-card" style="--review-color: #8bd4f8;"><div class="postmatch-top"><div class="postmatch-match">哥伦比亚 0-0 葡萄牙</div><span class="review-tag">小球命中</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>小2.5 占优，首选 1-1</span><span><b>实际结果</b><br>互交白卷</span></div><p>K 组头名战完全按低风险逻辑运行。哥伦比亚不败即可第一，葡萄牙平局也安全，双方都没有把阵型推到高风险区域，最终 0-0 兑现小球方向。</p></article>
+        <article class="postmatch-card" style="--review-color: #ff8f72;"><div class="postmatch-top"><div class="postmatch-match">刚果民主共和国 3-1 乌兹别克斯坦</div><span class="review-tag">方向正确，比分偏大</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>刚果民主共和国 1-0</span><span><b>实际结果</b><br>刚果民主共和国大胜</span></div><p>刚果民主共和国赢球方向兑现，但模型低估了乌兹别克斯坦后段防线松动。领先后刚果民主共和国反击效率继续提升，4 分和 +1 净胜球足够进入最佳第三晋级区。</p></article>
+        <article class="postmatch-card" style="--review-color: #ff8f72;"><div class="postmatch-top"><div class="postmatch-match">阿尔及利亚 3-3 奥地利</div><span class="review-tag">平局符合，比分偏大</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>首选 1-1</span><span><b>实际结果</b><br>六球战平</span></div><p>平局方向兑现，但这是本轮最大进球偏差。模型低估了双方在第二出线位和最佳第三压力下的后段投入，奥地利凭净胜球保住第二，阿尔及利亚 4 分进入最佳第三比较。</p></article>
+        <article class="postmatch-card" style="--review-color: #ff8f72;"><div class="postmatch-top"><div class="postmatch-match">约旦 1-3 阿根廷</div><span class="review-tag">方向正确，比分偏大</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>阿根廷 0-1</span><span><b>实际结果</b><br>阿根廷三连胜</span></div><p>阿根廷胜负方向没有问题，但轮换并未显著压低进球上限。约旦主动压上后也打进一球，比赛从小胜模型变成 1-3 大球，阿根廷以 9 分锁定 J 组第一。</p></article>
       </div>
     </section><footer class="footer-note">
-      <div class="table-grid">
-        <section>
-          <div class="standings-grid" id="all-standings-grid"></div>
-        </section>
-      </div>
+      <section class="r32-schedule" aria-labelledby="r32-schedule-title">
+        <div class="r32-schedule-head">
+          <h2 id="r32-schedule-title">32强赛程对战表</h2>
+          <p>按晋级路线图自动填入小组名次和最佳第三球队。</p>
+        </div>
+        <div class="r32-schedule-grid" id="r32-schedule-grid"></div>
+      </section>
       <section class="knockout-map" aria-labelledby="knockout-title">
         <div class="knockout-head">
           <h2 id="knockout-title">32强到决赛晋级路线图</h2>
@@ -1894,28 +2317,28 @@
           <div class="bracket-side left" style="--route-accent: #f2b650;">
             <h3>上半区</h3>
             <div class="bracket-rounds">
-              <div class="bracket-round round-32">
-                <div class="route-match"><b>R32-1</b><span class="route-time">6-30 00:00</span><span data-route="A1-B2">A1 vs B2</span></div>
-                <div class="route-match"><b>R32-2</b><span class="route-time">6-30 03:00</span><span data-route="C1-D2">C1 vs D2</span></div>
-                <div class="route-match group-start"><b>R32-3</b><span class="route-time">6-30 06:00</span><span data-route="E1-F2">E1 vs F2</span></div>
-                <div class="route-match"><b>R32-4</b><span class="route-time">6-30 09:00</span><span data-route="G1-H2">G1 vs H2</span></div>
-                <div class="route-match group-start"><b>R32-5</b><span class="route-time">7-1 00:00</span><span data-route="I1-J2">I1 vs J2</span></div>
-                <div class="route-match"><b>R32-6</b><span class="route-time">7-1 03:00</span><span data-route="K1-L2">K1 vs L2</span></div>
-                <div class="route-match group-start"><b>R32-7</b><span class="route-time">7-1 06:00</span><span data-route="T1-T2">最佳小组第3 vs 最佳小组第3</span></div>
-                <div class="route-match"><b>R32-8</b><span class="route-time">7-1 09:00</span><span data-route="T3-T4">最佳小组第3 vs 最佳小组第3</span></div>
+              <div class="bracket-round round-32" data-stage="1/16决赛">
+                <div class="route-match"><b>M74</b><span class="route-time">6-30 04:30</span><span data-route="E1-D3">E1 vs D3</span></div>
+                <div class="route-match"><b>M77</b><span class="route-time">7-1 05:00</span><span data-route="I1-F3">I1 vs F3</span></div>
+                <div class="route-match group-start"><b>M73</b><span class="route-time">6-29 03:00</span><span data-route="A2-B2">A2 vs B2</span></div>
+                <div class="route-match"><b>M75</b><span class="route-time">6-30 09:00</span><span data-route="F1-C2">F1 vs C2</span></div>
+                <div class="route-match group-start"><b>M83</b><span class="route-time">7-3 07:00</span><span data-route="K2-L2">K2 vs L2</span></div>
+                <div class="route-match"><b>M84</b><span class="route-time">7-3 03:00</span><span data-route="H1-J2">H1 vs J2</span></div>
+                <div class="route-match group-start"><b>M81</b><span class="route-time">7-2 08:00</span><span data-route="D1-B3">D1 vs B3</span></div>
+                <div class="route-match"><b>M82</b><span class="route-time">7-2 04:00</span><span data-route="G1-I3">G1 vs I3</span></div>
               </div>
-              <div class="bracket-round round-16">
-                <div class="route-match"><b>R16-1</b><span class="route-time">7-4 00:00</span><span>承接 R32-1 / R32-2</span></div>
-                <div class="route-match"><b>R16-2</b><span class="route-time">7-4 03:00</span><span>承接 R32-3 / R32-4</span></div>
-                <div class="route-match"><b>R16-3</b><span class="route-time">7-4 06:00</span><span>承接 R32-5 / R32-6</span></div>
-                <div class="route-match"><b>R16-4</b><span class="route-time">7-4 09:00</span><span>承接 R32-7 / R32-8</span></div>
+              <div class="bracket-round round-16" data-stage="1/8决赛">
+                <div class="route-match"><b>M89</b><span class="route-time">7-5 05:00</span><span>承接 M74 / M77</span></div>
+                <div class="route-match"><b>M90</b><span class="route-time">7-5 01:00</span><span>承接 M73 / M75</span></div>
+                <div class="route-match"><b>M93</b><span class="route-time">7-7 03:00</span><span>承接 M83 / M84</span></div>
+                <div class="route-match"><b>M94</b><span class="route-time">7-7 08:00</span><span>承接 M81 / M82</span></div>
               </div>
-              <div class="bracket-round round-8">
-                <div class="route-match"><b>QF-1</b><span class="route-time">7-9 03:00</span><span>承接 R16-1 / R16-2</span></div>
-                <div class="route-match"><b>QF-2</b><span class="route-time">7-9 09:00</span><span>承接 R16-3 / R16-4</span></div>
+              <div class="bracket-round round-8" data-stage="1/4决赛">
+                <div class="route-match"><b>M97</b><span class="route-time">7-10 04:00</span><span>承接 M89 / M90</span></div>
+                <div class="route-match"><b>M98</b><span class="route-time">7-11 03:00</span><span>承接 M93 / M94</span></div>
               </div>
-              <div class="bracket-round round-semi">
-                <div class="route-match"><b>SF-1</b><span class="route-time">7-15 08:00</span><span>承接 QF-1 / QF-2</span></div>
+              <div class="bracket-round round-semi" data-stage="半决赛">
+                <div class="route-match"><b>M101</b><span class="route-time">7-15 03:00</span><span>承接 M97 / M98</span></div>
               </div>
             </div>
           </div>
@@ -1923,9 +2346,9 @@
           <div class="bracket-center" style="--route-accent: #ffffff;">
             <h3>冠军区</h3>
             <div class="bracket-rounds">
-              <div class="bracket-round round-final">
-                <div class="route-match no-line final-match"><b>冠军战</b><span class="route-time">7-20 03:00</span><span>承接 SF-1 / SF-2 胜者</span></div>
-                <div class="route-match no-line final-match"><b>季军战</b><span class="route-time">7-19 03:00</span><span>承接 SF-1 / SF-2 负者</span></div>
+              <div class="bracket-round round-final" data-stage="决赛 / 季军战">
+                <div class="route-match no-line final-match"><b>M104 冠军战</b><span class="route-time">7-20 03:00</span><span>承接 M101 / M102 胜者</span></div>
+                <div class="route-match no-line final-match"><b>M103 季军战</b><span class="route-time">7-19 05:00</span><span>承接 M101 / M102 负者</span></div>
                 <div class="route-note">胜者逐轮进入中心决赛区，最终决出世界杯冠军。</div>
               </div>
             </div>
@@ -1934,28 +2357,28 @@
           <div class="bracket-side right" style="--route-accent: #47c6e8;">
             <h3>下半区</h3>
             <div class="bracket-rounds">
-              <div class="bracket-round round-semi">
-                <div class="route-match"><b>SF-2</b><span class="route-time">7-16 08:00</span><span>承接 QF-3 / QF-4</span></div>
+              <div class="bracket-round round-semi" data-stage="半决赛">
+                <div class="route-match"><b>M102</b><span class="route-time">7-16 03:00</span><span>承接 M99 / M100</span></div>
               </div>
-              <div class="bracket-round round-8">
-                <div class="route-match"><b>QF-3</b><span class="route-time">7-10 03:00</span><span>承接 R16-5 / R16-6</span></div>
-                <div class="route-match"><b>QF-4</b><span class="route-time">7-10 09:00</span><span>承接 R16-7 / R16-8</span></div>
+              <div class="bracket-round round-8" data-stage="1/4决赛">
+                <div class="route-match"><b>M99</b><span class="route-time">7-12 05:00</span><span>承接 M91 / M92</span></div>
+                <div class="route-match"><b>M100</b><span class="route-time">7-12 09:00</span><span>承接 M95 / M96</span></div>
               </div>
-              <div class="bracket-round round-16">
-                <div class="route-match"><b>R16-5</b><span class="route-time">7-5 00:00</span><span>承接 R32-9 / R32-10</span></div>
-                <div class="route-match"><b>R16-6</b><span class="route-time">7-5 03:00</span><span>承接 R32-11 / R32-12</span></div>
-                <div class="route-match"><b>R16-7</b><span class="route-time">7-5 06:00</span><span>承接 R32-13 / R32-14</span></div>
-                <div class="route-match"><b>R16-8</b><span class="route-time">7-5 09:00</span><span>承接 R32-15 / R32-16</span></div>
+              <div class="bracket-round round-16" data-stage="1/8决赛">
+                <div class="route-match"><b>M91</b><span class="route-time">7-6 04:00</span><span>承接 M76 / M78</span></div>
+                <div class="route-match"><b>M92</b><span class="route-time">7-6 08:00</span><span>承接 M79 / M80</span></div>
+                <div class="route-match"><b>M95</b><span class="route-time">7-8 00:00</span><span>承接 M86 / M88</span></div>
+                <div class="route-match"><b>M96</b><span class="route-time">7-8 04:00</span><span>承接 M85 / M87</span></div>
               </div>
-              <div class="bracket-round round-32">
-                <div class="route-match"><b>R32-9</b><span class="route-time">7-2 00:00</span><span data-route="B1-A2">B1 vs A2</span></div>
-                <div class="route-match"><b>R32-10</b><span class="route-time">7-2 03:00</span><span data-route="D1-C2">D1 vs C2</span></div>
-                <div class="route-match group-start"><b>R32-11</b><span class="route-time">7-2 06:00</span><span data-route="F1-E2">F1 vs E2</span></div>
-                <div class="route-match"><b>R32-12</b><span class="route-time">7-2 09:00</span><span data-route="H1-G2">H1 vs G2</span></div>
-                <div class="route-match group-start"><b>R32-13</b><span class="route-time">7-3 00:00</span><span data-route="J1-I2">J1 vs I2</span></div>
-                <div class="route-match"><b>R32-14</b><span class="route-time">7-3 03:00</span><span data-route="L1-K2">L1 vs K2</span></div>
-                <div class="route-match group-start"><b>R32-15</b><span class="route-time">7-3 06:00</span><span data-route="T5-T6">最佳小组第3 vs 最佳小组第3</span></div>
-                <div class="route-match"><b>R32-16</b><span class="route-time">7-3 09:00</span><span data-route="T7-T8">最佳小组第3 vs 最佳小组第3</span></div>
+              <div class="bracket-round round-32" data-stage="1/16决赛">
+                <div class="route-match"><b>M76</b><span class="route-time">6-30 01:00</span><span data-route="C1-F2">C1 vs F2</span></div>
+                <div class="route-match"><b>M78</b><span class="route-time">7-1 01:00</span><span data-route="E2-I2">E2 vs I2</span></div>
+                <div class="route-match group-start"><b>M79</b><span class="route-time">7-1 09:00</span><span data-route="A1-E3">A1 vs E3</span></div>
+                <div class="route-match"><b>M80</b><span class="route-time">7-2 00:00</span><span data-route="L1-K3">L1 vs K3</span></div>
+                <div class="route-match group-start"><b>M86</b><span class="route-time">7-4 06:00</span><span data-route="J1-H2">J1 vs H2</span></div>
+                <div class="route-match"><b>M88</b><span class="route-time">7-4 02:00</span><span data-route="D2-G2">D2 vs G2</span></div>
+                <div class="route-match group-start"><b>M85</b><span class="route-time">7-3 11:00</span><span data-route="B1-J3">B1 vs J3</span></div>
+                <div class="route-match"><b>M87</b><span class="route-time">7-4 09:30</span><span data-route="K1-L3">K1 vs L3</span></div>
               </div>
             </div>
           </div>
@@ -2026,24 +2449,24 @@
       ["J", "6-17 12:00", "奥地利 3-1 约旦", "已赛"],
       ["J", "6-23 09:00", "阿根廷 2-0 奥地利", "已赛"],
       ["J", "6-23 12:00", "约旦 1-2 阿尔及利亚", "已赛"],
-      ["J", "6-28 10:00", "阿尔及利亚 vs 奥地利", "未赛"],
-      ["J", "6-28 10:00", "约旦 vs 阿根廷", "未赛"],
+      ["J", "6-28 10:00", "阿尔及利亚 3-3 奥地利", "已赛"],
+      ["J", "6-28 10:00", "约旦 1-3 阿根廷", "已赛"],
       ["K", "6-18 03:00", "葡萄牙 1-1 刚果民主共和国", "已赛"],
       ["K", "6-18 06:00", "乌兹别克斯坦 0-2 哥伦比亚", "已赛"],
       ["K", "6-24 01:00", "葡萄牙 5-0 乌兹别克斯坦", "已赛"],
       ["K", "6-24 10:00", "哥伦比亚 1-0 刚果民主共和国", "已赛"],
-      ["K", "6-28 07:30", "哥伦比亚 vs 葡萄牙", "未赛"],
-      ["K", "6-28 07:30", "刚果民主共和国 vs 乌兹别克斯坦", "未赛"],
+      ["K", "6-28 07:30", "哥伦比亚 0-0 葡萄牙", "已赛"],
+      ["K", "6-28 07:30", "刚果民主共和国 3-1 乌兹别克斯坦", "已赛"],
       ["L", "6-18 09:00", "加纳 1-0 巴拿马", "已赛"],
       ["L", "6-18 12:00", "英格兰 4-2 克罗地亚", "已赛"],
       ["L", "6-24 04:00", "英格兰 0-0 加纳", "已赛"],
       ["L", "6-24 07:00", "巴拿马 0-1 克罗地亚", "已赛"],
-      ["L", "6-28 05:00", "巴拿马 vs 英格兰", "未赛"],
-      ["L", "6-28 05:00", "克罗地亚 vs 加纳", "未赛"]
+      ["L", "6-28 05:00", "巴拿马 0-2 英格兰", "已赛"],
+      ["L", "6-28 05:00", "克罗地亚 2-1 加纳", "已赛"]
     ];
 
     const standingsData = {
-      A: [["墨西哥", 3, 0, 0, "+6", 9], ["韩国", 1, 0, 2, "-1", 3], ["捷克", 1, 0, 2, "-3", 3], ["南非", 1, 0, 2, "-2", 3]],
+      A: [["墨西哥", 3, 0, 0, "+6", 9], ["南非", 1, 0, 2, "-2", 3], ["韩国", 1, 0, 2, "-1", 3], ["捷克", 1, 0, 2, "-3", 3]],
       B: [["瑞士", 2, 1, 0, "+4", 7], ["加拿大", 1, 1, 1, "+5", 4], ["波黑", 1, 1, 1, "-1", 4], ["卡塔尔", 0, 1, 2, "-8", 1]],
       C: [["巴西", 2, 1, 0, "+6", 7], ["摩洛哥", 2, 1, 0, "+3", 7], ["苏格兰", 1, 0, 2, "-2", 3], ["海地", 0, 0, 3, "-7", 0]],
       D: [["美国", 2, 0, 1, "+4", 6], ["澳大利亚", 1, 1, 1, "0", 4], ["巴拉圭", 1, 1, 1, "-2", 4], ["土耳其", 1, 0, 2, "-2", 3]],
@@ -2052,9 +2475,9 @@
       G: [["比利时", 1, 2, 0, "+4", 5], ["埃及", 1, 2, 0, "+2", 5], ["伊朗", 0, 3, 0, "0", 3], ["新西兰", 0, 1, 2, "-6", 1]],
       H: [["西班牙", 2, 1, 0, "+5", 7], ["佛得角", 0, 3, 0, "0", 3], ["乌拉圭", 0, 2, 1, "-1", 2], ["沙特", 0, 2, 1, "-4", 2]],
       I: [["法国", 3, 0, 0, "+8", 9], ["挪威", 2, 0, 1, "+1", 6], ["塞内加尔", 1, 0, 2, "+2", 3], ["伊拉克", 0, 0, 3, "-11", 0]],
-      J: [["阿根廷", 2, 0, 0, "+5", 6], ["奥地利", 1, 0, 1, "0", 3], ["阿尔及利亚", 1, 0, 1, "-2", 3], ["约旦", 0, 0, 2, "-3", 0]],
-      K: [["哥伦比亚", 2, 0, 0, "+3", 6], ["葡萄牙", 1, 1, 0, "+5", 4], ["刚果民主共和国", 0, 1, 1, "-1", 1], ["乌兹别克斯坦", 0, 0, 2, "-7", 0]],
-      L: [["英格兰", 1, 1, 0, "+2", 4], ["加纳", 1, 1, 0, "+1", 4], ["克罗地亚", 1, 0, 1, "-1", 3], ["巴拿马", 0, 0, 2, "-2", 0]]
+      J: [["阿根廷", 3, 0, 0, "+7", 9], ["奥地利", 1, 1, 1, "0", 4], ["阿尔及利亚", 1, 1, 1, "-2", 4], ["约旦", 0, 0, 3, "-5", 0]],
+      K: [["哥伦比亚", 2, 1, 0, "+3", 7], ["葡萄牙", 1, 2, 0, "+5", 5], ["刚果民主共和国", 1, 1, 1, "+1", 4], ["乌兹别克斯坦", 0, 0, 3, "-9", 0]],
+      L: [["英格兰", 2, 1, 0, "+4", 7], ["克罗地亚", 2, 0, 1, "0", 6], ["加纳", 1, 1, 1, "0", 4], ["巴拿马", 0, 0, 3, "-4", 0]]
     };
 
     const groupColors = {
@@ -2188,7 +2611,9 @@
       "约旦 1-2 阿尔及利亚": "旧金山湾区 Levi's Stadium",
       "约旦 vs 阿尔及利亚": "旧金山湾区 Levi's Stadium",
       "阿尔及利亚 vs 奥地利": "堪萨斯城 Arrowhead Stadium",
+      "阿尔及利亚 3-3 奥地利": "堪萨斯城 Arrowhead Stadium",
       "约旦 vs 阿根廷": "达拉斯 AT&T Stadium",
+      "约旦 1-3 阿根廷": "达拉斯 AT&T Stadium",
       "葡萄牙 1-1 刚果民主共和国": "休斯敦 NRG Stadium",
       "乌兹别克斯坦 0-2 哥伦比亚": "墨西哥城 Azteca",
       "葡萄牙 5-0 乌兹别克斯坦": "休斯敦 NRG Stadium",
@@ -2196,7 +2621,9 @@
       "葡萄牙 vs 乌兹别克斯坦": "休斯敦 NRG Stadium",
       "哥伦比亚 vs 刚果民主共和国": "达拉斯 AT&T Stadium",
       "哥伦比亚 vs 葡萄牙": "迈阿密 Hard Rock Stadium",
+      "哥伦比亚 0-0 葡萄牙": "迈阿密 Hard Rock Stadium",
       "刚果民主共和国 vs 乌兹别克斯坦": "蒙特雷 BBVA",
+      "刚果民主共和国 3-1 乌兹别克斯坦": "蒙特雷 BBVA",
       "加纳 1-0 巴拿马": "多伦多 BMO Field",
       "英格兰 4-2 克罗地亚": "达拉斯 AT&T Stadium",
       "英格兰 0-0 加纳": "波士顿 Gillette Stadium",
@@ -2204,7 +2631,9 @@
       "英格兰 vs 加纳": "波士顿 Gillette Stadium",
       "巴拿马 vs 克罗地亚": "多伦多 BMO Field",
       "巴拿马 vs 英格兰": "纽约/新泽西 MetLife Stadium",
-      "克罗地亚 vs 加纳": "费城 Lincoln Financial Field"
+      "巴拿马 0-2 英格兰": "纽约/新泽西 MetLife Stadium",
+      "克罗地亚 vs 加纳": "费城 Lincoln Financial Field",
+      "克罗地亚 2-1 加纳": "费城 Lincoln Financial Field"
     };
 
     function getVenue(group, match) {
@@ -2238,11 +2667,29 @@
       return status === "已赛" ? "赛时天气记录待补" : "20-28°C，赛前关注临场天气";
     }
 
-    const completedGroups = new Set(["A", "B", "C", "D", "E", "F", "G", "H", "I"]);
+    const completedGroups = new Set(["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"]);
+
+    function getBestThirdTeams() {
+      return Object.entries(standingsData)
+        .map(([group, rows]) => {
+          const [team, wins, draws, losses, goalDiff, points] = rows[2];
+          return { group, team, wins, draws, losses, goalDiff: parseGoalDiff(goalDiff), points };
+        })
+        .sort((a, b) =>
+          b.points - a.points ||
+          b.goalDiff - a.goalDiff ||
+          b.wins - a.wins ||
+          a.group.localeCompare(b.group)
+        );
+    }
 
     function getStandingStatus(group, index, points, losses, goalDiff) {
-      if (group === "H" && index >= 2) return "eliminated";
       if (completedGroups.has(group) && index < 2) return "qualified";
+      if (completedGroups.has(group) && index === 2) {
+        const bestThirdKeys = new Set(getBestThirdTeams().slice(0, 8).map((entry) => `${entry.group}:${entry.team}`));
+        const team = standingsData[group][index][0];
+        return bestThirdKeys.has(`${group}:${team}`) ? "qualified" : "eliminated";
+      }
       if (completedGroups.has(group) && index === 3) return "eliminated";
       if (points >= 6) return "qualified";
       if (points === 0 && losses >= 2 && Number(goalDiff) <= -3) return "eliminated";
@@ -2340,30 +2787,70 @@
     }
 
     function renderKnockoutRoute() {
-      const thirdTeams = Object.entries(standingsData)
-        .map(([group, rows]) => {
-          const [team, wins, draws, losses, goalDiff, points] = rows[2];
-          return { group, team, wins, draws, losses, goalDiff: parseGoalDiff(goalDiff), points };
-        })
-        .sort((a, b) =>
-          b.points - a.points ||
-          b.goalDiff - a.goalDiff ||
-          b.wins - a.wins ||
-          a.group.localeCompare(b.group)
-        );
+      const thirdTeams = getBestThirdTeams();
 
       const slots = {};
       Object.entries(standingsData).forEach(([group, rows]) => {
         slots[`${group}1`] = rows[0][0];
         slots[`${group}2`] = rows[1][0];
+        slots[`${group}3`] = `${rows[2][0]}（${group}3）`;
       });
       thirdTeams.slice(0, 8).forEach((entry, index) => {
         slots[`T${index + 1}`] = `${entry.team}（${entry.group}3）`;
       });
 
-      document.querySelectorAll("[data-route]").forEach((node) => {
-        const teams = node.dataset.route.split("-").map((slot) => slots[slot] || slot);
-        node.textContent = `${teams[0]} vs ${teams[1]}`;
+      function parseBeijingMatchTime(time) {
+        const match = String(time).match(/^(\d{1,2})-(\d{1,2})\s+(\d{1,2}):(\d{2})$/);
+        if (!match) return Number.MAX_SAFE_INTEGER;
+        const [, month, day, hour, minute] = match;
+        return new Date(2026, Number(month) - 1, Number(day), Number(hour), Number(minute)).getTime();
+      }
+
+      function routeTeamMarkup(team) {
+        return `
+          <span class="route-team">
+            <span class="route-team-name">${team || ""}</span>
+            <span class="route-score-box" aria-hidden="true"></span>
+          </span>
+        `;
+      }
+
+      const r32ScheduleGrid = document.querySelector("#r32-schedule-grid");
+      if (r32ScheduleGrid) {
+        const r32Matches = Array.from(document.querySelectorAll(".round-32 .route-match")).map((match) => {
+          const code = match.querySelector("b")?.textContent || "";
+          const time = match.querySelector(".route-time")?.textContent || "";
+          const routeNode = Array.from(match.querySelectorAll("span")).find((node) => node.dataset.route);
+          const teams = routeNode ? routeNode.dataset.route.split("-").map((slot) => slots[slot] || slot) : ["", ""];
+          return { code, time, teams };
+        }).sort((a, b) => {
+          const timeDiff = parseBeijingMatchTime(a.time) - parseBeijingMatchTime(b.time);
+          if (timeDiff !== 0) return timeDiff;
+          return Number(a.code.replace(/\D/g, "")) - Number(b.code.replace(/\D/g, ""));
+        });
+
+        r32ScheduleGrid.innerHTML = r32Matches.map(({ code, time, teams }) => `
+          <article class="r32-game">
+            <div class="r32-game-time"><span>${code}</span><span>${time}</span></div>
+            <div class="r32-game-teams"><span class="r32-team">${teams[0]}</span><span class="r32-vs">VS</span><span class="r32-team">${teams[1]}</span></div>
+          </article>
+        `).join("");
+      }
+
+      document.querySelectorAll(".route-match").forEach((match) => {
+        match.querySelector(".route-teams")?.remove();
+        const teamNode = Array.from(match.querySelectorAll("span")).find((node) => !node.classList.contains("route-time"));
+        if (!teamNode) return;
+
+        let teams = ["", ""];
+        if (teamNode.dataset.route) {
+          teams = teamNode.dataset.route.split("-").map((slot) => slots[slot] || slot);
+        } else if (teamNode.textContent.includes(" vs ")) {
+          teams = teamNode.textContent.split(" vs ");
+        }
+
+        teamNode.remove();
+        match.insertAdjacentHTML("beforeend", `<div class="route-teams">${teams.map(routeTeamMarkup).join("")}</div>`);
       });
     }
 
@@ -2372,12 +2859,7 @@
     const matchCards = Array.from(document.querySelectorAll(".match-card"));
 
     const poissonMatrixData = {
-      "detail-col-por": { home: "哥伦比亚", away: "葡萄牙", homeLambda: 1.06, awayLambda: 1.16, rho: -0.12 },
-      "detail-cod-uzb": { home: "刚果民主共和国", away: "乌兹别克斯坦", homeLambda: 1.38, awayLambda: 0.74, rho: -0.12 },
-      "detail-pan-eng": { home: "巴拿马", away: "英格兰", homeLambda: 0.68, awayLambda: 1.94, rho: -0.08 },
-      "detail-cro-gha": { home: "克罗地亚", away: "加纳", homeLambda: 1.16, awayLambda: 1.00, rho: -0.13 },
-      "detail-alg-aut": { home: "阿尔及利亚", away: "奥地利", homeLambda: 1.02, awayLambda: 1.28, rho: -0.13 },
-      "detail-jor-arg": { home: "约旦", away: "阿根廷", homeLambda: 0.70, awayLambda: 1.88, rho: -0.08 }
+      "detail-kor-can": { home: "南非", away: "加拿大", homeLambda: 0.92, awayLambda: 1.46, rho: -0.08 }
     };
 
     function factorial(n) {
@@ -2472,26 +2954,29 @@
       if (window.ScrollTrigger) {
         gsap.registerPlugin(ScrollTrigger);
       }
-      gsap.defaults({ ease: "power3.out", duration: 0.72 });
+      gsap.defaults({ ease: "power3.out", duration: 0.68, overwrite: "auto" });
       document.body.classList.add("motion-ready");
       setupPointerSpotlight();
       setupTiltCards();
 
-      const heroTimeline = gsap.timeline();
+      const heroTimeline = gsap.timeline({ defaults: { ease: "power3.out" } });
       heroTimeline
-        .from(".topbar", { y: -18, autoAlpha: 0, duration: 0.55 })
-        .from(".hero-copy > *", { y: 28, autoAlpha: 0, stagger: 0.08 }, "-=0.24")
-        .from(".briefing", { x: 32, rotateY: -8, transformPerspective: 900, autoAlpha: 0 }, "-=0.44")
-        .from(".metric", { y: 18, autoAlpha: 0, stagger: 0.07 }, "-=0.34")
-        .from(".chip", { y: 12, autoAlpha: 0, stagger: 0.05 }, "-=0.32")
-        .from(".section-title", { y: 18, autoAlpha: 0 }, "-=0.22")
-        .from(".match-switcher", { y: 32, autoAlpha: 0, scale: 0.975, rotateX: 3, transformPerspective: 1000 }, "-=0.18")
-        .from(".switcher-tab", { y: 18, autoAlpha: 0, stagger: 0.045 }, "-=0.34");
+        .from(".topbar", { y: -20, autoAlpha: 0, duration: 0.5 })
+        .from(".hero h1", { y: 34, autoAlpha: 0, duration: 0.72 }, "-=0.18")
+        .from(".lead", { y: 22, autoAlpha: 0, duration: 0.54 }, "-=0.42")
+        .from(".chip", { y: 14, autoAlpha: 0, stagger: 0.055, duration: 0.42 }, "-=0.32")
+        .from(".briefing", { x: 34, rotateY: -7, scale: 0.975, transformPerspective: 900, autoAlpha: 0, duration: 0.66 }, "-=0.58")
+        .from(".metric", { y: 20, autoAlpha: 0, stagger: 0.075, duration: 0.38 }, "-=0.34")
+        .from(".section-title", { y: 22, autoAlpha: 0, duration: 0.46 }, "-=0.16")
+        .from(".match-switcher", { y: 34, autoAlpha: 0, scale: 0.975, rotateX: 4, transformPerspective: 1000, duration: 0.64 }, "-=0.12")
+        .from(".switcher-tab", { y: 16, autoAlpha: 0, duration: 0.36, stagger: 0.04 }, "-=0.34");
 
       gsap.to(".brand-mark", {
-        rotate: 360,
-        duration: 18,
-        ease: "none",
+        rotate: 4,
+        scale: 1.035,
+        duration: 2.4,
+        ease: "sine.inOut",
+        yoyo: true,
         repeat: -1,
         transformOrigin: "50% 50%"
       });
@@ -2508,80 +2993,75 @@
 
       if (!window.ScrollTrigger) return;
 
-      gsap.utils.toArray(".postmatch-card").forEach((card, index) => {
-        gsap.from(card, {
-          scrollTrigger: { trigger: card, start: "top 88%", once: true },
-          y: 28,
-          autoAlpha: 0,
-          delay: (index % 3) * 0.05
-        });
-      });
-
-      gsap.utils.toArray(".group-card").forEach((card, index) => {
-        gsap.from(card, {
-          scrollTrigger: { trigger: card, start: "top 90%", once: true },
-          y: 32,
+      ScrollTrigger.batch(".postmatch-card", {
+        start: "top 88%",
+        once: true,
+        interval: 0.08,
+        batchMax: 3,
+        onEnter: (batch) => gsap.from(batch, {
+          y: 30,
           autoAlpha: 0,
           scale: 0.985,
-          delay: (index % 2) * 0.04
-        });
+          stagger: 0.07,
+          duration: 0.52
+        })
       });
 
-      gsap.utils.toArray(".schedule-panel").forEach((panel) => {
-        const cells = panel.querySelectorAll(".schedule-cell-content");
-        gsap.from(cells, {
-          scrollTrigger: { trigger: panel, start: "top 88%", once: true },
-          y: 8,
-          autoAlpha: 0,
-          stagger: { each: 0.012, from: "start" },
-          duration: 0.34,
-          ease: "power2.out"
-        });
-        gsap.fromTo(panel, { "--schedule-scan": "-28%" }, {
-          "--schedule-scan": "128%",
-          scrollTrigger: { trigger: panel, start: "top 88%", once: true },
-          duration: 1.1,
-          ease: "power2.out"
-        });
+      gsap.from(".r32-schedule-head > *", {
+        scrollTrigger: { trigger: ".r32-schedule", start: "top 86%", once: true },
+        y: 18,
+        autoAlpha: 0,
+        stagger: 0.08,
+        duration: 0.42
       });
 
-      gsap.to(".schedule-row-upcoming td:first-child", {
-        textShadow: "0 0 18px rgba(111, 214, 255, 0.55)",
-        duration: 1.45,
-        ease: "sine.inOut",
-        yoyo: true,
-        repeat: -1,
-        stagger: { each: 0.08, from: "random" }
+      ScrollTrigger.batch(".r32-game", {
+        start: "top 90%",
+        once: true,
+        interval: 0.06,
+        batchMax: 6,
+        onEnter: (batch) => {
+          gsap.from(batch, {
+            y: 24,
+            scale: 0.975,
+            autoAlpha: 0,
+            stagger: { each: 0.045, from: "start" },
+            duration: 0.48
+          });
+          gsap.delayedCall(0.18, () => lightRoute(batch, 0.035));
+        }
       });
 
-      gsap.to(".schedule-table .score-highlight", {
-        scale: 1.06,
-        boxShadow: "0 0 24px rgba(242, 182, 80, 0.58)",
-        duration: 1.1,
-        ease: "sine.inOut",
-        yoyo: true,
-        repeat: -1,
-        stagger: { each: 0.05, from: "random" }
+      gsap.from(".knockout-head > *", {
+        scrollTrigger: { trigger: ".knockout-map", start: "top 82%", once: true },
+        y: 18,
+        autoAlpha: 0,
+        stagger: 0.08,
+        duration: 0.42
       });
 
-      gsap.utils.toArray(".knockout-map .route-match").forEach((match, index) => {
-        gsap.from(match, {
-          scrollTrigger: { trigger: ".knockout-map", start: "top 78%", once: true },
-          x: match.closest(".right") ? 24 : -24,
-          autoAlpha: 0,
-          delay: index * 0.018,
-          duration: 0.5
-        });
+      gsap.from(".bracket-side h3, .bracket-center h3", {
+        scrollTrigger: { trigger: ".knockout-map", start: "top 76%", once: true },
+        y: 16,
+        autoAlpha: 0,
+        stagger: 0.08,
+        duration: 0.42
       });
 
-      gsap.timeline({
-        scrollTrigger: { trigger: ".knockout-map", start: "top 70%", once: true }
-      })
-        .call(() => lightRoute(".round-32 .route-match", 0.035))
-        .call(() => lightRoute(".round-16 .route-match", 0.055), null, "+=0.22")
-        .call(() => lightRoute(".round-8 .route-match", 0.08), null, "+=0.2")
-        .call(() => lightRoute(".round-semi .route-match", 0.12), null, "+=0.18")
-        .call(() => lightRoute(".round-final .route-match", 0.12), null, "+=0.16");
+      const routeTimeline = gsap.timeline({
+        scrollTrigger: { trigger: ".knockout-map", start: "top 72%", once: true }
+      });
+      routeTimeline
+        .from(".knockout-map .round-32 .route-match", { x: (index, target) => target.closest(".right") ? 26 : -26, autoAlpha: 0, scale: 0.985, stagger: 0.025, duration: 0.42 })
+        .call(() => lightRoute(".knockout-map .round-32 .route-match", 0.025), null, "-=0.28")
+        .from(".knockout-map .round-16 .route-match", { x: (index, target) => target.closest(".right") ? 22 : -22, autoAlpha: 0, scale: 0.985, stagger: 0.04, duration: 0.42 }, "-=0.12")
+        .call(() => lightRoute(".knockout-map .round-16 .route-match", 0.045), null, "-=0.24")
+        .from(".knockout-map .round-8 .route-match", { x: (index, target) => target.closest(".right") ? 18 : -18, autoAlpha: 0, scale: 0.99, stagger: 0.07, duration: 0.42 }, "-=0.08")
+        .call(() => lightRoute(".knockout-map .round-8 .route-match", 0.07), null, "-=0.2")
+        .from(".knockout-map .round-semi .route-match", { y: 18, autoAlpha: 0, scale: 0.985, stagger: 0.08, duration: 0.42 }, "-=0.04")
+        .call(() => lightRoute(".knockout-map .round-semi .route-match", 0.08), null, "-=0.18")
+        .from(".knockout-map .round-final .route-match, .route-note", { y: 18, autoAlpha: 0, scale: 0.985, stagger: 0.08, duration: 0.5 }, "-=0.02")
+        .call(() => lightRoute(".knockout-map .round-final .route-match", 0.08), null, "-=0.24");
     }
 
     function animateActiveMatch(target) {
@@ -2590,13 +3070,20 @@
 
       const panel = document.getElementById(target);
       const card = document.querySelector(`[data-match-card="${target}"]`);
-      const timeline = gsap.timeline();
+      if (!panel || !card) return;
+
+      gsap.killTweensOf([panel, card, panel.querySelectorAll("*"), card.querySelectorAll(".fill")]);
+      const timeline = gsap.timeline({ defaults: { ease: "power3.out" } });
       timeline
-        .fromTo(panel, { y: 22, scale: 0.985, autoAlpha: 0, filter: "blur(8px)" }, { y: 0, scale: 1, autoAlpha: 1, filter: "blur(0px)", duration: 0.5, ease: "power2.out" })
-        .fromTo(card, { y: 24, scale: 0.975, rotateX: 4, autoAlpha: 0, transformPerspective: 1000 }, { y: 0, scale: 1, rotateX: 0, autoAlpha: 1, duration: 0.56, ease: "back.out(1.25)" }, "-=0.38")
-        .fromTo(panel.querySelectorAll(".detail-kpi, .poisson-line"), { y: 12, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.025, duration: 0.32, ease: "power2.out" }, "-=0.34")
-        .fromTo(panel.querySelectorAll(".matrix-cell"), { scale: 0.92, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, stagger: { each: 0.008, from: "center" }, duration: 0.26, ease: "power2.out" }, "-=0.22")
-        .fromTo(card.querySelectorAll(".fill"), { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, stagger: 0.08, duration: 0.52, ease: "power3.out" }, "-=0.48");
+        .fromTo(panel, { y: 24, scale: 0.982, autoAlpha: 0, filter: "blur(10px)" }, { y: 0, scale: 1, autoAlpha: 1, filter: "blur(0px)", duration: 0.54 })
+        .fromTo(card, { y: 26, scale: 0.976, rotateX: 4, autoAlpha: 0, transformPerspective: 1000 }, { y: 0, scale: 1, rotateX: 0, autoAlpha: 1, duration: 0.58, ease: "back.out(1.18)" }, "-=0.4")
+        .fromTo(panel.querySelectorAll(".detail-kpi"), { y: 14, autoAlpha: 0, scale: 0.96 }, { y: 0, autoAlpha: 1, scale: 1, stagger: 0.035, duration: 0.32 }, "-=0.34")
+        .fromTo(panel.querySelector(".rating-panel"), { y: 16, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.34 }, "-=0.2")
+        .fromTo(panel.querySelectorAll(".rating-fill"), { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, stagger: 0.035, duration: 0.44, ease: "power3.out" }, "-=0.18")
+        .fromTo(panel.querySelectorAll(".detail-data li"), { x: -14, autoAlpha: 0 }, { x: 0, autoAlpha: 1, stagger: 0.04, duration: 0.32 }, "-=0.22")
+        .fromTo(panel.querySelectorAll(".poisson-line"), { y: 12, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.035, duration: 0.32 }, "-=0.2")
+        .fromTo(panel.querySelectorAll(".matrix-cell"), { scale: 0.88, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, stagger: { each: 0.01, from: "center" }, duration: 0.28, ease: "power2.out" }, "-=0.14")
+        .fromTo(card.querySelectorAll(".fill"), { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, stagger: 0.08, duration: 0.56 }, "-=0.48");
     }
 
     function setupPointerSpotlight() {
@@ -2609,13 +3096,15 @@
     }
 
     function lightRoute(selector, delay) {
-      gsap.utils.toArray(selector).forEach((node, index) => {
+      const nodes = typeof selector === "string" ? gsap.utils.toArray(selector) : gsap.utils.toArray(selector);
+      nodes.forEach((node, index) => {
         gsap.delayedCall(index * delay, () => node.classList.add("is-lit"));
       });
     }
 
     function setupTiltCards() {
-      const cards = gsap.utils.toArray(".match-card, .briefing, .postmatch-card, .group-card, .route-match");
+      if (window.matchMedia("(pointer: coarse)").matches) return;
+      const cards = gsap.utils.toArray(".match-card, .briefing, .postmatch-card, .r32-game, .route-match");
       cards.forEach((card) => {
         card.addEventListener("pointermove", (event) => {
           const rect = card.getBoundingClientRect();
@@ -2654,7 +3143,6 @@
       });
     });
 
-    renderStandings();
     renderKnockoutRoute();
     renderPoissonMatrix();
     setupMotion();
@@ -2662,6 +3150,7 @@
   </script>
 </body>
 </html>
+
 
 
 
