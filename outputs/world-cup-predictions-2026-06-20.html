@@ -1686,10 +1686,8 @@
     }
 
     .route-team {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 26px;
+      display: block;
       align-items: center;
-      gap: 8px;
       min-height: 34px;
       padding: 3px 7px 3px 10px;
       border-radius: 8px;
@@ -1699,17 +1697,26 @@
     }
 
     .route-team-name {
+      display: block;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      text-align: center;
+      font-size: var(--team-font-size, 14px);
     }
 
     .route-score-box {
-      width: 24px;
-      height: 28px;
-      border-radius: 4px;
+      display: none;
+    }
+
+    .route-result {
+      display: block;
+      padding: 2px 8px 6px;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 1000;
+      text-align: center;
       background: #171067;
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.32);
     }
 
     .route-note {
@@ -1772,6 +1779,14 @@
       color: #111111;
     }
 
+    .r32-game.is-complete {
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      border-color: rgba(242, 182, 80, 0.72);
+      background:
+        linear-gradient(135deg, rgba(255, 232, 150, 0.82), rgba(255, 248, 220, 0.94)),
+        #ffffff;
+    }
+
     .r32-game::after {
       content: "";
       position: absolute;
@@ -1805,6 +1820,10 @@
       font-weight: 900;
     }
 
+    .r32-game.is-complete .r32-game-time {
+      grid-column: 1 / -1;
+    }
+
     .r32-game-teams {
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
@@ -1814,20 +1833,42 @@
       font-weight: 1000;
     }
 
+    .r32-game.is-complete .r32-game-teams {
+      grid-column: 1 / -1;
+    }
+
     .r32-team {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      font-size: var(--team-font-size, 15px);
     }
 
     .r32-team:last-child {
       text-align: right;
     }
 
+    .r32-team.is-winner,
+    .route-team.is-winner .route-team-name {
+      color: #d71920 !important;
+      font-weight: 1000;
+    }
+
     .r32-vs {
       color: #171067;
       font-size: 12px;
       font-weight: 1000;
+    }
+
+    .r32-result {
+      display: inline-flex;
+      justify-self: center;
+      grid-column: 2;
+      padding: 2px 0;
+      color: #171067;
+      font-size: 13px;
+      font-weight: 1000;
+      background: transparent;
     }
 
     .source-links {
@@ -2038,10 +2079,6 @@
         min-height: 104px;
       }
 
-      .route-team {
-        grid-template-columns: minmax(0, 1fr) 28px;
-      }
-
       .route-team-name {
         white-space: normal;
       }
@@ -2229,35 +2266,35 @@
         </div>
         <span>2026 世界杯比赛日 AI 预测</span>
       </div>
-      <div class="timestamp">最后更新：北京时间 2026-06-28 21:24</div>
+      <div class="timestamp">最后更新：北京时间 2026-06-29 18:26</div>
     </header>
 
     <section class="hero" aria-labelledby="page-title">
       <div>
-        <h1 id="page-title">北京时间 6-29 世界杯32强赛前预测</h1>
-        <p class="lead">今日只做一场，按视频图文方法深化：小组走势、战术对位、九维评分、Dixon-Coles 泊松矩阵、大小球分层概率与临场触发条件同步更新。预测用于赛前阅读与讨论，不作为投注建议。</p>
+        <h1 id="page-title">北京时间 6-30 世界杯32强赛前预测</h1>
+        <p class="lead">今日更新三场 32 强淘汰赛预测：按开赛时间切换查看小组走势、战术对位、九维评分、Dixon-Coles 泊松矩阵、大小球概率与临场触发条件。预测用于赛前阅读与讨论，不作为投注建议。</p>
         <div class="chips" aria-label="今日概览">
-          <span class="chip"><span class="dot"></span>M73 南非 vs 加拿大</span>
-          <span class="chip"><span class="dot" style="color: var(--gold); background: var(--gold);"></span>6-29 03:00</span>
-          <span class="chip"><span class="dot" style="color: var(--cyan); background: var(--cyan);"></span>单场深度预测</span>
+          <span class="chip"><span class="dot"></span>M76 巴西 vs 日本</span>
+          <span class="chip"><span class="dot" style="color: var(--gold); background: var(--gold);"></span>M74 德国 vs 巴拉圭</span>
+          <span class="chip"><span class="dot" style="color: var(--cyan); background: var(--cyan);"></span>M75 荷兰 vs 摩洛哥</span>
         </div>
       </div>
 
       <aside class="briefing" aria-label="预测摘要">
         <h2>比赛日总览</h2>
-        <p>32强首场为南非对加拿大。加拿大小组赛进 8 球、净胜球 +5，冲击力更强；南非以 4 分拿到 A 组第二，低位防守和定位球质量是主要变量。</p>
+        <p>6-30 三场节奏不同：巴西对日本更看临场控球与反击转换，德国对巴拉圭优势最清晰，荷兰对摩洛哥最容易进入胶着小比分。</p>
         <div class="metrics">
           <div class="metric">
-            <strong>50.7%</strong>
-            <span>加拿大常规时间胜率</span>
+            <strong>64.2%</strong>
+            <span>德国常规时间胜率最高</span>
           </div>
           <div class="metric">
-            <strong>0-1</strong>
-            <span>最高频比分</span>
+            <strong>1-1</strong>
+            <span>两场首选防平</span>
           </div>
           <div class="metric">
-            <strong>61.7%</strong>
-            <span>小2.5 概率</span>
+            <strong>55%+</strong>
+            <span>巴西/荷兰场小2.5占优</span>
           </div>
         </div>
       </aside>
@@ -2265,40 +2302,53 @@
 
             <section aria-labelledby="match-title">
       <div class="section-title">
-        <h2 id="match-title">今日单场深度预测</h2>
-        <p>只保留北京时间 6-29 的比赛，分析比小组赛阶段更细。</p>
+        <h2 id="match-title">今日三场深度预测</h2>
+        <p>按北京时间先后排序，点击上方按钮只显示对应场次分析。</p>
       </div>
 
       <section class="match-switcher" aria-label="切换比赛详细数据">
         <div class="switcher-tabs" role="tablist" aria-label="选择比赛">
-          <button class="switcher-tab" type="button" role="tab" aria-selected="true" aria-controls="detail-kor-can" id="tab-kor-can" style="--tab-accent: var(--red);">南非 vs 加拿大<span>6-29 03:00 · M73 · 32强</span></button>
+          <button class="switcher-tab" type="button" role="tab" aria-selected="true" aria-controls="detail-bra-jpn" id="tab-bra-jpn" style="--tab-accent: var(--red);">巴西 vs 日本<span>6-30 01:00 · M76 · 32强</span></button>
+          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-ger-par" id="tab-ger-par" style="--tab-accent: var(--gold);">德国 vs 巴拉圭<span>6-30 04:30 · M74 · 32强</span></button>
+          <button class="switcher-tab" type="button" role="tab" aria-selected="false" aria-controls="detail-ned-mar" id="tab-ned-mar" style="--tab-accent: var(--cyan);">荷兰 vs 摩洛哥<span>6-30 09:00 · M75 · 32强</span></button>
         </div>
 
-        <div class="match-detail is-active" id="detail-kor-can" role="tabpanel" aria-labelledby="tab-kor-can">
-          <div class="detail-scoreboard"><h3>南非 vs 加拿大：加拿大占优，小球防平</h3><p>这场是 32 强 M73，南非以 A 组第二进入淘汰赛，加拿大以 B 组第二进入。模型给加拿大常规时间胜率 50.7%，平局概率 29.2%，首选比分放在 0-1，次选 1-1/0-0；倾向加拿大不败，小2.5 更稳。</p><div class="detail-kpis"><div class="detail-kpi"><strong>0-1</strong><span>首选比分</span></div><div class="detail-kpi"><strong>20.2/29.2/50.7</strong><span>胜平负</span></div><div class="detail-kpi"><strong>61.7%</strong><span>小2.5</span></div><div class="detail-kpi"><strong>0.80/1.42</strong><span>预期进球</span></div><div class="detail-kpi"><strong>加拿大不败</strong><span>方向建议</span></div><div class="detail-kpi"><strong>M73</strong><span>32强首场</span></div></div><div class="rating-panel" aria-label="南非 vs 加拿大九维评分比例图"><div class="rating-title">九维评分比例图<span>10分制</span></div><div class="rating-legend"><span style="--legend-color: #8bd4f8;">南非</span><span style="--legend-color: #f2b650;">加拿大</span></div><div class="rating-rows"><div class="rating-row"><span>进攻效率</span><span class="rating-score home">5.9</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 5.9; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 7.4; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">7.4</span></div><div class="rating-row"><span>防守稳定</span><span class="rating-score home">6.8</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 6.8; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 6.8; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">6.8</span></div><div class="rating-row"><span>转换速度</span><span class="rating-score home">6.3</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 6.3; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 8.1; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">8.1</span></div><div class="rating-row"><span>定位球</span><span class="rating-score home">6.9</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 6.9; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 6.5; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">6.5</span></div><div class="rating-row"><span>抗压能力</span><span class="rating-score home">6.7</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 6.7; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 6.8; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">6.8</span></div></div><div class="rating-summary"><div class="rating-total"><strong>6.52</strong><span>南非综合</span></div><div class="rating-total"><strong>7.12</strong><span>加拿大综合</span></div></div></div></div>
-          <div class="detail-data"><ul><li><b>小组走势</b>南非 1 胜 1 平 1 负、净胜球 -1，收官战 1-0 韩国把出线权抢回来，三场只进 2 球但防守端有硬度；加拿大 1 胜 1 平 1 负、净胜球 +5，6-0 卡塔尔抬高了进攻数据，但面对瑞士时暴露了转换防守问题。</li><li><b>战术对位</b>南非更需要把阵型压紧，依靠身体对抗、定位球和边路二点球制造机会；加拿大的优势在纵向冲刺、边路速度和前场二次压迫，若能抢到第一球，比赛会从小比分拖入加拿大节奏。</li><li><b>盘口倾向</b>加拿大胜率过半但没有到碾压档，单挑胜负不如加拿大不败稳；比分区间主要集中在 0-1、1-1、0-0、0-2，若南非定位球质量提升，平局权重会上升。</li><li><b>触发判定</b>前 25 分钟若加拿大形成 3 次以上高位抢断并有禁区内射门，加拿大胜率上修；若南非把半场拖到 0-0，小2.5 和平局概率会明显提高；若先出现定位球进球，大2.5 才会被拉到接近四成。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>南非 0.80，加拿大 1.42，ρ=-0.08。</span></div><div class="poisson-line"><span>胜平负</span><span>南非胜 20.2%，平 29.2%，加拿大胜 50.7%。</span></div><div class="poisson-line"><span>高频比分</span><span>0-1 14.4%，1-1 13.3%，0-0 11.8%，0-2 10.9%。</span></div><div class="poisson-line"><span>大小球</span><span>大2.5 38.3%，小2.5 61.7%。</span></div></div></div>
+        <div class="match-detail is-active" id="detail-bra-jpn" role="tabpanel" aria-labelledby="tab-bra-jpn">
+          <div class="detail-scoreboard"><h3>巴西 vs 日本：巴西小优，防日本反击</h3><p>这场是 32 强 M76，巴西 C 组第一，日本 F 组第二。模型给巴西常规时间胜率 51.1%，平局 27.5%，日本胜 21.4%；首选 1-1，次选 1-0/2-0，方向倾向巴西不败，小2.5 略优。</p><div class="detail-kpis"><div class="detail-kpi"><strong>1-1</strong><span>首选比分</span></div><div class="detail-kpi"><strong>51.1/27.5/21.4</strong><span>胜平负</span></div><div class="detail-kpi"><strong>55.2%</strong><span>小2.5</span></div><div class="detail-kpi"><strong>1.55/0.92</strong><span>预期进球</span></div><div class="detail-kpi"><strong>巴西不败</strong><span>方向建议</span></div><div class="detail-kpi"><strong>M76</strong><span>32强</span></div></div><div class="rating-panel" aria-label="巴西 vs 日本九维评分比例图"><div class="rating-title">九维评分比例图<span>10分制</span></div><div class="rating-legend"><span style="--legend-color: #8bd4f8;">巴西</span><span style="--legend-color: #f2b650;">日本</span></div><div class="rating-rows"><div class="rating-row"><span>进攻效率</span><span class="rating-score home">8.0</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 8.0; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 6.8; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">6.8</span></div><div class="rating-row"><span>防守稳定</span><span class="rating-score home">7.4</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 7.4; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 7.1; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">7.1</span></div><div class="rating-row"><span>转换速度</span><span class="rating-score home">7.7</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 7.7; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 7.5; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">7.5</span></div><div class="rating-row"><span>定位球</span><span class="rating-score home">7.0</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 7.0; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 6.4; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">6.4</span></div><div class="rating-row"><span>抗压能力</span><span class="rating-score home">7.8</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 7.8; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 7.0; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">7.0</span></div></div><div class="rating-summary"><div class="rating-total"><strong>7.58</strong><span>巴西综合</span></div><div class="rating-total"><strong>6.96</strong><span>日本综合</span></div></div></div></div>
+          <div class="detail-data"><ul><li><b>小组走势</b>巴西 2 胜 1 平、进 7 球失 1 球，控球压制和禁区前沿质量稳定；日本 1 胜 2 平保持不败，但面对高强度边路压迫时进攻落点会被压低。</li><li><b>战术对位</b>巴西需要控制日本反击第一脚，重点压制日本边路推进和后腰转身；日本更适合压缩中路，靠快速出球和二点球抢巴西身后。</li><li><b>盘口倾向</b>巴西胜率过半，但 1-1 是矩阵最高频，说明巴西优势主要来自持续压制，不是早段打穿。单场方向巴西不败优先，比分防 1-1。</li><li><b>触发判定</b>若巴西前 30 分钟形成 5 次以上禁区触球，巴西胜率上修；若日本先把节奏拖慢并制造反击射正，小2.5 与平局概率继续抬升。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>巴西 1.55，日本 0.92，ρ=-0.08。</span></div><div class="poisson-line"><span>胜平负</span><span>巴西胜 51.1%，平 27.5%，日本胜 21.4%。</span></div><div class="poisson-line"><span>高频比分</span><span>1-1 13.0%，1-0 12.1%，2-0 10.2%，0-0 9.4%。</span></div><div class="poisson-line"><span>大小球</span><span>大2.5 44.8%，小2.5 55.2%。</span></div></div></div>
+        </div>
+
+        <div class="match-detail" id="detail-ger-par" role="tabpanel" aria-labelledby="tab-ger-par">
+          <div class="detail-scoreboard"><h3>德国 vs 巴拉圭：德国优势最清晰</h3><p>德国 E 组第一，巴拉圭以 D 组第三进入 32 强。模型给德国常规时间胜率 64.2%，平局 21.7%，巴拉圭胜 14.0%；首选比分 2-0，次选 1-0/1-1，倾向德国胜，大2.5 略高。</p><div class="detail-kpis"><div class="detail-kpi"><strong>2-0</strong><span>首选比分</span></div><div class="detail-kpi"><strong>64.2/21.7/14.0</strong><span>胜平负</span></div><div class="detail-kpi"><strong>55.6%</strong><span>大2.5</span></div><div class="detail-kpi"><strong>2.05/0.86</strong><span>预期进球</span></div><div class="detail-kpi"><strong>德国胜</strong><span>方向建议</span></div><div class="detail-kpi"><strong>M74</strong><span>32强</span></div></div><div class="rating-panel" aria-label="德国 vs 巴拉圭九维评分比例图"><div class="rating-title">九维评分比例图<span>10分制</span></div><div class="rating-legend"><span style="--legend-color: #8bd4f8;">德国</span><span style="--legend-color: #f2b650;">巴拉圭</span></div><div class="rating-rows"><div class="rating-row"><span>进攻效率</span><span class="rating-score home">8.3</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 8.3; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 6.1; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">6.1</span></div><div class="rating-row"><span>防守稳定</span><span class="rating-score home">7.2</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 7.2; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 6.8; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">6.8</span></div><div class="rating-row"><span>转换速度</span><span class="rating-score home">7.8</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 7.8; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 6.6; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">6.6</span></div><div class="rating-row"><span>定位球</span><span class="rating-score home">7.6</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 7.6; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 6.7; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">6.7</span></div><div class="rating-row"><span>抗压能力</span><span class="rating-score home">7.7</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 7.7; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 6.4; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">6.4</span></div></div><div class="rating-summary"><div class="rating-total"><strong>7.72</strong><span>德国综合</span></div><div class="rating-total"><strong>6.52</strong><span>巴拉圭综合</span></div></div></div></div>
+          <div class="detail-data"><ul><li><b>小组走势</b>德国小组赛进攻峰值高，三场进球能力和阵地战层次都在上半区前列；巴拉圭 4 分晋级，但进攻稳定性一般，更多依赖防守后的反击效率。</li><li><b>战术对位</b>德国会持续用边中结合拉扯巴拉圭低位，二点压迫是扩大优势的关键；巴拉圭要避免禁区前沿犯规，并把反击第一脚传到德国边卫身后。</li><li><b>盘口倾向</b>德国胜率是今日三场最高，2-0 和 1-0 都很靠前，说明德国赢球基础更扎实；若早段进球，大2.5 权重会明显上升。</li><li><b>触发判定</b>德国若半场前完成 8 次以上射门，胜率继续上修；若巴拉圭把上半场守成 0-0，平局会从低位抬升，但德国仍是主方向。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>德国 2.05，巴拉圭 0.86，ρ=-0.08。</span></div><div class="poisson-line"><span>胜平负</span><span>德国胜 64.2%，平 21.7%，巴拉圭胜 14.0%。</span></div><div class="poisson-line"><span>高频比分</span><span>2-0 11.4%，1-0 10.4%，1-1 10.4%，2-1 9.8%。</span></div><div class="poisson-line"><span>大小球</span><span>大2.5 55.6%，小2.5 44.4%。</span></div></div></div>
+        </div>
+
+        <div class="match-detail" id="detail-ned-mar" role="tabpanel" aria-labelledby="tab-ned-mar">
+          <div class="detail-scoreboard"><h3>荷兰 vs 摩洛哥：最接近的一场</h3><p>荷兰 F 组第一，摩洛哥 C 组第二。模型给荷兰常规时间胜率 41.4%，平局 29.1%，摩洛哥胜 29.4%；首选比分 1-1，次选 1-0/0-0，倾向荷兰不败，小2.5 略优。</p><div class="detail-kpis"><div class="detail-kpi"><strong>1-1</strong><span>首选比分</span></div><div class="detail-kpi"><strong>41.4/29.1/29.4</strong><span>胜平负</span></div><div class="detail-kpi"><strong>55.7%</strong><span>小2.5</span></div><div class="detail-kpi"><strong>1.35/1.10</strong><span>预期进球</span></div><div class="detail-kpi"><strong>荷兰不败</strong><span>方向建议</span></div><div class="detail-kpi"><strong>M75</strong><span>32强</span></div></div><div class="rating-panel" aria-label="荷兰 vs 摩洛哥九维评分比例图"><div class="rating-title">九维评分比例图<span>10分制</span></div><div class="rating-legend"><span style="--legend-color: #8bd4f8;">荷兰</span><span style="--legend-color: #f2b650;">摩洛哥</span></div><div class="rating-rows"><div class="rating-row"><span>进攻效率</span><span class="rating-score home">7.6</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 7.6; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 7.1; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">7.1</span></div><div class="rating-row"><span>防守稳定</span><span class="rating-score home">7.1</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 7.1; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 7.4; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">7.4</span></div><div class="rating-row"><span>转换速度</span><span class="rating-score home">7.4</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 7.4; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 7.3; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">7.3</span></div><div class="rating-row"><span>定位球</span><span class="rating-score home">7.3</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 7.3; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 6.7; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">6.7</span></div><div class="rating-row"><span>抗压能力</span><span class="rating-score home">7.2</span><div class="rating-bars"><div class="rating-track"><span class="rating-fill home" style="--value: 7.2; --fill-color: #8bd4f8;"></span><span class="rating-fill away" style="--value: 7.2; --fill-color: #f2b650;"></span></div></div><span class="rating-score away">7.2</span></div></div><div class="rating-summary"><div class="rating-total"><strong>7.32</strong><span>荷兰综合</span></div><div class="rating-total"><strong>7.14</strong><span>摩洛哥综合</span></div></div></div></div>
+          <div class="detail-data"><ul><li><b>小组走势</b>荷兰 2 胜 1 平、进攻端爆点更足，但防线面对速度型前锋仍有回追压力；摩洛哥 2 胜 1 平，防守组织和转换效率都很稳定。</li><li><b>战术对位</b>荷兰需要用高点和边路传中制造禁区压力，摩洛哥更擅长在中低位断球后快速推进。谁先丢球，谁的阵型风险都会被放大。</li><li><b>盘口倾向</b>这是今日最接近的场次，荷兰胜和平局、摩洛哥胜差距不大。主方向不宜过重，荷兰不败搭配小2.5更稳。</li><li><b>触发判定</b>若荷兰边路传中成功率高，1-0/2-1权重上升；若摩洛哥限制荷兰中锋接应并打出反击射正，1-1会继续成为核心比分。</li></ul><div class="poisson-box"><b>Dixon-Coles 泊松推演</b><div class="poisson-line"><span>Dixon-Coles λ</span><span>荷兰 1.35，摩洛哥 1.10，ρ=-0.08。</span></div><div class="poisson-line"><span>胜平负</span><span>荷兰胜 41.4%，平 29.1%，摩洛哥胜 29.4%。</span></div><div class="poisson-line"><span>高频比分</span><span>1-1 13.8%，1-0 10.6%，0-0 9.7%，2-1 8.6%。</span></div><div class="poisson-line"><span>大小球</span><span>大2.5 44.3%，小2.5 55.7%。</span></div></div></div>
         </div>
       </section>
 
       <div class="matches">
-        <article class="card match-card is-active" data-match-card="detail-kor-can" style="--accent: var(--red); --card-bg: linear-gradient(135deg, rgba(125, 42, 58, 0.62), rgba(36, 17, 28, 0.74));">
-          <div class="card-inner"><div class="match-meta"><span>M73 · 32强</span><span>6-29 03:00</span></div><div class="teams"><div class="team"><span class="team-name">南非</span><span class="team-note">A 组第二，低位防守和定位球是爆冷关键。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">加拿大</span><span class="team-note">B 组第二，速度与冲击力占优。</span></div></div><div class="data-strip" aria-label="南非 vs 加拿大推演数据"><div class="data-point"><strong>首选 0-1</strong><span>加拿大占优，小球权重比平局更明显。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 0.80 / 1.42；最高频比分 0-1。</span></div><div class="data-point"><strong>大小球百分比</strong><span>大2.5 38.3%，小2.5 61.7%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>南非胜</span><div class="track"><div class="fill" style="--value: 20.2%;"></div></div><span>20.2%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 29.2%;"></div></div><span>29.2%</span></div><div class="bar-row"><span>加拿大胜</span><div class="track"><div class="fill" style="--value: 50.7%;"></div></div><span>50.7%</span></div></div></div>
+        <article class="card match-card is-active" data-match-card="detail-bra-jpn" style="--accent: var(--red); --card-bg: linear-gradient(135deg, rgba(125, 42, 58, 0.62), rgba(36, 17, 28, 0.74));">
+          <div class="card-inner"><div class="match-meta"><span>M76 · 32强</span><span>6-30 01:00</span></div><div class="teams"><div class="team"><span class="team-name">巴西</span><span class="team-note">C 组第一，阵地战压制力更强。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">日本</span><span class="team-note">F 组第二，反击速度和纪律性出色。</span></div></div><div class="data-strip" aria-label="巴西 vs 日本推演数据"><div class="data-point"><strong>首选 1-1</strong><span>巴西小优，但日本反击让平局权重很高。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 1.55 / 0.92；最高频比分 1-1。</span></div><div class="data-point"><strong>大小球百分比</strong><span>大2.5 44.8%，小2.5 55.2%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>巴西胜</span><div class="track"><div class="fill" style="--value: 51.1%;"></div></div><span>51.1%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 27.5%;"></div></div><span>27.5%</span></div><div class="bar-row"><span>日本胜</span><div class="track"><div class="fill" style="--value: 21.4%;"></div></div><span>21.4%</span></div></div></div>
+        </article>
+        <article class="card match-card" data-match-card="detail-ger-par" style="--accent: var(--gold); --card-bg: linear-gradient(135deg, rgba(126, 91, 25, 0.62), rgba(39, 30, 16, 0.76));">
+          <div class="card-inner"><div class="match-meta"><span>M74 · 32强</span><span>6-30 04:30</span></div><div class="teams"><div class="team"><span class="team-name">德国</span><span class="team-note">E 组第一，进攻层次和压迫强度占优。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">巴拉圭</span><span class="team-note">D 组第三，低位防守后等反击。</span></div></div><div class="data-strip" aria-label="德国 vs 巴拉圭推演数据"><div class="data-point"><strong>首选 2-0</strong><span>德国是今日最清晰优势方。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 2.05 / 0.86；最高频比分 2-0。</span></div><div class="data-point"><strong>大小球百分比</strong><span>大2.5 55.6%，小2.5 44.4%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>德国胜</span><div class="track"><div class="fill" style="--value: 64.2%;"></div></div><span>64.2%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 21.7%;"></div></div><span>21.7%</span></div><div class="bar-row"><span>巴拉圭胜</span><div class="track"><div class="fill" style="--value: 14.0%;"></div></div><span>14.0%</span></div></div></div>
+        </article>
+        <article class="card match-card" data-match-card="detail-ned-mar" style="--accent: var(--cyan); --card-bg: linear-gradient(135deg, rgba(28, 103, 126, 0.62), rgba(16, 34, 43, 0.78));">
+          <div class="card-inner"><div class="match-meta"><span>M75 · 32强</span><span>6-30 09:00</span></div><div class="teams"><div class="team"><span class="team-name">荷兰</span><span class="team-note">F 组第一，高点和边路推进占优。</span></div><div class="versus">VS</div><div class="team right"><span class="team-name">摩洛哥</span><span class="team-note">C 组第二，防守组织和转换效率稳定。</span></div></div><div class="data-strip" aria-label="荷兰 vs 摩洛哥推演数据"><div class="data-point"><strong>首选 1-1</strong><span>今日最接近，防平优先。</span></div><div class="data-point"><strong>Dixon-Coles</strong><span>λ 1.35 / 1.10；最高频比分 1-1。</span></div><div class="data-point"><strong>大小球百分比</strong><span>大2.5 44.3%，小2.5 55.7%。</span></div></div><div class="bars" aria-label="概率"><div class="bar-row"><span>荷兰胜</span><div class="track"><div class="fill" style="--value: 41.4%;"></div></div><span>41.4%</span></div><div class="bar-row"><span>平局</span><div class="track"><div class="fill" style="--value: 29.1%;"></div></div><span>29.1%</span></div><div class="bar-row"><span>摩洛哥胜</span><div class="track"><div class="fill" style="--value: 29.4%;"></div></div><span>29.4%</span></div></div></div>
         </article>
       </div>
     </section>
 
     <section class="postmatch-section" aria-labelledby="postmatch-title">
       <div class="postmatch-head">
-        <h2 id="postmatch-title">赛后复盘：J/K/L 组收官六场</h2>
-        <p>复盘 6-28 完赛场次，重点看模型偏差和小组出线形势变化。</p>
+        <h2 id="postmatch-title">赛后复盘：32强淘汰赛</h2>
+        <p>32强复盘全部保留，最新完赛写在最前，较早复盘依次往后排。</p>
       </div>
       <div class="postmatch-grid">
-        <article class="postmatch-card" style="--review-color: #8bd4f8;"><div class="postmatch-top"><div class="postmatch-match">巴拿马 0-2 英格兰</div><span class="review-tag">比分命中</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>英格兰 0-2</span><span><b>实际结果</b><br>英格兰 2球完胜</span></div><p>模型把英格兰胜率放在最高档，比分也落在首选 0-2。英格兰控节奏后没有强行拉高回合数，巴拿马三场零进球，进攻端质量不足的问题继续暴露。</p></article>
-        <article class="postmatch-card" style="--review-color: #ff8f72;"><div class="postmatch-top"><div class="postmatch-match">克罗地亚 2-1 加纳</div><span class="review-tag">方向正确，比分偏大</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>克罗地亚不败，首选 1-1</span><span><b>实际结果</b><br>克罗地亚反超晋级</span></div><p>赛前胜平负里克罗地亚是最高项，但首选比分偏保守。必须赢球的压力让克罗地亚后段投入更高，加纳输球后仍靠 4 分留在最佳第三晋级区。</p></article>
-        <article class="postmatch-card" style="--review-color: #8bd4f8;"><div class="postmatch-top"><div class="postmatch-match">哥伦比亚 0-0 葡萄牙</div><span class="review-tag">小球命中</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>小2.5 占优，首选 1-1</span><span><b>实际结果</b><br>互交白卷</span></div><p>K 组头名战完全按低风险逻辑运行。哥伦比亚不败即可第一，葡萄牙平局也安全，双方都没有把阵型推到高风险区域，最终 0-0 兑现小球方向。</p></article>
-        <article class="postmatch-card" style="--review-color: #ff8f72;"><div class="postmatch-top"><div class="postmatch-match">刚果民主共和国 3-1 乌兹别克斯坦</div><span class="review-tag">方向正确，比分偏大</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>刚果民主共和国 1-0</span><span><b>实际结果</b><br>刚果民主共和国大胜</span></div><p>刚果民主共和国赢球方向兑现，但模型低估了乌兹别克斯坦后段防线松动。领先后刚果民主共和国反击效率继续提升，4 分和 +1 净胜球足够进入最佳第三晋级区。</p></article>
-        <article class="postmatch-card" style="--review-color: #ff8f72;"><div class="postmatch-top"><div class="postmatch-match">阿尔及利亚 3-3 奥地利</div><span class="review-tag">平局符合，比分偏大</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>首选 1-1</span><span><b>实际结果</b><br>六球战平</span></div><p>平局方向兑现，但这是本轮最大进球偏差。模型低估了双方在第二出线位和最佳第三压力下的后段投入，奥地利凭净胜球保住第二，阿尔及利亚 4 分进入最佳第三比较。</p></article>
-        <article class="postmatch-card" style="--review-color: #ff8f72;"><div class="postmatch-top"><div class="postmatch-match">约旦 1-3 阿根廷</div><span class="review-tag">方向正确，比分偏大</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>阿根廷 0-1</span><span><b>实际结果</b><br>阿根廷三连胜</span></div><p>阿根廷胜负方向没有问题，但轮换并未显著压低进球上限。约旦主动压上后也打进一球，比赛从小胜模型变成 1-3 大球，阿根廷以 9 分锁定 J 组第一。</p></article>
+        <article class="postmatch-card" style="--review-color: #8bd4f8;"><div class="postmatch-top"><div class="postmatch-match">南非 0-1 加拿大</div><span class="review-tag">比分命中</span></div><div class="postmatch-meta"><span><b>赛前倾向</b><br>加拿大不败，首选 0-1，小2.5</span><span><b>实际结果</b><br>加拿大 1球晋级</span></div><p>这场和赛前模型高度一致：加拿大常规时间胜率最高，但比赛没有被拉成大开大合。南非低位防守把节奏压住，不过进攻端持续威胁不足；加拿大用更强的边路推进和前场压迫拿到关键进球，最终 0-1 同时兑现方向、比分和小2.5。</p></article>
       </div>
     </section><footer class="footer-note">
       <section class="r32-schedule" aria-labelledby="r32-schedule-title">
@@ -2788,6 +2838,12 @@
 
     function renderKnockoutRoute() {
       const thirdTeams = getBestThirdTeams();
+      const completedKnockoutMatches = {
+        M73: { score: "南非 0-1 加拿大", scoreOnly: "0-1", winner: "加拿大" }
+      };
+      const advancedRouteTeams = {
+        M90: ["加拿大", "待定"]
+      };
 
       const slots = {};
       Object.entries(standingsData).forEach(([group, rows]) => {
@@ -2807,12 +2863,23 @@
       }
 
       function routeTeamMarkup(team) {
+        const cleanTeam = String(team || "").replace(/（[^）]*）/g, "");
         return `
-          <span class="route-team">
-            <span class="route-team-name">${team || ""}</span>
+          <span class="route-team" style="${teamFontStyle(cleanTeam, 14, 10.5)}">
+            <span class="route-team-name">${cleanTeam}</span>
             <span class="route-score-box" aria-hidden="true"></span>
           </span>
         `;
+      }
+
+      function cleanTeamName(team) {
+        return String(team || "").replace(/（[^）]*）/g, "");
+      }
+
+      function teamFontStyle(team, base = 15, min = 11) {
+        const length = Array.from(cleanTeamName(team)).length;
+        const size = Math.max(min, base - Math.max(0, length - 5) * 0.65);
+        return `--team-font-size: ${size.toFixed(1)}px;`;
       }
 
       const r32ScheduleGrid = document.querySelector("#r32-schedule-grid");
@@ -2822,17 +2889,18 @@
           const time = match.querySelector(".route-time")?.textContent || "";
           const routeNode = Array.from(match.querySelectorAll("span")).find((node) => node.dataset.route);
           const teams = routeNode ? routeNode.dataset.route.split("-").map((slot) => slots[slot] || slot) : ["", ""];
-          return { code, time, teams };
+          return { code, time, teams: teams.map(cleanTeamName), result: completedKnockoutMatches[code] };
         }).sort((a, b) => {
           const timeDiff = parseBeijingMatchTime(a.time) - parseBeijingMatchTime(b.time);
           if (timeDiff !== 0) return timeDiff;
           return Number(a.code.replace(/\D/g, "")) - Number(b.code.replace(/\D/g, ""));
         });
 
-        r32ScheduleGrid.innerHTML = r32Matches.map(({ code, time, teams }) => `
-          <article class="r32-game">
+        r32ScheduleGrid.innerHTML = r32Matches.map(({ code, time, teams, result }) => `
+          <article class="r32-game ${result ? "is-complete" : ""}">
             <div class="r32-game-time"><span>${code}</span><span>${time}</span></div>
-            <div class="r32-game-teams"><span class="r32-team">${teams[0]}</span><span class="r32-vs">VS</span><span class="r32-team">${teams[1]}</span></div>
+            <div class="r32-game-teams"><span class="r32-team ${result?.winner === teams[0] ? "is-winner" : ""}" style="${teamFontStyle(teams[0])}">${teams[0]}</span><span class="r32-vs">VS</span><span class="r32-team ${result?.winner === teams[1] ? "is-winner" : ""}" style="${teamFontStyle(teams[1])}">${teams[1]}</span></div>
+            ${result ? `<span class="r32-result">${result.scoreOnly}</span>` : ""}
           </article>
         `).join("");
       }
@@ -2843,14 +2911,18 @@
         if (!teamNode) return;
 
         let teams = ["", ""];
-        if (teamNode.dataset.route) {
-          teams = teamNode.dataset.route.split("-").map((slot) => slots[slot] || slot);
+        const code = match.querySelector("b")?.textContent || "";
+        if (advancedRouteTeams[code]) {
+          teams = advancedRouteTeams[code].map(cleanTeamName);
+        } else if (teamNode.dataset.route) {
+          teams = teamNode.dataset.route.split("-").map((slot) => cleanTeamName(slots[slot] || slot));
         } else if (teamNode.textContent.includes(" vs ")) {
-          teams = teamNode.textContent.split(" vs ");
+          teams = teamNode.textContent.split(" vs ").map(cleanTeamName);
         }
 
         teamNode.remove();
-        match.insertAdjacentHTML("beforeend", `<div class="route-teams">${teams.map(routeTeamMarkup).join("")}</div>`);
+        const result = completedKnockoutMatches[code];
+        match.insertAdjacentHTML("beforeend", `<div class="route-teams">${teams.map((team) => routeTeamMarkup(team).replace('class="route-team"', `class="route-team ${result?.winner === team ? "is-winner" : ""}"`)).join("")}</div>${result ? `<span class="route-result">${result.scoreOnly}</span>` : ""}`);
       });
     }
 
@@ -2859,7 +2931,9 @@
     const matchCards = Array.from(document.querySelectorAll(".match-card"));
 
     const poissonMatrixData = {
-      "detail-kor-can": { home: "南非", away: "加拿大", homeLambda: 0.80, awayLambda: 1.42, rho: -0.08 }
+      "detail-bra-jpn": { home: "巴西", away: "日本", homeLambda: 1.55, awayLambda: 0.92, rho: -0.08 },
+      "detail-ger-par": { home: "德国", away: "巴拉圭", homeLambda: 2.05, awayLambda: 0.86, rho: -0.08 },
+      "detail-ned-mar": { home: "荷兰", away: "摩洛哥", homeLambda: 1.35, awayLambda: 1.10, rho: -0.08 }
     };
 
     function factorial(n) {
